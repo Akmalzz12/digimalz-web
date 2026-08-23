@@ -12,6 +12,7 @@ const DATA = {
       "YouTube": { icon: "icon/yt.png", prices: { 1: 5000, 2: 10000, 3: 15000 } },
       "Netflix": { icon: "icon/netflix.png", prices: { 1: 25000, 2: 50000, 3: 75000 } },
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
+      "Disney+": { icon: "icon/disney.png", prices: { 1: 38000, 2: 76000, 3: 114000 } },
       "Spotify": { icon: "icon/spotify.png", prices: { 1: 32000, 2: 64000, 3: 96000 } },
       "Getcontact": { icon: "icon/gtc.png", prices: { 1: 10000, 2: 20000, 3: 30000 } },
       "ChatGPT": { icon: "icon/gpt.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
@@ -150,6 +151,20 @@ const DESCRIPTIONS = {
       ],
       notes: [
         "Catatan: Bisa pakai akun pribadi"
+      ]
+    },
+    "Disney+": {
+      paragraphs: [
+        "Disney+ Premium adalah layanan streaming untuk menikmati film, serial, dan tayangan eksklusif dari Disney, Pixar, Marvel, Star Wars, dan lainnya."
+      ],
+      benefits: [
+        "Anti Screen Limit",
+        "Akses Konten Eksklusif",
+        "Kualitas Video Hingga 4K",
+        "Religion Indonesia Only"
+      ],
+      notes: [
+        "Catatan: Akun dari admin. Akun Sharing, Kamu mendapatkan 1 Slot Profil Pribadi"
       ]
     },
     "Spotify": {
