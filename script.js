@@ -14,8 +14,8 @@ const DATA = {
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
       "Spotify": { icon: "icon/spotify.png", prices: { 1: 32000, 2: 64000, 3: 96000 } },
       "Getcontact": { icon: "icon/gtc.png", prices: { 1: 10000, 2: 20000, 3: 30000 } },
-      "ChatGPT": { icon: "icon/gpt.png", prices: { 1: 10000, 2: 18000, 3: 25000 } },
-      "Gemini": { icon: "icon/gemini.png", prices: { 1: 15000, 2: 30000, 3: 45000 } }
+      "ChatGPT": { icon: "icon/gpt.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
+      "Gemini": { icon: "icon/gemini.png", prices: { 1: 18000, 2: 36000, 3: 54000 } }
     }
   },
   "Suntik Instagram": {
