@@ -124,6 +124,20 @@ const DESCRIPTIONS = {
         "Catatan: Akun bisa dari pribadi, dan bisa dari admin"
       ]
     },
+    "Netflix": {
+      paragraphs: [
+        "Netflix Premium adalah layanan streaming untuk menikmati berbagai film, serial, dan tayangan eksklusif dengan kualitas tinggi."
+      ],
+      benefits: [
+        "Akses Film & Serial Lengkap",
+        "Tidak Ada Iklan",
+        "Kualitas Video Jernih",
+        "Support Semua Device"
+      ],
+      notes: [
+        "Catatan: Akun dari admin, tidak bisa pakai akun/email sendiri"
+      ]
+    },
     "Vidio": {
       paragraphs: [
         "Vidio Premium adalah layanan berlangganan Vidio untuk menikmati berbagai konten premium, live streaming olahraga, film, serial, dan tayangan eksklusif."
