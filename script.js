@@ -7,15 +7,15 @@ const DATA = {
     unit: "bulan",
     services: {
       "Canva": { icon: "icon/canva.png", prices: { 1: 2500, 2: 5000, 3: 7000 } },
-      "Capcut": { icon: "icon/capcut.png", prices: { 1: 35000, 2: 70000, 3: 105000 } },
-      "Alight Motion": { icon: "icon/am.png", prices: { 1: 20000 } },
+      "Capcut": { icon: "icon/capcut.png", prices: { 1: 28000, 2: 56000, 3: 84000 } },
+      "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000, 2: 10000, 3: 15000 } },
       "YouTube": { icon: "icon/yt.png", prices: { 1: 5000, 2: 10000, 3: 15000 } },
       "Netflix": { icon: "icon/netflix.png", prices: { 1: 25000, 2: 50000, 3: 75000 } },
-      "Vidio": { icon: "icon/vidio.png", prices: { 1: 10000, 2: 18000, 3: 25000 } },
-      "Spotify": { icon: "icon/spotify.png", prices: { 1: 10000, 2: 18000, 3: 25000 } },
-      "Getcontact": { icon: "icon/gtc.png", prices: { 1: 10000, 2: 18000, 3: 25000 } },
+      "Vidio": { icon: "icon/vidio.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
+      "Spotify": { icon: "icon/spotify.png", prices: { 1: 32000, 2: 64000, 3: 96000 } },
+      "Getcontact": { icon: "icon/gtc.png", prices: { 1: 10000, 2: 20000, 3: 30000 } },
       "ChatGPT": { icon: "icon/gpt.png", prices: { 1: 10000, 2: 18000, 3: 25000 } },
-      "Gemini": { icon: "icon/gemini.png", prices: { 1: 10000, 2: 18000, 3: 25000 } }
+      "Gemini": { icon: "icon/gemini.png", prices: { 1: 15000, 2: 30000, 3: 45000 } }
     }
   },
   "Suntik Instagram": {
