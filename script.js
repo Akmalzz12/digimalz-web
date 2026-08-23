@@ -222,7 +222,7 @@ const DESCRIPTIONS = {
   // tambahin kategori/layanan lain kalau perlu
 };
 
-const REFERRAL_CODE = "DIGIMALZ10"; // ganti kode referral lo
+const REFERRAL_CODE = ""; // ganti kode referral lo
 const REFERRAL_DISCOUNT = 2000; // potongan nominal
 const MIN_ORDER_FOR_DISCOUNT = 10000; // syarat minimal biar kode bisa dipakai
 
