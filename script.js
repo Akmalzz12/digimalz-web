@@ -414,10 +414,17 @@ applyReferralBtn.addEventListener("click", () => {
 });
 
 function applyReferralCode(inputCode) {
+  const trimmedCode = inputCode.trim();
+
+  if (trimmedCode === "") {
+    showToast("Masukkan kode referral terlebih dahulu");
+    return;
+  }
+
   const priceTable = getPriceTable(selectedSM, selectedService);
   const total = priceTable[qty] ?? 0;
 
-  if (inputCode.trim().toUpperCase() !== REFERRAL_CODE) {
+  if (trimmedCode.toUpperCase() !== REFERRAL_CODE) {
     showToast("Kode referral tidak valid");
     return;
   }
