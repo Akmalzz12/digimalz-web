@@ -107,22 +107,15 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-
   /* Lebar menu */
   width: 50%;
   max-width: 360px;
   min-width: 280px;
-
   background: #FFFFFF;
-
   border-radius: 20px 0 0 20px;
-
   padding: 22px 20px;
-
   box-shadow: -12px 0 35px rgba(16,21,28,0.15);
-
   z-index: 10001;
-
   opacity: 0;
   visibility: hidden;
 
@@ -803,7 +796,7 @@ body {
 }
 
 .testi-info strong {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   color: #10151C;
 }
