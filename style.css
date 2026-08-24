@@ -552,7 +552,7 @@ body {
 
 .banner-dots {
   position: absolute;
-  bottom: 8px;
+  bottom: 3px;
   left: 50%;
   transform: translateX(-50%);
 
