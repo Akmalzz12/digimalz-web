@@ -655,4 +655,4 @@ setInterval(() => {
   }
 
   bannerTrack.style.transform = `translateX(-${bannerIndex * 100}%)`;
-}, 3000);
+}, 4000);
