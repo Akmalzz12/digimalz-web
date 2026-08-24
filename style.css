@@ -524,6 +524,25 @@ body {
 }
 
 /* ==============================
+   BANNER
+============================== */
+
+.banner-box {
+  width: 100%;
+  max-width: 450px;
+  margin: 28px auto 0;
+  padding: 0 15px;
+}
+
+.banner-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ==============================
    ICON
 ============================== */
 
