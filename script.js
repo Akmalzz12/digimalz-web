@@ -641,3 +641,18 @@ testiNext.addEventListener("click", () => {
 });
 
 renderTesti();
+
+const bannerTrack = document.querySelector(".banner-track");
+const bannerImages = document.querySelectorAll(".banner-track img");
+
+let bannerIndex = 0;
+
+setInterval(() => {
+  bannerIndex++;
+
+  if (bannerIndex >= bannerImages.length) {
+    bannerIndex = 0;
+  }
+
+  bannerTrack.style.transform = `translateX(-${bannerIndex * 100}%)`;
+}, 3000);
