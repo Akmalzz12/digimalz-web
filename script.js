@@ -642,17 +642,163 @@ testiNext.addEventListener("click", () => {
 
 renderTesti();
 
+const bannerBox = document.querySelector(".banner-box");
 const bannerTrack = document.querySelector(".banner-track");
 const bannerImages = document.querySelectorAll(".banner-track img");
 
 let bannerIndex = 0;
+let bannerTimer;
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
 
-setInterval(() => {
-  bannerIndex++;
+if (bannerTrack && bannerImages.length > 0) {
 
-  if (bannerIndex >= bannerImages.length) {
-    bannerIndex = 0;
+  /* ==============================
+     DOT INDICATOR
+  ============================== */
+
+  const dotsContainer = document.createElement("div");
+  dotsContainer.className = "banner-dots";
+
+  bannerImages.forEach((_, index) => {
+    const dot = document.createElement("span");
+
+    if (index === 0) {
+      dot.classList.add("active");
+    }
+
+    dot.addEventListener("click", () => {
+      bannerIndex = index;
+      updateBanner();
+      restartBannerTimer();
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+
+  bannerBox.appendChild(dotsContainer);
+
+  const bannerDots = dotsContainer.querySelectorAll("span");
+
+
+  /* ==============================
+     UPDATE BANNER
+  ============================== */
+
+  function updateBanner() {
+    bannerTrack.style.transform =
+      `translateX(-${bannerIndex * 100}%)`;
+
+    bannerDots.forEach((dot, index) => {
+      dot.classList.toggle(
+        "active",
+        index === bannerIndex
+      );
+    });
   }
 
-  bannerTrack.style.transform = `translateX(-${bannerIndex * 100}%)`;
-}, 4000);
+
+  /* ==============================
+     AUTO SLIDE
+  ============================== */
+
+  function startBannerTimer() {
+    bannerTimer = setInterval(() => {
+
+      bannerIndex++;
+
+      if (bannerIndex >= bannerImages.length) {
+        bannerIndex = 0;
+      }
+
+      updateBanner();
+
+    }, 3000);
+  }
+
+  function stopBannerTimer() {
+    clearInterval(bannerTimer);
+  }
+
+  function restartBannerTimer() {
+    stopBannerTimer();
+    startBannerTimer();
+  }
+
+
+  /* ==============================
+     TOUCH / SWIPE
+  ============================== */
+
+  bannerBox.addEventListener("touchstart", (e) => {
+
+    stopBannerTimer();
+
+    startX = e.touches[0].clientX;
+    currentX = startX;
+    isDragging = true;
+
+    bannerTrack.style.transition = "none";
+
+  }, { passive: true });
+
+
+  bannerBox.addEventListener("touchmove", (e) => {
+
+    if (!isDragging) return;
+
+    currentX = e.touches[0].clientX;
+
+    const moveX = currentX - startX;
+    const offset =
+      -(bannerIndex * 100) +
+      (moveX / bannerBox.offsetWidth) * 100;
+
+    bannerTrack.style.transform =
+      `translateX(${offset}%)`;
+
+  }, { passive: true });
+
+
+  bannerBox.addEventListener("touchend", () => {
+
+    if (!isDragging) return;
+
+    const moveX = currentX - startX;
+
+    bannerTrack.style.transition =
+      "transform 0.5s ease";
+
+    if (Math.abs(moveX) > 50) {
+
+      if (moveX < 0) {
+        bannerIndex++;
+      } else {
+        bannerIndex--;
+      }
+
+      if (bannerIndex >= bannerImages.length) {
+        bannerIndex = 0;
+      }
+
+      if (bannerIndex < 0) {
+        bannerIndex = bannerImages.length - 1;
+      }
+    }
+
+    updateBanner();
+
+    isDragging = false;
+
+    restartBannerTimer();
+
+  });
+
+
+  /* ==============================
+     MULAI AUTO SLIDE
+  ============================== */
+
+  startBannerTimer();
+}
