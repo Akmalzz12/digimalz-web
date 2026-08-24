@@ -546,36 +546,6 @@ body {
   display: block;
 }
 
-.banner-box {
-  position: relative;
-}
-
-.banner-dots {
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.banner-dots span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
-  transition: all 0.25s ease;
-  cursor: pointer;
-}
-
-.banner-dots span.active {
-  width: 16px;
-  border-radius: 5px;
-  background: #FFFFFF;
-}
-
 /* ==============================
    ICON
 ============================== */
