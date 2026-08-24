@@ -682,7 +682,7 @@ if (bannerTrack && bannerImages.length > 0) {
 
       updateBanner();
 
-    }, 4000);
+    }, 5000);
   }
 
 
