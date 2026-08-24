@@ -1185,3 +1185,14 @@ body {
     padding: 10px 6px;
   }
 }
+
+@media (min-width: 768px) {
+
+  .order-box,
+  .why-box,
+  .testi-box,
+  .payment-box {
+    max-width: 900px;
+  }
+
+}
