@@ -1093,6 +1093,21 @@ body {
   box-shadow: 0 0 0 3px rgba(32,199,122,0.10);
 }
 
+@keyframes borderBlink {
+  0%, 100% {
+    border-color: #DCE4EC;
+    box-shadow: 0 0 0 0 rgba(3, 141, 242, 0);
+  }
+  50% {
+    border-color: #038df2;
+    box-shadow: 0 0 0 4px rgba(3, 141, 242, 0.15);
+  }
+}
+
+.dropdown.attention .dropdown-btn {
+  animation: borderBlink 1.4s ease-in-out infinite;
+}
+
 /* ==============================
    FOOTER MOBILE
 ============================== */
