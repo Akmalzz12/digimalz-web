@@ -321,6 +321,7 @@ Object.keys(DATA).forEach(sm => {
     selectedSM = sm;
     smSelected.innerHTML = `<img src="${DATA[sm].icon}" alt="${sm}" class="sm-icon"> ${sm}`;
     smDropdown.classList.remove("open");
+    smDropdown.classList.remove("attention");
 
     svDropdown.classList.remove("locked");
 
