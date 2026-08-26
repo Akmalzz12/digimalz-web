@@ -324,6 +324,7 @@ Object.keys(DATA).forEach(sm => {
     smDropdown.classList.remove("attention");
 
     svDropdown.classList.remove("locked");
+    svDropdown.classList.add("attention");
 
     selectedService = null;
     svSelected.textContent = "Pilih Layanan";
@@ -348,6 +349,7 @@ Object.keys(DATA).forEach(sm => {
           ? `<img src="${serviceIcon}" alt="${sv}" class="sm-icon"> ${sv}`
           : sv;
         svDropdown.classList.remove("open");
+      svDropdown.classList.remove("attention");
         qtyStepper.classList.remove("locked");
         referralApplied = false;
         referralInput.value = "";
