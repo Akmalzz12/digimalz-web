@@ -295,7 +295,7 @@ const DESCRIPTIONS = {
   },
 
   "Suntik Instagram": {
-    "Followers": [
+    "Folloers": [
       {
         type: "paragraph",
         text: "Mohon dibaca sebelum order!"
