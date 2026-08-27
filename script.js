@@ -67,172 +67,259 @@ const DATA = {
 // Deskripsi tiap layanan — terpisah dari data harga, nggak nyampur
 const DESCRIPTIONS = {
   "Aplikasi Premium": {
-    "Canva": {
-      paragraphs: [
-        "Canva Pro adalah versi premium Canva dengan akses fitur, template, elemen, dan aset eksklusif untuk membuat desain lebih mudah dan profesional.",
-      ],
-      benefits: [
-        "Akses Jutaan Template & Elemen",
-        "Akses Ribuan Font Menarik",
-        "Hapus Background Otomatis",
-        "Simpan Design Jernih"
-      ],
-      notes: [
-        "Catatan: proses menggunakan sistem invite email canva kamu."
-      ]
-    },
-    "Capcut": {
-      paragraphs: [
-        "CapCut Pro adalah versi premium CapCut dengan fitur editing lebih lengkap, efek dan template eksklusif, serta akses berbagai tools premium untuk membuat video lebih keren dan profesional."
-      ],
-      benefits: [
-        "Tidak Ada Iklan",
-        "Akses Efek, Font & Template Pro",
-        "Akses Tools AI",
-        "Hapus Watermark",
-        "Ekspor Video Kualitas Tinggi"
-      ],
-      notes: [
-        "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
-      ]
-    },
-    "Alight Motion": {
-      paragraphs: [
-        "Alight Motion Pro adalah versi premium Alight Motion dengan fitur editing lebih lengkap untuk membuat animasi, motion graphics, dan video profesional."
-      ],
-      benefits: [
-        "Tidak Ada Iklan",
-        "Akses Efek, Font & Template Pro",
-        "Akses Tools AI",
-        "Hapus Watermark",
-        "Ekspor Video Kualitas Tinggi"
-      ],
-      notes: [
-        "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
-      ]
-    },
-    "YouTube": {
-      paragraphs: [
-        "YouTube Premium adalah layanan berlangganan YouTube untuk menikmati video tanpa iklan, akses YouTube Music, serta fitur tambahan lainnya."
-      ],
-      benefits: [
-        "Tidak Ada Iklan",
-        "Putar Video Di latar Belakang",
-        "Kualitas Video Jernih",
-        "Download Video Untuk Offline"
-      ],
-      notes: [
-        "Catatan: Akun bisa dari pribadi, dan bisa dari admin"
-      ]
-    },
-    "Netflix": {
-      paragraphs: [
-        "Netflix Premium adalah layanan streaming untuk menikmati berbagai film, serial, dan tayangan eksklusif dengan kualitas tinggi."
-      ],
-      benefits: [
-        "Akses Film & Serial Lengkap",
-        "Tidak Ada Iklan",
-        "Kualitas Video Jernih",
-        "Support Semua Device"
-      ],
-      notes: [
-        "Catatan: Akun dari admin, tidak bisa pakai akun/email sendiri"
-      ]
-    },
-    "Vidio": {
-      paragraphs: [
-        "Vidio Premium adalah layanan berlangganan Vidio untuk menikmati berbagai konten premium, live streaming olahraga, film, serial, dan tayangan eksklusif."
-      ],
-      benefits: [
-        "Akses Konten Premium & Eksklusif",
-        "Live Streaming Olahraga Tertentu",
-        "Lebih Banyak Channel TV Lokal",
-        "Bisa Ditonton Di Berbagai Perangkat"
-      ],
-      notes: [
-        "Catatan: Bisa pakai akun pribadi"
-      ]
-    },
-    "Disney+": {
-      paragraphs: [
-        "Disney+ Premium adalah layanan streaming untuk menikmati film, serial, dan tayangan eksklusif dari Disney, Pixar, Marvel, Star Wars, dan lainnya."
-      ],
-      benefits: [
-        "Anti Screen Limit",
-        "Akses Konten Eksklusif",
-        "Kualitas Video Hingga 4K",
-        "Religion Indonesia Only"
-      ],
-      notes: [
-        "Catatan: Akun dari admin. Akun Sharing, Kamu mendapatkan 1 Slot Profil Pribadi"
-      ]
-    },
-    "Spotify": {
-      paragraphs: [
-        "Spotify Premium adalah layanan berlangganan Spotify untuk menikmati musik dan podcast tanpa iklan, download offline, serta fitur premium lainnya."
-      ],
-      benefits: [
-        "Tidak Ada Iklan",
-        "Pilih & Putar Lagu Bebas",
-        "Download Lagu Untuk Offline",
-        "Unlimited Skip"
-      ],
-      notes: [
-        "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
-      ]
-    },
-    "Getcontact": {
-      paragraphs: [
-        "Getcontact Premium adalah layanan berlangganan dengan fitur tambahan untuk membantu mengelola dan mengenali nomor telepon dengan lebih lengkap."
-      ],
-      benefits: [
-        "Tidak Ada Iklan",
-        "Identifikasi Nomor Lebih Lengkap",
-        "Lihat Tag Nomor",
-        "Lihat Siapa Yang Mencari Nomor Kamu",
-        "Fitur Pencarian Premium"
-      ],
-      notes: [
-        "Catatan: Sistem proses pakai nomor WhatsApp kamu."
-      ]
-    },
-    "ChatGPT": {
-      paragraphs: [
-        "ChatGPT Plus adalah paket premium ChatGPT dengan akses fitur dan model yang lebih lengkap untuk membantu berbagai kebutuhan, seperti belajar, bekerja, membuat konten, dan lainnya."
-      ],
-      benefits: [
-        "Akses Model AI Lebih Canggih",
-        "Batas Penggunaan Lebih Tinggi",
-        "Analisis File & Dokumen",
-        "Prioritas Saat Trafik Tinggi",
-        "Fitur AI Lebih Lengkap"
-      ],
-      notes: [
-        "Catatan: Sistem proses pakai email kamu."
-      ]
-    },
-    "Gemini": {
-      paragraphs: [
-        "Gemini Advanced adalah layanan AI premium dari Google dengan akses fitur AI yang lebih canggih untuk membantu menulis, belajar, membuat ide, menganalisis informasi, dan berbagai kebutuhan lainnya."
-      ],
-      benefits: [
-        "Akses Model AI Premium",
-        "Kemampuan Reasoning Lebih Canggih",
-        "Analisis File & Dokumen",
-        "Prioritas Saat Trafik Tinggi"
-      ],
-      notes: [
-        "Catatan: Sistem proses pakai email kamu."
-      ]
-    }
+    "Canva": [
+      {
+        type: "paragraph",
+        text: "Canva Pro adalah versi premium Canva dengan akses fitur, template, elemen, dan aset eksklusif untuk membuat desain lebih mudah dan profesional."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akses Jutaan Template & Elemen",
+          "Akses Ribuan Font Menarik",
+          "Hapus Background Otomatis",
+          "Simpan Design Jernih"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: proses menggunakan sistem invite email canva kamu."
+      }
+    ],
+
+    "Capcut": [
+      {
+        type: "paragraph",
+        text: "CapCut Pro adalah versi premium CapCut dengan fitur editing lebih lengkap, efek dan template eksklusif, serta akses berbagai tools premium untuk membuat video lebih keren dan profesional."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Tidak Ada Iklan",
+          "Akses Efek, Font & Template Pro",
+          "Akses Tools AI",
+          "Hapus Watermark",
+          "Ekspor Video Kualitas Tinggi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
+      }
+    ],
+
+    "Alight Motion": [
+      {
+        type: "paragraph",
+        text: "Alight Motion Pro adalah versi premium Alight Motion dengan fitur editing lebih lengkap untuk membuat animasi, motion graphics, dan video profesional."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Tidak Ada Iklan",
+          "Akses Efek, Font & Template Pro",
+          "Akses Tools AI",
+          "Hapus Watermark",
+          "Ekspor Video Kualitas Tinggi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
+      }
+    ],
+
+    "YouTube": [
+      {
+        type: "paragraph",
+        text: "YouTube Premium adalah layanan berlangganan YouTube untuk menikmati video tanpa iklan, akses YouTube Music, serta fitur tambahan lainnya."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Tidak Ada Iklan",
+          "Putar Video Di latar Belakang",
+          "Kualitas Video Jernih",
+          "Download Video Untuk Offline"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun bisa dari pribadi, dan bisa dari admin"
+      }
+    ],
+
+    "Netflix": [
+      {
+        type: "paragraph",
+        text: "Netflix Premium adalah layanan streaming untuk menikmati berbagai film, serial, dan tayangan eksklusif dengan kualitas tinggi."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akses Film & Serial Lengkap",
+          "Tidak Ada Iklan",
+          "Kualitas Video Jernih",
+          "Support Semua Device"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin, tidak bisa pakai akun/email sendiri"
+      }
+    ],
+
+    "Vidio": [
+      {
+        type: "paragraph",
+        text: "Vidio Premium adalah layanan berlangganan Vidio untuk menikmati berbagai konten premium, live streaming olahraga, film, serial, dan tayangan eksklusif."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akses Konten Premium & Eksklusif",
+          "Live Streaming Olahraga Tertentu",
+          "Lebih Banyak Channel TV Lokal",
+          "Bisa Ditonton Di Berbagai Perangkat"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Bisa pakai akun pribadi"
+      }
+    ],
+
+    "Disney+": [
+      {
+        type: "paragraph",
+        text: "Disney+ Premium adalah layanan streaming untuk menikmati film, serial, dan tayangan eksklusif dari Disney, Pixar, Marvel, Star Wars, dan lainnya."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Anti Screen Limit",
+          "Akses Konten Eksklusif",
+          "Kualitas Video Hingga 4K",
+          "Religion Indonesia Only"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin. Akun Sharing, Kamu mendapatkan 1 Slot Profil Pribadi"
+      }
+    ],
+
+    "Spotify": [
+      {
+        type: "paragraph",
+        text: "Spotify Premium adalah layanan berlangganan Spotify untuk menikmati musik dan podcast tanpa iklan, download offline, serta fitur premium lainnya."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Tidak Ada Iklan",
+          "Pilih & Putar Lagu Bebas",
+          "Download Lagu Untuk Offline",
+          "Unlimited Skip"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
+      }
+    ],
+
+    "Getcontact": [
+      {
+        type: "paragraph",
+        text: "Getcontact Premium adalah layanan berlangganan dengan fitur tambahan untuk membantu mengelola dan mengenali nomor telepon dengan lebih lengkap."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Tidak Ada Iklan",
+          "Identifikasi Nomor Lebih Lengkap",
+          "Lihat Tag Nomor",
+          "Lihat Siapa Yang Mencari Nomor Kamu",
+          "Fitur Pencarian Premium"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Sistem proses pakai nomor WhatsApp kamu."
+      }
+    ],
+
+    "ChatGPT": [
+      {
+        type: "paragraph",
+        text: "ChatGPT Plus adalah paket premium ChatGPT dengan akses fitur dan model yang lebih lengkap untuk membantu berbagai kebutuhan, seperti belajar, bekerja, membuat konten, dan lainnya."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akses Model AI Lebih Canggih",
+          "Batas Penggunaan Lebih Tinggi",
+          "Analisis File & Dokumen",
+          "Prioritas Saat Trafik Tinggi",
+          "Fitur AI Lebih Lengkap"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Sistem proses pakai email kamu."
+      }
+    ],
+
+    "Gemini": [
+      {
+        type: "paragraph",
+        text: "Gemini Advanced adalah layanan AI premium dari Google dengan akses fitur AI yang lebih canggih untuk membantu menulis, belajar, membuat ide, menganalisis informasi, dan berbagai kebutuhan lainnya."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akses Model AI Premium",
+          "Kemampuan Reasoning Lebih Canggih",
+          "Analisis File & Dokumen",
+          "Prioritas Saat Trafik Tinggi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Sistem proses pakai email kamu."
+      }
+    ]
+
+    // tambahin layanan lain dengan format yang sama
   },
+
   "Suntik Instagram": {
-    "Folloers": {
-      paragraphs: [
-        "Followers real dan aktif, diproses bertahap secara natural biar aman buat kesehatan akun Instagram lo."
-      ]
-    }
+    "Followers": [
+      {
+        type: "paragraph",
+        text: "Mohon dibaca sebelum order!"
+      },
+      {
+        type: "paragraph",
+        text: "Followers dengan akun campuran dari berbagai negara, memiliki tingkat drop/penurunan 1-5%, dapat di refill sesuai jumlah yang turun selama seumur hidup (Garansi lifetime)"
+      },
+      {
+        type: "benefits",
+        items: [
+          "Hight Quality Account",
+          "Refill Lifetime",
+          "Proses Instant"
+        ]
+      },
+      {
+        type: "paragraph",
+        text: "Apabila ingin order yang full akun Indonesia, tidak drop, kualitas real. Silahkan hubungi admin tanpa isi form"
+      }
+    ]
   }
+
+  // tambahin kategori/layanan lain kalau perlu
 };
 
 let selectedSM = null;
