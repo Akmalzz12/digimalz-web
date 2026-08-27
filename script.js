@@ -225,7 +225,6 @@ const DESCRIPTIONS = {
         "Catatan: Sistem proses pakai email kamu."
       ]
     }
-    // tambahin layanan lain dengan format sama
   },
   "Suntik Instagram": {
     "Folloers": {
@@ -234,17 +233,11 @@ const DESCRIPTIONS = {
       ]
     }
   }
-  // tambahin kategori/layanan lain kalau perlu
 };
-
-const REFERRAL_CODE = ""; // ganti kode referral lo
-const REFERRAL_DISCOUNT = 2000; // potongan nominal
-const MIN_ORDER_FOR_DISCOUNT = 10000; // syarat minimal biar kode bisa dipakai
 
 let selectedSM = null;
 let selectedService = null;
 let qty = null;
-let referralApplied = false;
 
 const smBtn = document.getElementById("smBtn");
 const smSelected = document.getElementById("smSelected");
@@ -264,8 +257,6 @@ const plusBtn = document.getElementById("plusBtn");
 const priceValue = document.getElementById("priceValue");
 const waBtn = document.getElementById("waBtn");
 const toast = document.getElementById("toast");
-const referralInput = document.getElementById("referralInput");
-const applyReferralBtn = document.getElementById("applyReferralBtn");
 const descBox = document.getElementById("descBox");
 const descText = document.getElementById("descText");
 
@@ -299,7 +290,6 @@ function formatQtyDisplay() {
   qtyValue.textContent = unit === "bulan" ? `${qty} Bulan` : qty;
 }
 
-// bangun HTML deskripsi dari paragraphs, benefits, dan notes
 function renderDescription(desc) {
   if (!desc) return "";
   const paragraphsHTML = (desc.paragraphs || [])
@@ -333,8 +323,6 @@ Object.keys(DATA).forEach(sm => {
     qty = null;
     qtyValue.textContent = "-";
     qtyLabel.textContent = DATA[sm].unit === "bulan" ? "Pilih Durasi" : "Tentukan Jumlah";
-    referralApplied = false;
-    referralInput.value = "";
     descBox.style.display = "none";
 
     Object.keys(DATA[sm].services).forEach(sv => {
@@ -349,10 +337,8 @@ Object.keys(DATA).forEach(sm => {
           ? `<img src="${serviceIcon}" alt="${sv}" class="sm-icon"> ${sv}`
           : sv;
         svDropdown.classList.remove("open");
-      svDropdown.classList.remove("attention");
+        svDropdown.classList.remove("attention");
         qtyStepper.classList.remove("locked");
-        referralApplied = false;
-        referralInput.value = "";
 
         const desc = DESCRIPTIONS[selectedSM]?.[sv];
         if (desc) {
@@ -423,47 +409,10 @@ minusBtn.addEventListener("click", () => {
   }
 });
 
-applyReferralBtn.addEventListener("click", () => {
-  if (!selectedSM || !selectedService || qty === null) {
-    showToast("Pilih layanan & jumlah dulu sebelum pakai kode");
-    return;
-  }
-  applyReferralCode(referralInput.value);
-});
-
-function applyReferralCode(inputCode) {
-  const trimmedCode = inputCode.trim();
-
-  if (trimmedCode === "") {
-    showToast("Masukkan kode referral terlebih dahulu");
-    return;
-  }
-
-  const priceTable = getPriceTable(selectedSM, selectedService);
-  const total = priceTable[qty] ?? 0;
-
-  if (trimmedCode.toUpperCase() !== REFERRAL_CODE) {
-    showToast("Kode referral tidak valid");
-    return;
-  }
-  if (total < MIN_ORDER_FOR_DISCOUNT) {
-    showToast(`Minimal order Rp${MIN_ORDER_FOR_DISCOUNT.toLocaleString("id-ID")} untuk pakai kode ini`);
-    return;
-  }
-  referralApplied = true;
-  showToast("Kode referral berhasil dipakai!");
-  updatePrice();
-}
-
 function updatePrice() {
   if (selectedSM && selectedService && qty !== null) {
     const priceTable = getPriceTable(selectedSM, selectedService);
-    let total = priceTable[qty] ?? 0;
-
-    if (referralApplied && total >= MIN_ORDER_FOR_DISCOUNT) {
-      total = total - REFERRAL_DISCOUNT;
-    }
-
+    const total = priceTable[qty] ?? 0;
     priceValue.textContent = "Rp" + total.toLocaleString("id-ID");
     waBtn.disabled = total <= 0;
   } else {
@@ -475,15 +424,11 @@ function updatePrice() {
 waBtn.addEventListener("click", () => {
   if (!selectedSM || !selectedService || qty === null) return;
   const priceTable = getPriceTable(selectedSM, selectedService);
-  let total = priceTable[qty] ?? 0;
-  if (referralApplied && total >= MIN_ORDER_FOR_DISCOUNT) {
-    total = total - REFERRAL_DISCOUNT;
-  }
+  const total = priceTable[qty] ?? 0;
   if (total <= 0) return;
   const totalFormatted = "Rp" + total.toLocaleString("id-ID");
   const unit = DATA[selectedSM].unit;
   const jumlahLine = unit === "bulan" ? `Durasi: ${qty} Bulan` : `Jumlah: ${qty}`;
-  const referralLine = referralApplied ? `\nKode Referral: ${REFERRAL_CODE} (potongan Rp${REFERRAL_DISCOUNT.toLocaleString("id-ID")})` : "";
 
   const message =
 `Halo Digimalz, saya mau order:
@@ -491,7 +436,7 @@ waBtn.addEventListener("click", () => {
 Sosial Media/Kategori: ${selectedSM}
 Layanan: ${selectedService}
 ${jumlahLine}
-Total Harga: ${totalFormatted}${referralLine}
+Total Harga: ${totalFormatted}
 
 Mohon info lebih lanjut. Terima kasih!`;
 
@@ -507,47 +452,36 @@ const noticeContent = document.querySelector(".notice-content");
 
 const noticeMessages = [
   "Wellcome to Digimalz.id! 🎉 Pesan layanan produk digital dengan mudah dan cepat.",
-  "Setiap hari Jum'at kami akan memberikan kode referral untuk mendapatkan potongan harga!",
   "Mau order dengan jumlah yang lebih banyak dari yang ada di website? silahkan klik icon WhatsApp yang ada di bawah kanan"
 ];
 
 let noticeIndex = 0;
 
 function runNotice() {
-  // Hapus teks sebelumnya
   noticeContent.innerHTML = "";
 
-  // Buat elemen teks
   const text = document.createElement("div");
   text.className = "notice-js";
   text.textContent = noticeMessages[noticeIndex];
 
   noticeContent.appendChild(text);
 
-  // Tunggu browser menghitung ukuran teks
   requestAnimationFrame(() => {
     const containerWidth = noticeContent.offsetWidth;
     const textWidth = text.offsetWidth;
 
-    // Mulai dari luar kanan
     let position = containerWidth;
-
-    // Kecepatan pixel per frame
     const speed = 1;
 
     function moveText() {
       position -= speed;
-
       text.style.transform = `translateX(${position}px)`;
 
-      // Kalau SELURUH teks sudah keluar melewati sisi kiri
       if (position < -textWidth) {
         noticeIndex++;
-
         if (noticeIndex >= noticeMessages.length) {
           noticeIndex = 0;
         }
-
         runNotice();
         return;
       }
@@ -559,7 +493,6 @@ function runNotice() {
   });
 }
 
-// Jalankan setelah halaman selesai dimuat
 window.addEventListener("load", () => {
   runNotice();
 });
@@ -586,9 +519,7 @@ function closeMenu() {
 }
 
 menuBtn.addEventListener("click", openMenu);
-
 menuClose.addEventListener("click", closeMenu);
-
 menuOverlay.addEventListener("click", closeMenu);
 
 document.addEventListener("keydown", (e) => {
@@ -645,6 +576,10 @@ testiNext.addEventListener("click", () => {
 
 renderTesti();
 
+// ============================================================
+// BANNER SLIDER
+// ============================================================
+
 const bannerBox = document.querySelector(".banner-box");
 const bannerTrack = document.querySelector(".banner-track");
 const bannerImages = document.querySelectorAll(".banner-track img");
@@ -658,131 +593,68 @@ let isDragging = false;
 
 if (bannerTrack && bannerImages.length > 0) {
 
-  /* ==============================
-     UPDATE BANNER
-  ============================== */
-
   function updateBanner() {
     bannerTrack.style.transition = "transform 0.5s ease";
-
-    bannerTrack.style.transform =
-      `translateX(-${bannerIndex * 100}%)`;
+    bannerTrack.style.transform = `translateX(-${bannerIndex * 100}%)`;
   }
-
-
-  /* ==============================
-     AUTO SLIDE
-  ============================== */
 
   function startBannerTimer() {
     bannerTimer = setInterval(() => {
-
       bannerIndex++;
-
       if (bannerIndex >= bannerImages.length) {
         bannerIndex = 0;
       }
-
       updateBanner();
-
     }, 5000);
   }
-
 
   function stopBannerTimer() {
     clearInterval(bannerTimer);
   }
-
 
   function restartBannerTimer() {
     stopBannerTimer();
     startBannerTimer();
   }
 
-
-  /* ==============================
-     TOUCH / SWIPE
-  ============================== */
-
   bannerBox.addEventListener("touchstart", (e) => {
-
     stopBannerTimer();
-
     startX = e.touches[0].clientX;
     currentX = startX;
-
     isDragging = true;
-
     bannerTrack.style.transition = "none";
-
   }, { passive: true });
-
 
   bannerBox.addEventListener("touchmove", (e) => {
-
     if (!isDragging) return;
-
     currentX = e.touches[0].clientX;
-
     const moveX = currentX - startX;
-
-    const offset =
-      -(bannerIndex * 100) +
-      (moveX / bannerBox.offsetWidth) * 100;
-
-    bannerTrack.style.transform =
-      `translateX(${offset}%)`;
-
+    const offset = -(bannerIndex * 100) + (moveX / bannerBox.offsetWidth) * 100;
+    bannerTrack.style.transform = `translateX(${offset}%)`;
   }, { passive: true });
 
-
   bannerBox.addEventListener("touchend", () => {
-
     if (!isDragging) return;
-
     const moveX = currentX - startX;
+    bannerTrack.style.transition = "transform 0.5s ease";
 
-    bannerTrack.style.transition =
-      "transform 0.5s ease";
-
-
-    /* Swipe kiri */
     if (moveX < -50) {
       bannerIndex++;
-    }
-
-
-    /* Swipe kanan */
-    else if (moveX > 50) {
+    } else if (moveX > 50) {
       bannerIndex--;
     }
 
-
-    /* Jika melewati banner terakhir */
     if (bannerIndex >= bannerImages.length) {
       bannerIndex = 0;
     }
-
-
-    /* Jika swipe dari banner pertama ke kanan */
     if (bannerIndex < 0) {
       bannerIndex = bannerImages.length - 1;
     }
 
-
     updateBanner();
-
     isDragging = false;
-
     restartBannerTimer();
-
   });
 
-
-  /* ==============================
-     MULAI AUTO SLIDE
-  ============================== */
-
   startBannerTimer();
-
 }
