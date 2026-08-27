@@ -498,16 +498,6 @@ body {
   margin-bottom: 0;
 }
 
-.benefit-list {
-  margin: 0 0 14px;
-  padding-left: 20px;
-  line-height: 1.8;
-}
-
-.benefit-list:last-child {
-  margin-bottom: 0;
-}
-
 .desc-note {
   margin-top: 14px !important;
   padding-top: 12px;
