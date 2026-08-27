@@ -290,18 +290,25 @@ function formatQtyDisplay() {
   qtyValue.textContent = unit === "bulan" ? `${qty} Bulan` : qty;
 }
 
+// bangun HTML deskripsi sesuai urutan yang ditentukan
 function renderDescription(desc) {
   if (!desc) return "";
-  const paragraphsHTML = (desc.paragraphs || [])
-    .map(p => `<p>${p}</p>`)
-    .join("");
-  const benefitsHTML = desc.benefits && desc.benefits.length
-    ? `<ul class="benefit-list">${desc.benefits.map(b => `<li>${b}</li>`).join("")}</ul>`
-    : "";
-  const notesHTML = (desc.notes || [])
-    .map(n => `<p class="desc-note">${n}</p>`)
-    .join("");
-  return paragraphsHTML + benefitsHTML + notesHTML;
+
+  return desc.map(item => {
+    if (item.type === "paragraph") {
+      return `<p>${item.text}</p>`;
+    }
+
+    if (item.type === "benefits") {
+      return `<ul class="benefit-list">${item.items.map(b => `<li>${b}</li>`).join("")}</ul>`;
+    }
+
+    if (item.type === "note") {
+      return `<p class="desc-note">${item.text}</p>`;
+    }
+
+    return "";
+  }).join("");
 }
 
 Object.keys(DATA).forEach(sm => {
