@@ -315,7 +315,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "note",
-        text: "Proses hanya menggunakan username sosmed."
+        text: "Proses hanya menggunakan username sosmed | Tingkat drop/penurunan setiap akun berbeda-beda, dan tergantung dari Instagram nya juga sedang ketat atau tidak."
       }
     ]
   }
