@@ -302,7 +302,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: "Pastikan akun tidak di privat, dilarang keras untuk mengganti username saat proses sedang berlangsung, dan sudah menonaktifkan fitur "Laporkan untuk ditinjau"."
+        text: 'Pastikan akun tidak di privat, dilarang keras untuk mengganti username saat proses sedang berlangsung, dan sudah menonaktifkan fitur "Laporkan untuk ditinjau".'
       },
       {
         type: "benefits",
