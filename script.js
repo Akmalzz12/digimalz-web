@@ -109,6 +109,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -130,6 +134,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -150,6 +158,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Akun bisa dari pribadi, dan bisa dari admin"
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -170,6 +182,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Akun dari admin, tidak bisa pakai akun/email sendiri"
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -190,6 +206,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Bisa pakai akun pribadi"
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -210,6 +230,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Akun dari admin. Akun Sharing, Kamu mendapatkan 1 Slot Profil Pribadi"
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -230,6 +254,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -251,6 +279,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Sistem proses pakai nomor WhatsApp kamu."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -272,6 +304,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Sistem proses pakai email kamu."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -292,6 +328,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Sistem proses pakai email kamu."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ]
 
