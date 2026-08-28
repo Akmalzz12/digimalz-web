@@ -84,6 +84,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: proses menggunakan sistem invite email canva kamu."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda        dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
