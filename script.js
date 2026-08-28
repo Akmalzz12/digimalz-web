@@ -87,7 +87,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda        dianggap sudah memahami <a href="sk.html" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda        dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -112,7 +112,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -137,7 +137,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -161,7 +161,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -185,7 +185,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -209,7 +209,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -233,7 +233,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -257,7 +257,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -282,7 +282,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -307,7 +307,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -331,7 +331,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ]
 
@@ -363,7 +363,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -391,7 +391,7 @@ const DESCRIPTIONS = {
     },
     {
       type: "paragraph",
-      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
     }
   ]
 }
