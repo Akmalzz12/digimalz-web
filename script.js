@@ -338,7 +338,7 @@ const DESCRIPTIONS = {
         "Akun Indonesia Bot",
         "Proses Instant",
         "Drop/Turun 1-5%",
-        "Hight Quality
+        "Hight Quality"
       ]
     },
     {
