@@ -295,26 +295,27 @@ const DESCRIPTIONS = {
   },
 
   "Suntik Instagram": {
-    "Folloers": [
+    "Followers": [
       {
         type: "paragraph",
         text: "Mohon dibaca sebelum order!"
       },
       {
         type: "paragraph",
-        text: "Followers dengan akun campuran dari berbagai negara, memiliki tingkat drop/penurunan 1-5%, dapat di refill sesuai jumlah yang turun selama seumur hidup (Garansi lifetime)"
+        text: "Pastikan akun tidak di privat, dilarang keras untuk mengganti username saat proses sedang berlangsung, dan sudah menonaktifkan fitur "Laporkan untuk ditinjau"."
       },
       {
         type: "benefits",
         items: [
-          "Hight Quality Account",
-          "Refill Lifetime",
+          "Mix Account With Post",
+          "Drop/Turun 1-3%",
+          "Refill 60 Days",
           "Proses Instant"
         ]
       },
       {
-        type: "paragraph",
-        text: "Apabila ingin order yang full akun Indonesia, tidak drop, kualitas real. Silahkan hubungi admin tanpa isi form"
+        type: "note",
+        text: "Proses hanya menggunakan username sosmed."
       }
     ]
   }
