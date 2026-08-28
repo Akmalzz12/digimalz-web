@@ -471,12 +471,12 @@ body {
   list-style: none;
   margin: 0 0 12px;
   padding: 0;
-  line-height: 1.8;
+  line-height: 1;
 }
 
 .benefit-list li {
   position: relative;
-  padding-left: 10px;
+  padding-left: 15px;
   margin-bottom: 2px;
 }
 
