@@ -316,6 +316,10 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Proses hanya menggunakan username sosmed | Tingkat drop/penurunan setiap akun berbeda-beda, dan tergantung dari Instagram nya juga sedang ketat atau tidak."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="https://digimalz.my.id/syarat-ketentuan" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ]
   }
