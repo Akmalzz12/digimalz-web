@@ -393,6 +393,34 @@ const DESCRIPTIONS = {
       type: "paragraph",
       text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
     }
+  ],
+
+ "Komentar": [
+    {
+      type: "paragraph",
+      text: "Mohon dibaca sebelum order!"
+    },
+    {
+      type: "paragraph",
+      text: 'Pastikan akun tidak di privat dan postingan dapat diakses secara publik. Jangan menghapus postingan selama proses sedang berlangsung.'
+    },
+    {
+      type: "benefits",
+      items: [
+        "Real Akun Indonesia Buzzer",
+        "Proses Instant",
+        "Non Drop/Tidak Turun",
+        "Hight Quality"
+      ]
+    },
+    {
+      type: "note",
+      text: "Proses hanya menggunakan link postingan Instagram | Proses pengerjaan dikerjakan manual satu-persatu oleh tim buzzer kami, jadi komentar bersifat real, bukan auto komen bot."
+    },
+    {
+      type: "paragraph",
+      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+    }
   ]
 }
   // tambahin kategori/layanan lain kalau perlu
