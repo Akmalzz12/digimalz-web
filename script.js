@@ -407,15 +407,15 @@ const DESCRIPTIONS = {
     {
       type: "benefits",
       items: [
-        "Real Akun Indonesia Buzzer",
-        "Proses Instant",
+        "Komentar 100% sesuai script kamu",
+        "Dikerjakan manual oleh akun real, bukan bot",
         "Non Drop/Tidak Turun",
-        "Hight Quality"
+        "Cocok untuk campaign, testimoni, soft-selling, atau membangun percakapan terarah."
       ]
     },
     {
       type: "note",
-      text: "Proses hanya menggunakan link postingan Instagram | Proses pengerjaan dikerjakan manual satu-persatu oleh tim buzzer kami, jadi komentar bersifat real, bukan auto komen bot."
+      text: "Proses hanya menggunakan link postingan Instagram."
     },
     {
       type: "paragraph",
