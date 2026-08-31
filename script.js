@@ -8,7 +8,7 @@ const DATA = {
     services: {
       "Canva": { icon: "icon/canva.png", prices: { 1: 2500, 2: 5000, 3: 7000 } },
       "Capcut": { icon: "icon/capcut.png", prices: { 1: 37000, 2: 74000, 3: 111000 } },
-      "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000, 2: 10000, 3: 15000 } },
+      "Alight Motion": { icon: "icon/am.png", prices: { 10: 5000 } },
       "YouTube": { icon: "icon/yt.png", prices: { 1: 5000, 2: 10000, 3: 15000 } },
       "Netflix": { icon: "icon/netflix.png", prices: { 1: 25000, 2: 50000, 3: 75000 } },
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
