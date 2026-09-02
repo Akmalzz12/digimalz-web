@@ -355,19 +355,19 @@ const DESCRIPTIONS = {
     },
     {
       type: "paragraph",
-      text: "Nomor kosong WhatsApp siap digunakan untuk berbagai kebutuhan."
+      text: "Layanan ini menyediakan nomor virtual yang khusus digunakan untuk WhatsApp. Nomor bersifat virtual dan tidak berupa kartu SIM fisik."
     },
     {
       type: "benefits",
       items: [
-        "Nomor Baru",
-        "Siap Digunakan",
-        "Proses Cepat"
+        "Nomor Baru/Fresh",
+        "Proses Cepat",
+        "Langsung bisa digunakan"
       ]
     },
     {
       type: "note",
-      text: "Catatan: Detail nomor akan diberikan setelah proses order selesai."
+      text: "Catatan: Kode OTP hanya bisa di request 1x, jika nomor ter-logout dari WhatsApp maka tidak bisa req OTP lagi!."
     },
     {
       type: "paragraph",
