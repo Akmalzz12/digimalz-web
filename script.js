@@ -347,6 +347,35 @@ const DESCRIPTIONS = {
     // tambahin layanan lain dengan format yang sama
   },
 
+ "Nokos WhatsApp": {
+  "Nomor Indonesia": [
+    {
+      type: "paragraph",
+      text: "Mohon dibaca sebelum order!"
+    },
+    {
+      type: "paragraph",
+      text: "Nomor kosong WhatsApp siap digunakan untuk berbagai kebutuhan."
+    },
+    {
+      type: "benefits",
+      items: [
+        "Nomor Baru",
+        "Siap Digunakan",
+        "Proses Cepat"
+      ]
+    },
+    {
+      type: "note",
+      text: "Catatan: Detail nomor akan diberikan setelah proses order selesai."
+    },
+    {
+      type: "paragraph",
+      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+    }
+  ]
+},
+
   "Suntik Instagram": {
     "Followers": [
       {
