@@ -26,7 +26,8 @@ const DATA = {
     "Nomor Kosong": {
       1: 10000
     }
-  },
+  }
+},
   "Suntik Instagram": {
     icon: "icon/ig.png",
     services: {
