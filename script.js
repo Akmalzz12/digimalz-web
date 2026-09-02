@@ -19,7 +19,7 @@ const DATA = {
       "Gemini": { icon: "icon/gemini.png", prices: { 1: 18000, 2: 36000, 3: 54000 } }
     }
   },
-  "Nomor Kosong WhatsApp": {
+  "Nokos WhatsApp": {
   icon: "icon/wa.png",
   unit: "nomor",
   services: {
