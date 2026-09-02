@@ -360,6 +360,7 @@ const DESCRIPTIONS = {
     {
       type: "benefits",
       items: [
+        "Operator Random",
         "Nomor Baru/Fresh",
         "Proses Cepat",
         "Langsung bisa digunakan"
