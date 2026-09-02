@@ -367,7 +367,7 @@ const DESCRIPTIONS = {
     },
     {
       type: "note",
-      text: "Catatan: Kode OTP hanya bisa di request 1x, jika nomor ter-logout dari WhatsApp maka tidak bisa req OTP lagi!."
+      text: "Catatan: Kode OTP hanya bisa di request 1x, jika nomor ter-logout dari WhatsApp maka tidak bisa req OTP lagi!, jadi harap bijak dalam menggunakan nomor virtual tersebut, jangan spam chat saat nomor baru aktif."
     },
     {
       type: "paragraph",
