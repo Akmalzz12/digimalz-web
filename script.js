@@ -23,7 +23,7 @@ const DATA = {
   icon: "icon/wa.png",
   unit: "nomor",
   services: {
-    "Nomor Kosong": {
+    "Nomor Indonesia": {
       1: 10000
     }
   }
