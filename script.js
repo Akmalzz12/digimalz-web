@@ -81,7 +81,6 @@ const DATA = {
       }
     }
   }
-};
 }; ============================================================
 
 // Deskripsi tiap layanan — terpisah dari data harga, nggak nyampur
