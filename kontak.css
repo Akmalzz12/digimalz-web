@@ -254,12 +254,12 @@ body {
 }
 
 .hours-row span {
-  font-size: 11px;
+  font-size: 13px;
   color: #8492A6;
 }
 
 .hours-row strong {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: #038DF2;
   white-space: nowrap;
