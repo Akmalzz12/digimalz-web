@@ -71,7 +71,6 @@ const DATA = {
 
   "Google Maps": {
     icon: "icon/gmaps.png",
-    unit: "review",
     services: {
       "Review Bintang 5": {
         10: 30000,
