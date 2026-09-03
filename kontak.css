@@ -271,6 +271,9 @@ body {
   white-space: nowrap;
 }
 
+.hours-row strong.closed {
+  color: #FF3B30;
+}
 
 /* ==============================
    RESPONSIVE
