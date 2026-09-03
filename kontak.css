@@ -214,6 +214,57 @@ body {
   margin-left: auto;
 }
 
+/* ==============================
+   JAM OPERASIONAL
+============================== */
+
+.operational-hours {
+  width: 100%;
+  margin-top: 16px;
+  padding: 16px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.hours-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #10151C;
+}
+
+.hours-title span {
+  font-size: 18px;
+}
+
+.hours-title strong {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hours-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #EEF2F6;
+}
+
+.hours-row span {
+  font-size: 11px;
+  color: #8492A6;
+}
+
+.hours-row strong {
+  font-size: 11px;
+  font-weight: 600;
+  color: #038DF2;
+  white-space: nowrap;
+}
+
 
 /* ==============================
    RESPONSIVE
