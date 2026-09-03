@@ -498,7 +498,7 @@ const DESCRIPTIONS = {
         "Riview Sesuai Script",
         "Pengerjaan Manual, Bukan Bot",
         "Permanen/No Drop",
-        "Cocok untuk bisnis, restoran, jasa, klinik, toko, kantor, dan usaha lokal lainnya.
+        "Cocok untuk bisnis, restoran, jasa, klinik, toko, kantor, dan usaha lokal lainnya."
       ]
     },
     {
