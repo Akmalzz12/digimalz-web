@@ -507,6 +507,34 @@ const DESCRIPTIONS = {
       type: "paragraph",
       text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
     }
+   ],
+
+    "Random Review Bintang 5": [
+    {
+      type: "paragraph",
+      text: "Mohon dibaca sebelum order!"
+    },
+    {
+      type: "paragraph",
+      text: "Layanan ini menyediakan nomor virtual yang khusus digunakan untuk WhatsApp. Nomor bersifat virtual dan tidak berupa kartu SIM fisik."
+    },
+    {
+      type: "benefits",
+      items: [
+        "Operator Random",
+        "Nomor Baru/Fresh",
+        "Proses Cepat",
+        "Langsung bisa digunakan"
+      ]
+    },
+    {
+      type: "note",
+      text: "Catatan: Kode OTP hanya bisa di request 1x, jika nomor ter-logout dari WhatsApp maka tidak bisa req OTP lagi! - jadi harap bijak dalam menggunakan nomor virtual tersebut, jangan langsung spam chat saat nomor baru aktif."
+    },
+    {
+      type: "paragraph",
+      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+    }
   ]
 },
   // tambahin kategori/layanan lain kalau perlu
