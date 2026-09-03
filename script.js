@@ -67,11 +67,22 @@ const DATA = {
       "Likes": { 100: 2000, 200: 4000, 300: 6000, 400: 8000, 500: 10000, 1000: 15000, 2000: 30000, 3000: 45000, 4000: 60000, 5000: 75000 },
       "Views": { 1000: 2000, 2000: 4000, 3000: 6000, 4000: 8000, 5000: 10000, 6000: 12000, 7000: 14000, 8000: 16000, 9000: 18000, 10000: 20000 }
     }
+  },
+  "Google Maps": {
+    icon: "icon/gmaps.png",
+    unit: "review",
+    services: {
+      "Review Bintang 5": {
+        10: 30000,
+        20: 60000,
+        30: 90000,
+        40: 120000,
+        50: 150000
+      }
+    }
   }
 };
-// Belum ada gambar pricelist utk Instagram Views, TikTok Komentar, Shopee Views, X/Twitter Komentar.
-// Siapin file icon aplikasi (canva.png, capcut.png, dst) di folder icon/.
-// ============================================================
+}; ============================================================
 
 // Deskripsi tiap layanan — terpisah dari data harga, nggak nyampur
 const DESCRIPTIONS = {
