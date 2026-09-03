@@ -527,10 +527,6 @@ const DESCRIPTIONS = {
       ]
     },
     {
-      type: "note",
-      text: "Catatan: Kode OTP hanya bisa di request 1x, jika nomor ter-logout dari WhatsApp maka tidak bisa req OTP lagi! - jadi harap bijak dalam menggunakan nomor virtual tersebut, jangan langsung spam chat saat nomor baru aktif."
-    },
-    {
       type: "paragraph",
       text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
     }
