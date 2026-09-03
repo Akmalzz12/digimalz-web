@@ -68,7 +68,7 @@ const DATA = {
       "Views": { 1000: 2000, 2000: 4000, 3000: 6000, 4000: 8000, 5000: 10000, 6000: 12000, 7000: 14000, 8000: 16000, 9000: 18000, 10000: 20000 }
     }
   },
-  "Google Maps": {
+  "Google Maps Riview": {
   icon: "icon/gmaps.png",
   services: {
     "Custom Review Bintang 5": {
