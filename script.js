@@ -480,6 +480,7 @@ const DESCRIPTIONS = {
     }
   ]
 },
+
   "Google Maps Riview": {
   "Custom Review Bintang 5": [
     {
@@ -488,20 +489,17 @@ const DESCRIPTIONS = {
     },
     {
       type: "paragraph",
-      text: "Layanan ini menyediakan nomor virtual yang khusus digunakan untuk WhatsApp. Nomor bersifat virtual dan tidak berupa kartu SIM fisik."
+      text: "Layanan penambahan rating ⭐5 + Custom riview yang dikerjakan manual oleh tim buzzer kami. Akun riview bersifat real bukan bot - Setiap review mengikuti teks/script yang kamu berikan agar terlihat natural dan sesuai kebutuhan bisnis."
     },
     {
       type: "benefits",
       items: [
-        "Operator Random",
-        "Nomor Baru/Fresh",
-        "Proses Cepat",
-        "Langsung bisa digunakan"
+        "Akun Real Indonesia",
+        "Riview Sesuai Script",
+        "Pengerjaan Manual, Bukan Bot",
+        "Permanen/No Drop",
+        "Cocok untuk bisnis, restoran, jasa, klinik, toko, kantor, dan usaha lokal lainnya.
       ]
-    },
-    {
-      type: "note",
-      text: "Catatan: Kode OTP hanya bisa di request 1x, jika nomor ter-logout dari WhatsApp maka tidak bisa req OTP lagi! - jadi harap bijak dalam menggunakan nomor virtual tersebut, jangan langsung spam chat saat nomor baru aktif."
     },
     {
       type: "paragraph",
