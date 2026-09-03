@@ -514,15 +514,16 @@ const DESCRIPTIONS = {
     },
     {
       type: "paragraph",
-      text: "Layanan ini menyediakan nomor virtual yang khusus digunakan untuk WhatsApp. Nomor bersifat virtual dan tidak berupa kartu SIM fisik."
+      text: "Layanan penambahan rating ⭐5 + Riview positif acak yang dikerjakan manual oleh tim buzzer kami. Akun riview bersifat real bukan bot - Komentar menggunakan variasi natural yang tetap relevan agar tidak terlihat dibuat-buat."
     },
     {
       type: "benefits",
       items: [
-        "Operator Random",
-        "Nomor Baru/Fresh",
-        "Proses Cepat",
-        "Langsung bisa digunakan"
+        "Akun Real Indonesia",
+        "Komentar Positif Random",
+        "Pengerjaan Manual, Bukan Bot",
+        "Permanen/No Drop",
+        "Cocok untuk bisnis, restoran, jasa, klinik, toko, kantor, dan usaha lokal lainnya."
       ]
     },
     {
