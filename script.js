@@ -272,6 +272,7 @@ const DESCRIPTIONS = {
       {
         type: "benefits",
         items: [
+          "Paket Indplan",
           "Tidak Ada Iklan",
           "Pilih & Putar Lagu Bebas",
           "Download Lagu Untuk Offline",
