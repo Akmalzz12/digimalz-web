@@ -1,0 +1,445 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ==============================
+   BODY
+============================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #EAF2FB;
+  color: #10151C;
+  min-height: 100vh;
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  background: #FFFFFF;
+  color: #008af7;
+  z-index: 9999;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==============================
+   JUDUL NAVBAR
+============================== */
+
+.contact-navbar h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #008af7;
+  white-space: nowrap;
+}
+
+
+/* ==============================
+   TOMBOL BACK
+============================== */
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #008af7;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.back-btn:hover {
+  opacity: 0.7;
+}
+
+.back-btn:active {
+  transform: scale(0.88);
+}
+
+/* ==============================
+   HALAMAN SARAN
+============================== */
+
+.saran-page {
+  width: 90%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 30px 0 50px;
+}
+
+
+/* ==============================
+   HERO SARAN
+============================== */
+
+.saran-hero {
+  width: 100%;
+  padding: 28px 22px 26px;
+  background: #008af7;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(3, 141, 242, 0.18);
+}
+
+
+/* ICON */
+
+.saran-hero-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 14px;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+}
+
+.saran-hero-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #FFFFFF;
+}
+
+
+/* JUDUL */
+
+.saran-hero h2 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+}
+
+
+/* DESKRIPSI */
+
+.saran-hero p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto;
+  max-width: 330px;
+}
+
+/* ==============================
+   CARD FORM
+============================== */
+
+.saran-card {
+  width: 100%;
+  padding: 20px;
+
+  background: #FFFFFF;
+  border-radius: 18px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==============================
+   FORM GROUP
+============================== */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #10151C;
+}
+
+.form-group label span {
+  font-size: 10.5px;
+  font-weight: 400;
+  color: #9AA6B5;
+}
+
+
+/* ==============================
+   INPUT
+============================== */
+
+.input-wrapper,
+.textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper svg,
+.textarea-wrapper svg {
+  position: absolute;
+
+  left: 13px;
+  top: 50%;
+
+  width: 18px;
+  height: 18px;
+
+  color: #9AA6B5;
+
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 47px;
+
+  padding: 0 13px 0 42px;
+
+  border: 1px solid #E3E9F0;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #F9FBFD;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 11.5px;
+  color: #10151C;
+
+  transition: 0.2s ease;
+}
+
+.input-wrapper input::placeholder,
+.textarea-wrapper textarea::placeholder {
+  color: #AAB4C0;
+}
+
+.input-wrapper input:focus,
+.textarea-wrapper textarea:focus {
+  border-color: #43ACFF;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(67, 172, 255, 0.10);
+}
+
+
+/* ==============================
+   TEXTAREA
+============================== */
+
+.textarea-wrapper svg {
+  top: 18px;
+  transform: none;
+}
+
+.textarea-wrapper textarea {
+  width: 100%;
+  min-height: 135px;
+
+  padding: 13px 13px 13px 42px;
+
+  border: 1px solid #E3E9F0;
+  border-radius: 12px;
+
+  outline: none;
+  resize: vertical;
+
+  background: #F9FBFD;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 11.5px;
+  line-height: 1.6;
+
+  color: #10151C;
+
+  transition: 0.2s ease;
+}
+
+.char-count {
+  text-align: right;
+  margin-top: 5px;
+
+  font-size: 9.5px;
+  color: #AAB4C0;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+.submit-btn {
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #038DF2;
+  color: #FFFFFF;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(3, 141, 242, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 7px 20px rgba(3, 141, 242, 0.25);
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-icon {
+  transition: transform 0.2s ease;
+}
+
+.submit-btn:hover .btn-icon {
+  transform: translate(2px, -2px);
+}
+
+
+/* ==============================
+   SUCCESS MESSAGE
+============================== */
+
+.success-message {
+  display: none;
+
+  text-align: center;
+  padding: 15px 5px 5px;
+}
+
+.success-message.show {
+  display: block;
+  animation: successIn 0.35s ease;
+}
+
+.success-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 12px;
+
+  border-radius: 50%;
+
+  background: #E9F8F0;
+  color: #20A464;
+}
+
+.success-message strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #10151C;
+}
+
+.success-message p {
+  font-size: 10.5px;
+  line-height: 1.6;
+  color: #8492A6;
+}
+
+
+@keyframes successIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    height: 64px;
+    padding: 0 5px;
+  }
+
+  .contact-navbar h1 {
+    font-size: 17px;
+  }
+
+  .back-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .saran-page {
+    width: 90%;
+    padding-top: 25px;
+  }
+
+  .saran-card {
+    padding: 18px;
+  }
+}
