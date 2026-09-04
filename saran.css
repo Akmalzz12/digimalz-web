@@ -124,14 +124,14 @@ body {
 
   margin: 0 auto 14px;
 
-  background: rgba(255, 255, 255, 0.15);
+  background: #008af7
   border-radius: 16px;
 }
 
 .saran-hero-icon svg {
   width: 32px;
   height: 32px;
-  color: #008af7;
+  color: #FFFFFF;
 }
 
 
@@ -150,7 +150,7 @@ body {
 .saran-hero p {
   font-size: 13px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: #008af7
   margin: 0 auto;
   max-width: 330px;
 }
