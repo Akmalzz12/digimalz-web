@@ -103,11 +103,11 @@ body {
 .saran-hero {
   width: 100%;
   padding: 28px 22px 26px;
-  background: #008af7;
+  background: #FFFFFF;
   border-radius: 18px;
   margin-bottom: 18px;
   text-align: center;
-  color: #FFFFFF;
+  color: #008af7;
   box-shadow: 0 6px 20px rgba(3, 141, 242, 0.18);
 }
 
