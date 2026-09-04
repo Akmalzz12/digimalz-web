@@ -6,11 +6,11 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "Canva": { icon: "icon/canva.png", prices: { 1: 2500, 2: 5000, 3: 7000 } },
+      "Canva": { icon: "icon/canva.png", prices: { 1: 2000, 2: 4000, 3: 6000 } },
       "Capcut": { icon: "icon/capcut.png", prices: { 1: 37000, 2: 74000, 3: 111000 } },
-      "Alight Motion": { icon: "icon/am.png", prices: { 10: 5000 } },
+      "Alight Motion": { icon: "icon/am.png", prices: { 12: 5000 } },
       "YouTube": { icon: "icon/yt.png", prices: { 1: 5000, 2: 10000, 3: 15000 } },
-      "Netflix": { icon: "icon/netflix.png", prices: { 1: 25000, 2: 50000, 3: 75000 } },
+      "Netflix": { icon: "icon/netflix.png", prices: { 1: 33000 } },
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
       "Disney+": { icon: "icon/disney.png", prices: { 1: 28000, 2: 56000, 3: 84000 } },
       "Spotify": { icon: "icon/spotify.png", prices: { 1: 30000 } },
@@ -200,6 +200,7 @@ const DESCRIPTIONS = {
       {
         type: "benefits",
         items: [
+          "Akun Sharing 1P1U",
           "Akses Film & Serial Lengkap",
           "Tidak Ada Iklan",
           "Kualitas Video Jernih",
