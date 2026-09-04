@@ -1,46 +1,50 @@
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyO4PCyPR0miup6nakMugwyomVLxcPFdk4GibanxJyyaHKAPmCv0eqTOJdT75Rl67E/exec";
+// ====== GANTI 3 NILAI INI SESUAI GOOGLE FORM LO ======
+const GOOGLE_FORM_ID = "1FAIpQLSc-Ea6YHuXZ3kZyOM2sEz40DpyRVll7JWCoxr4V5NkxrPWmOw";
+const ENTRY_EMAIL = "entry.865231788";
+const ENTRY_SARAN = "entry.207969406";
+// ======================================================
 
-const form = document.getElementById("saranForm");
-const email = document.getElementById("email");
-const saran = document.getElementById("saran");
-const successMessage = document.getElementById("successMessage");
+const saranForm = document.getElementById("saranForm");
 const submitBtn = document.getElementById("submitBtn");
+const successMessage = document.getElementById("successMessage");
+const emailInput = document.getElementById("email");
+const saranInput = document.getElementById("saran");
 const charCount = document.getElementById("charCount");
 
-saran.addEventListener("input", () => {
-  charCount.textContent = saran.value.length;
+// hitung karakter live
+saranInput.addEventListener("input", () => {
+  charCount.textContent = saranInput.value.length;
 });
 
-form.addEventListener("submit", async (e) => {
+saranForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (!saran.value.trim()) {
-    alert("Silakan isi kritik atau saran terlebih dahulu.");
+  if (!saranInput.value.trim()) {
+    saranInput.focus();
     return;
   }
 
   submitBtn.disabled = true;
   submitBtn.querySelector(".btn-text").textContent = "Mengirim...";
 
-  const data = new URLSearchParams();
-  data.append("email", email.value.trim());
-  data.append("saran", saran.value.trim());
+  const formData = new FormData();
+  formData.append(ENTRY_EMAIL, emailInput.value.trim());
+  formData.append(ENTRY_SARAN, saranInput.value.trim());
 
-  try {
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      body: data,
-      mode: "no-cors"
+  const url = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
+
+  fetch(url, {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  })
+    .then(() => {
+      saranForm.style.display = "none";
+      successMessage.classList.add("show");
+    })
+    .catch(() => {
+      alert("Gagal mengirim, coba lagi.");
+      submitBtn.disabled = false;
+      submitBtn.querySelector(".btn-text").textContent = "Kirim Masukan";
     });
-
-    form.style.display = "none";
-    successMessage.classList.add("show");
-
-  } catch (error) {
-    console.error(error);
-    alert("Gagal mengirim masukan.");
-  }
-
-  submitBtn.disabled = false;
-  submitBtn.querySelector(".btn-text").textContent = "Kirim Masukan";
 });
