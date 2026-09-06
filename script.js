@@ -968,3 +968,72 @@ if (bannerTrack && bannerImages.length > 0) {
 
   startBannerTimer();
 }
+
+// ==============================
+// POPUP IKLAN
+// ==============================
+
+const AD_CONFIG = {
+  enabled: true,
+
+  image: "icon/iklan.png",
+
+  link: "#"
+};
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const popup = document.getElementById("adPopup");
+  const closeBtn = document.getElementById("adPopupClose");
+  const image = document.getElementById("adPopupImage");
+  const link = document.getElementById("adPopupLink");
+
+  if (!popup) return;
+
+
+  // Kalau tidak ada iklan
+  if (!AD_CONFIG.enabled || !AD_CONFIG.image) {
+    popup.remove();
+    return;
+  }
+
+
+  // Pasang gambar iklan
+  image.src = AD_CONFIG.image;
+
+
+  // Link iklan
+  if (AD_CONFIG.link && AD_CONFIG.link !== "#") {
+    link.href = AD_CONFIG.link;
+  } else {
+    link.removeAttribute("href");
+    link.removeAttribute("target");
+  }
+
+
+  // Tampilkan popup
+  setTimeout(() => {
+    popup.classList.add("show");
+    document.body.style.overflow = "hidden";
+  }, 500);
+
+
+  // Tutup popup
+  function closePopup() {
+    popup.classList.remove("show");
+    document.body.style.overflow = "";
+  }
+
+
+  closeBtn.addEventListener("click", closePopup);
+
+
+  // Klik area luar popup
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      closePopup();
+    }
+  });
+
+});
