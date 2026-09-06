@@ -18,6 +18,80 @@ body {
   background: #EAF2FB;
 }
 
+.ad-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.ad-popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ad-popup {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  transform: scale(0.92);
+  transition: transform 0.25s ease;
+}
+
+.ad-popup-overlay.show .ad-popup {
+  transform: scale(1);
+}
+
+.ad-popup a {
+  display: block;
+  line-height: 0;
+}
+
+.ad-popup img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.ad-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  font-size: 25px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.ad-popup-close:active {
+  transform: scale(0.88);
+}
+
 .navbar {
   position: sticky;
   top: 0;
