@@ -761,7 +761,8 @@ const noticeContent = document.querySelector(".notice-content");
 
 const noticeMessages = [
   "Wellcome to Digimalz.id! 🎉 Pesan layanan produk digital dengan mudah dan cepat.",
-  "Mau order dengan jumlah yang lebih banyak dari yang ada di website? silahkan klik icon WhatsApp yang ada di bawah kanan"
+  "Khusus pembelian pada kategori aplikasi premium, tanyakan stok terlebih dahulu sebelum transfer.",
+  "Harga yang tertera pada website dapat berubah sewaktu-waktu tanpa pemberitahuan."
 ];
 
 let noticeIndex = 0;
