@@ -974,7 +974,7 @@ if (bannerTrack && bannerImages.length > 0) {
 // ==============================
 
 const AD_CONFIG = {
-  enabled: true,
+  enabled: false,
 
   image: "icon/iklan.png",
 
