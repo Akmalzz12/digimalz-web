@@ -976,7 +976,7 @@ if (bannerTrack && bannerImages.length > 0) {
 const AD_CONFIG = {
   enabled: true,
 
-  image: "icon/pocong.png",
+  image: "icon/popup.png",
 
   link: "#"
 };
