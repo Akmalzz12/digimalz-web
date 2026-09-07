@@ -18,6 +18,20 @@ body {
   background: #EAF2FB;
 }
 
+.crisp-label {
+  position: fixed;
+  right: 18px;
+  bottom: 82px;
+  z-index: 9998;
+  padding: 9px 14px;
+  border-radius: 14px;
+  background: #038DF2;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(3,141,242,0.25);
+}
+
 .ad-popup-overlay {
   position: fixed;
   inset: 0;
