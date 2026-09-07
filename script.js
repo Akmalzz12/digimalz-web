@@ -412,7 +412,7 @@ const DESCRIPTIONS = {
         items: [
           "Mix Account With Post",
           "Drop/Turun 1-3%",
-          "Refill 60 Days",
+          "Refill 30 Days",
           "Proses Instant"
         ]
       },
