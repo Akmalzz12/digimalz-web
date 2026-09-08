@@ -1044,5 +1044,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.getElementById("customChatBtn").addEventListener("click", () => {
   $crisp.push(["do", "chat:open"]);
-  $crisp.push(["do", "chat:show"]);
 });
+
+// pastikan launcher bawaan Crisp tetap tersembunyi walau chat ditutup
+$crisp.push(["on", "chat:closed", () => {
+  $crisp.push(["do", "chat:hide"]);
+}]);
