@@ -1038,20 +1038,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+// ============================================================
+// CUSTOM CHAT BUTTON - CRISP
+// ============================================================
 
-  // Sembunyikan tombol/bubble Crisp bawaan
-  $crisp.push(["do", "chat:hide"]);
-
-  const button = document.getElementById("customChatButton");
-
-  if (button) {
-    button.addEventListener("click", function () {
-
-      // Buka chat Crisp
-      $crisp.push(["do", "chat:open"]);
-
-    });
-  }
-
+document.getElementById("customChatBtn").addEventListener("click", () => {
+  $crisp.push(["do", "chat:open"]);
+  $crisp.push(["do", "chat:show"]);
 });
