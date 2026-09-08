@@ -46,6 +46,13 @@ body {
   border-top: 10px solid #038DF2;
 }
 
+.crisp-client .cc-tlyw {
+  transform: scale(0.88) !important;
+  transform-origin: bottom right !important;
+  right: 20px !important;
+  bottom: 10px !important;
+}
+
 .ad-popup-overlay {
   position: fixed;
   inset: 0;
