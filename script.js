@@ -1037,3 +1037,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  $crisp.push(["do", "chat:hide"]);
+
+  const button = document.getElementById("customChatButton");
+
+  if (button) {
+    button.addEventListener("click", function () {
+      $crisp.push(["do", "chat:show"]);
+      $crisp.push(["do", "chat:open"]);
+    });
+  }
+});
