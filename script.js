@@ -563,8 +563,9 @@ const descBox = document.getElementById("descBox");
 const descText = document.getElementById("descText");
 
 let toastTimer;
-function showToast(msg) {
+function showToast(msg, color) {
   toast.textContent = msg;
+  toast.style.background = color || "#038df2"; // default biru kalau nggak diisi
   toast.classList.add("show");
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => toast.classList.remove("show"), 2000);
