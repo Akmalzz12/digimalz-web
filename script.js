@@ -1068,11 +1068,18 @@ const crispObserver = new MutationObserver(() => {
 });
 crispObserver.observe(document.body, { childList: true, subtree: true });
 
+// status apakah chat lagi kebuka atau tidak
+let crispChatOpen = false;
+
 // tombol custom kita
 document.getElementById("customChatBtn").addEventListener("click", (e) => {
   e.preventDefault();
   $crisp.push(["do", "chat:show"]);
   $crisp.push(["do", "chat:open"]);
+
+  // tambahkan entry history palsu, supaya tombol back HP pertama menutup chat dulu
+  history.pushState({ crispChat: true }, "");
+  crispChatOpen = true;
 });
 
 // ============================================================
@@ -1086,11 +1093,26 @@ const ratingThanks = document.getElementById("ratingThanks");
 const ratingNoBtn = document.getElementById("ratingNoBtn");
 const ratingYesBtn = document.getElementById("ratingYesBtn");
 
-$crisp.push(["on", "chat:closed", () => {
+function tampilkanRatingPopup() {
   ratingQuestion.style.display = "block";
   ratingButtons.style.display = "flex";
   ratingThanks.classList.remove("show");
   ratingOverlay.classList.add("show");
+}
+
+// saat tombol back HP ditekan
+window.addEventListener("popstate", () => {
+  if (crispChatOpen) {
+    $crisp.push(["do", "chat:hide"]);
+    crispChatOpen = false;
+    tampilkanRatingPopup();
+  }
+});
+
+// saat user menutup chat lewat tombol X bawaan Crisp
+$crisp.push(["on", "chat:closed", () => {
+  crispChatOpen = false;
+  tampilkanRatingPopup();
 }]);
 
 ratingNoBtn.addEventListener("click", () => {
