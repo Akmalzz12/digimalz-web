@@ -1094,7 +1094,7 @@ $crisp.push(["on", "chat:closed", () => {
 }]);
 
 ratingNoBtn.addEventListener("click", () => {
-  showToast("Tombol rusak, pilih tombol yang samping-nya aja.", "#E5484D");
+  showToast("Tombol rusak, pilih tombol samping-nya aja.", "#E5484D");
 });
 
 ratingYesBtn.addEventListener("click", () => {
