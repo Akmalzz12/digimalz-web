@@ -1038,10 +1038,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// ============================================================
-// CUSTOM CHAT BUTTON - CRISP
-// ============================================================
+// sembunyikan Crisp sepenuhnya saat halaman pertama dimuat
+window.addEventListener("load", () => {
+  $crisp.push(["do", "chat:hide"]);
+});
 
+// fungsi untuk menyembunyikan HANYA launcher bulat kecil bawaan Crisp,
+// jendela chat (yang jauh lebih besar) dibiarkan tetap muncul normal
+function hideCrispLauncher() {
+  const chatbox = document.getElementById("crisp-chatbox");
+  if (!chatbox) return;
+
+  const allEls = chatbox.querySelectorAll("*");
+  allEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.width > 40 && rect.width < 90 && rect.height > 40 && rect.height < 90) {
+      el.style.setProperty("display", "none", "important");
+    }
+  });
+}
+
+// pantau terus perubahan DOM Crisp, karena launcher bisa muncul lagi kapan saja
+const crispObserver = new MutationObserver(() => {
+  hideCrispLauncher();
+});
+crispObserver.observe(document.body, { childList: true, subtree: true });
+
+// tombol custom kita
 document.getElementById("customChatBtn").addEventListener("click", (e) => {
   e.preventDefault();
   $crisp.push(["do", "chat:show"]);
