@@ -1042,11 +1042,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // CUSTOM CHAT BUTTON - CRISP
 // ============================================================
 
-document.getElementById("customChatBtn").addEventListener("click", () => {
-  $crisp.push(["do", "chat:open"]);
+document.getElementById("customChatBtn").addEventListener("click", (e) => {
+  e.preventDefault(); // cegah reload/submit form kalau ada
+  try {
+    $crisp.push(["do", "chat:open"]);
+    alert("Berhasil manggil chat:open");
+  } catch (err) {
+    alert("ERROR: " + err.message);
+  }
 });
-
-// pastikan launcher bawaan Crisp tetap tersembunyi walau chat ditutup
-$crisp.push(["on", "chat:closed", () => {
-  $crisp.push(["do", "chat:hide"]);
-}]);
