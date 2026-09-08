@@ -1345,22 +1345,25 @@ body {
 
 }
 
-#customChatButton {
+.custom-chat-btn {
   position: fixed;
-  right: 18px;
   bottom: 20px;
-  width: 55px;
-  height: 55px;
-  padding: 0;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
   border: none;
-  background: transparent;
+  background: #038df2;
+  box-shadow: 0 6px 20px rgba(3,141,242,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  z-index: 99999;
+  z-index: 9998;
 }
 
-#customChatButton img {
-  width: 100%;
-  height: 100%;
-  display: block;
+.custom-chat-btn img {
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
