@@ -1039,14 +1039,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Sembunyikan tombol Crisp bawaan
   $crisp.push(["do", "chat:hide"]);
+
+  // Kalau chat ditutup, sembunyikan lagi tombol Crisp
+  $crisp.push(["on", "chat:closed", function () {
+    $crisp.push(["do", "chat:hide"]);
+  }]);
 
   const button = document.getElementById("customChatButton");
 
   if (button) {
     button.addEventListener("click", function () {
-      $crisp.push(["do", "chat:show"]);
+      // Buka sesi chat Crisp
       $crisp.push(["do", "chat:open"]);
+
+      // Pastikan tombol Crisp bawaan tetap tersembunyi
+      $crisp.push(["do", "chat:hide"]);
     });
   }
+
 });
