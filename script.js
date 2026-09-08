@@ -1051,6 +1051,9 @@ function hideCrispLauncher() {
 
   const allEls = chatbox.querySelectorAll("*");
   allEls.forEach(el => {
+    const style = window.getComputedStyle(el);
+    if (style.position !== "fixed") return;
+
     const rect = el.getBoundingClientRect();
     if (rect.width > 40 && rect.width < 90 && rect.height > 40 && rect.height < 90) {
       el.style.setProperty("display", "none", "important");
