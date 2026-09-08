@@ -1068,12 +1068,29 @@ const crispObserver = new MutationObserver(() => {
 });
 crispObserver.observe(document.body, { childList: true, subtree: true });
 
+let crispChatOpen = false;
+
 // tombol custom kita
 document.getElementById("customChatBtn").addEventListener("click", (e) => {
   e.preventDefault();
   $crisp.push(["do", "chat:show"]);
   $crisp.push(["do", "chat:open"]);
+  crispChatOpen = true;
+
+  history.pushState({ crispChat: true }, "");
 });
+
+// selama chat masih kebuka, tombol back HP "dijebak" supaya tidak menutup/keluar web
+window.addEventListener("popstate", () => {
+  if (crispChatOpen) {
+    history.pushState({ crispChat: true }, "");
+  }
+});
+
+// saat user menutup chat lewat tombol X bawaan Crisp, baru tombol back kembali normal
+$crisp.push(["on", "chat:closed", () => {
+  crispChatOpen = false;
+}]);
 
 // ============================================================
 // RATING CS POPUP
