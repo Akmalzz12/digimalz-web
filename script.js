@@ -1043,11 +1043,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ============================================================
 
 document.getElementById("customChatBtn").addEventListener("click", (e) => {
-  e.preventDefault(); // cegah reload/submit form kalau ada
-  try {
-    $crisp.push(["do", "chat:open"]);
-    alert("Berhasil manggil chat:open");
-  } catch (err) {
-    alert("ERROR: " + err.message);
-  }
+  e.preventDefault();
+  $crisp.push(["do", "chat:show"]);
+  $crisp.push(["do", "chat:open"]);
 });
