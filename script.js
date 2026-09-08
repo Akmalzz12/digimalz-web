@@ -1073,3 +1073,35 @@ document.getElementById("customChatBtn").addEventListener("click", (e) => {
   $crisp.push(["do", "chat:show"]);
   $crisp.push(["do", "chat:open"]);
 });
+
+// ============================================================
+// RATING CS POPUP
+// ============================================================
+
+const ratingOverlay = document.getElementById("ratingOverlay");
+const ratingQuestion = document.getElementById("ratingQuestion");
+const ratingButtons = document.getElementById("ratingButtons");
+const ratingThanks = document.getElementById("ratingThanks");
+const ratingNoBtn = document.getElementById("ratingNoBtn");
+const ratingYesBtn = document.getElementById("ratingYesBtn");
+
+$crisp.push(["on", "chat:closed", () => {
+  ratingQuestion.style.display = "block";
+  ratingButtons.style.display = "flex";
+  ratingThanks.classList.remove("show");
+  ratingOverlay.classList.add("show");
+}]);
+
+ratingNoBtn.addEventListener("click", () => {
+  showToast("Tombol bermasalah");
+});
+
+ratingYesBtn.addEventListener("click", () => {
+  ratingQuestion.style.display = "none";
+  ratingButtons.style.display = "none";
+  ratingThanks.classList.add("show");
+
+  setTimeout(() => {
+    ratingOverlay.classList.remove("show");
+  }, 2500);
+});
