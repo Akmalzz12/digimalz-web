@@ -1364,3 +1364,8 @@ body {
   display: block;
   object-fit: contain;
 }
+
+#crisp-chatbox .cc-1m2mf,
+#crisp-chatbox a[data-visible="true"] {
+  display: none !important;
+}
