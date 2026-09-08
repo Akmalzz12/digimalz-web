@@ -1094,7 +1094,7 @@ $crisp.push(["on", "chat:closed", () => {
 }]);
 
 ratingNoBtn.addEventListener("click", () => {
-  showToast("Tombol bermasalah");
+  showToast("Tombol bermasalah", "#E5484D");
 });
 
 ratingYesBtn.addEventListener("click", () => {
