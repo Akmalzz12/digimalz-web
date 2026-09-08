@@ -1040,23 +1040,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Sembunyikan tombol Crisp bawaan
+  // Sembunyikan tombol/bubble Crisp bawaan
   $crisp.push(["do", "chat:hide"]);
-
-  // Kalau chat ditutup, sembunyikan lagi tombol Crisp
-  $crisp.push(["on", "chat:closed", function () {
-    $crisp.push(["do", "chat:hide"]);
-  }]);
 
   const button = document.getElementById("customChatButton");
 
   if (button) {
     button.addEventListener("click", function () {
-      // Buka sesi chat Crisp
+
+      // Buka chat Crisp
       $crisp.push(["do", "chat:open"]);
 
-      // Pastikan tombol Crisp bawaan tetap tersembunyi
-      $crisp.push(["do", "chat:hide"]);
     });
   }
 
