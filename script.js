@@ -1084,7 +1084,7 @@ document.getElementById("customChatBtn").addEventListener("click", (e) => {
 
 // selama chat masih kebuka, tombol back HP
 window.addEventListener("popstate", () => {
-  alert("BACK DITEKAN");
+  alert("BACK DITEKAN, crispChatOpen = " + crispChatOpen);
   if (crispChatOpen) {
     history.pushState({ crispChat: true }, "");
   }
