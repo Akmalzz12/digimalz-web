@@ -1082,11 +1082,10 @@ document.getElementById("customChatBtn").addEventListener("click", (e) => {
   history.pushState({ crispChat: true }, "");
 });
 
-// selama chat masih kebuka, tombol back HP
 window.addEventListener("popstate", () => {
-  alert("BACK DITEKAN, crispChatOpen = " + crispChatOpen);
   if (crispChatOpen) {
     history.pushState({ crispChat: true }, "");
+    showToast("Klik tanda panah di pojok kanan atas untuk keluar dari sesi chat");
   }
 });
 
