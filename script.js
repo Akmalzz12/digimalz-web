@@ -1068,25 +1068,11 @@ const crispObserver = new MutationObserver(() => {
 });
 crispObserver.observe(document.body, { childList: true, subtree: true });
 
-// status apakah chat lagi kebuka atau tidak
-let crispChatOpen = false;
-
 // tombol custom kita
 document.getElementById("customChatBtn").addEventListener("click", (e) => {
   e.preventDefault();
   $crisp.push(["do", "chat:show"]);
   $crisp.push(["do", "chat:open"]);
-  crispChatOpen = true;
-
-  history.pushState({ crispChat: true }, "");
-  history.pushState({ crispChat: true }, "");
-});
-
-window.addEventListener("popstate", () => {
-  if (crispChatOpen) {
-    history.pushState({ crispChat: true }, "");
-    showToast("Klik tanda panah di pojok kanan atas untuk keluar dari sesi chat");
-  }
 });
 
 // ============================================================
@@ -1100,10 +1086,7 @@ const ratingThanks = document.getElementById("ratingThanks");
 const ratingNoBtn = document.getElementById("ratingNoBtn");
 const ratingYesBtn = document.getElementById("ratingYesBtn");
 
-// hanya SATU blok ini yang menangani penutupan chat lewat tombol X Crisp
 $crisp.push(["on", "chat:closed", () => {
-  crispChatOpen = false;
-
   ratingQuestion.style.display = "block";
   ratingButtons.style.display = "flex";
   ratingThanks.classList.remove("show");
