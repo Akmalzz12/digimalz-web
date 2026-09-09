@@ -1462,8 +1462,8 @@ body {
   position: fixed;
   right: 18px;
   bottom: 20px;
-  width: 55px;
-  height: 55px;
+  width: 100px;
+  height: 100px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -1476,6 +1476,18 @@ body {
   height: 100%;
   display: block;
   object-fit: contain;
+}
+
+.online-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 18px;
+  height: 18px;
+  background: #20C77A;
+  border: 3px solid #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(32,199,122,0.15);
 }
 
 #crisp-chatbox .cc-1m2mf,
