@@ -1106,9 +1106,9 @@ ratingYesBtn.addEventListener("click", () => {
   const bar = document.getElementById("ratingProgressBar");
   bar.style.animation = "none";
   bar.offsetHeight; // trik supaya browser "lupa" animasi lama
-  bar.style.animation = "shrinkBar 3s linear forwards";
+  bar.style.animation = "shrinkBar 5s linear forwards";
 
   setTimeout(() => {
     ratingOverlay.classList.remove("show");
-  }, 3000);
+  }, 5000);
 });
