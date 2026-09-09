@@ -106,6 +106,31 @@ body {
   display: block;
 }
 
+.rating-progress-track {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #E5E9EE;
+  border-radius: 4px;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.rating-progress-bar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #038df2;
+  border-radius: 4px;
+  transform-origin: left;
+  animation: shrinkBar 2.5s linear forwards;
+}
+
+@keyframes shrinkBar {
+  from { transform: scaleX(1); }
+  to { transform: scaleX(0); }
+}
+
 .crisp-label {
   position: fixed;
   right: 18px;
