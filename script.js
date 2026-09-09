@@ -1104,5 +1104,5 @@ ratingYesBtn.addEventListener("click", () => {
 
   setTimeout(() => {
     ratingOverlay.classList.remove("show");
-  }, 2500);
+  }, 3000);
 });
