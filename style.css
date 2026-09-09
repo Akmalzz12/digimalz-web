@@ -1480,10 +1480,10 @@ body {
 
 .online-badge {
   position: absolute;
-  bottom: 6px;
-  right: 6px;
-  width: 18px;
-  height: 18px;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
   background: #20C77A;
   border: 3px solid #FFFFFF;
   border-radius: 50%;
