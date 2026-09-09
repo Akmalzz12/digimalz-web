@@ -1079,6 +1079,7 @@ document.getElementById("customChatBtn").addEventListener("click", (e) => {
   crispChatOpen = true;
 
   history.pushState({ crispChat: true }, "");
+  history.pushState({ crispChat: true }, "");
 });
 
 // selama chat masih kebuka, tombol back HP
