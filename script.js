@@ -1081,8 +1081,8 @@ document.getElementById("customChatBtn").addEventListener("click", (e) => {
   history.pushState({ crispChat: true }, "");
 });
 
-// selama chat masih kebuka, tombol back HP "dijebak" supaya tidak menutup/keluar web
-window.addEventListener("popstate", () => {
+// selama chat masih kebuka, tombol back HP window.addEventListener("popstate", () => {
+  alert("BACK DITEKAN");
   if (crispChatOpen) {
     history.pushState({ crispChat: true }, "");
   }
