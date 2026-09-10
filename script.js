@@ -1089,19 +1089,13 @@ const ratingYesBtn = document.getElementById("ratingYesBtn");
 let lastCornerIndex = -1;
 
 function gerakinTombolTidak() {
-  const yesRect = ratingYesBtn.getBoundingClientRect();
-  const noRect = ratingButtons.getBoundingClientRect();
-  const btnWidth = ratingNoBtn.offsetWidth;
-
-  const maxX = Math.max((yesRect.left - noRect.left) - btnWidth - 10, 10);
   const maxY = 130;
 
-  // semua titik pakai X maksimal, cuma beda Y (atas/bawah) buat variasi
+  // 3 titik, cuma beda posisi vertikal (atas/bawah), X tetap diam
   const corners = [
-    { x: maxX, y: -maxY },
-    { x: maxX, y: maxY },
-    { x: maxX * 0.85, y: -maxY * 0.6 },
-    { x: maxX * 0.85, y: maxY * 0.6 }
+    { y: -maxY },
+    { y: maxY },
+    { y: -maxY * 0.5 }
   ];
 
   let index;
@@ -1113,9 +1107,8 @@ function gerakinTombolTidak() {
   const pos = corners[index];
 
   ratingNoBtn.style.position = "relative";
-  ratingNoBtn.style.left = pos.x + "px";
   ratingNoBtn.style.top = pos.y + "px";
-  ratingNoBtn.style.transition = "left 0.25s ease, top 0.25s ease";
+  ratingNoBtn.style.transition = "top 0.25s ease";
 }
 
 function resetTombolTidak() {
