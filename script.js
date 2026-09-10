@@ -1086,30 +1086,38 @@ const ratingThanks = document.getElementById("ratingThanks");
 const ratingNoBtn = document.getElementById("ratingNoBtn");
 const ratingYesBtn = document.getElementById("ratingYesBtn");
 
-let lastCornerIndex = -1;
+let tombolX = 0;
+let tombolY = 0;
 
 function gerakinTombolTidak() {
-  const radius = 120; // SEMUA loncatan tepat 120px
+  const radius = 150;
 
-  let angle;
+  const directions = [
+    { x: -1, y: 0 },
+    { x: -0.7071, y: -0.7071 },
+    { x: -0.7071, y: 0.7071 },
+    { x: 0, y: -1 },
+    { x: 0, y: 1 }
+  ];
 
-  do {
-    angle = Math.random() * Math.PI * 2;
-  } while (
-    Math.abs(Math.cos(angle)) < 0.2
-  );
+  const dir =
+    directions[Math.floor(Math.random() * directions.length)];
 
-  const posX = Math.cos(angle) * radius;
-  const posY = Math.sin(angle) * radius;
+  tombolX += dir.x * radius;
+  tombolY += dir.y * radius;
 
-  ratingNoBtn.style.position = "relative";
-  ratingNoBtn.style.left = posX + "px";
-  ratingNoBtn.style.top = posY + "px";
-  ratingNoBtn.style.transition = "left 0.25s ease, top 0.25s ease";
+  ratingNoBtn.style.transform =
+    `translate(${tombolX}px, ${tombolY}px)`;
+
+  ratingNoBtn.style.transition =
+    "transform 0.25s ease";
 
   const jumpSound = document.getElementById("jumpSound");
-  jumpSound.currentTime = 0;
-  jumpSound.play().catch(() => {});
+
+  if (jumpSound) {
+    jumpSound.currentTime = 0;
+    jumpSound.play().catch(() => {});
+  }
 }
 
 function resetTombolTidak() {
