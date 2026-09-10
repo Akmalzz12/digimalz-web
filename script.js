@@ -1096,12 +1096,12 @@ function gerakinTombolTidak() {
   const maxX = Math.max((yesRect.left - noRect.left) - btnWidth - 10, 10);
   const maxY = 130;
 
-  // 4 titik pojok terjauh dari posisi awal, supaya lompatannya selalu terasa jauh & konsisten
+  // semua titik pakai X maksimal, cuma beda Y (atas/bawah) buat variasi
   const corners = [
     { x: maxX, y: -maxY },
     { x: maxX, y: maxY },
-    { x: maxX * 0.3, y: -maxY },
-    { x: maxX * 0.3, y: maxY }
+    { x: maxX * 0.85, y: -maxY * 0.6 },
+    { x: maxX * 0.85, y: maxY * 0.6 }
   ];
 
   let index;
