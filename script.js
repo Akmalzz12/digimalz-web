@@ -1089,69 +1089,244 @@ const ratingYesBtn = document.getElementById("ratingYesBtn");
 let tombolX = 0;
 let tombolY = 0;
 
+
+/* ================================
+   GERAKKAN TOMBOL "TIDAK"
+================================ */
+
 function gerakinTombolTidak() {
   const radius = 150;
 
   const directions = [
-    { x: -1, y: 0 },
-    { x: -0.7071, y: -0.7071 },
-    { x: -0.7071, y: 0.7071 },
-    { x: 0, y: -1 },
-    { x: 0, y: 1 }
+    { x: -1, y: 0 },                 // kiri
+    { x: 1, y: 0 },                  // kanan
+    { x: 0, y: -1 },                 // atas
+    { x: 0, y: 1 },                  // bawah
+
+    { x: -0.7071, y: -0.7071 },      // kiri atas
+    { x: -0.7071, y: 0.7071 },       // kiri bawah
+    { x: 0.7071, y: -0.7071 },       // kanan atas
+    { x: 0.7071, y: 0.7071 }         // kanan bawah
   ];
 
-  const dir =
-    directions[Math.floor(Math.random() * directions.length)];
+  const rect = ratingNoBtn.getBoundingClientRect();
 
-  tombolX += dir.x * radius;
-  tombolY += dir.y * radius;
+  const margin = 10;
 
-  ratingNoBtn.style.transform =
-    `translate(${tombolX}px, ${tombolY}px)`;
+  /*
+    Posisi tombol saat ini di viewport.
+    Kita hitung posisi tombol setelah lompat.
+  */
+
+  const currentLeft = rect.left;
+  const currentRight = rect.right;
+  const currentTop = rect.top;
+  const currentBottom = rect.bottom;
+
+  const validDirections = directions.filter(dir => {
+
+    const nextLeft =
+      currentLeft + (dir.x * radius);
+
+    const nextRight =
+      currentRight + (dir.x * radius);
+
+    const nextTop =
+      currentTop + (dir.y * radius);
+
+    const nextBottom =
+      currentBottom + (dir.y * radius);
+
+    return (
+      nextLeft >= margin &&
+      nextRight <= window.innerWidth - margin &&
+      nextTop >= margin &&
+      nextBottom <= window.innerHeight - margin
+    );
+  });
+
+
+  /*
+    Kalau masih ada arah yang aman,
+    pilih salah satu secara random.
+  */
+
+  if (validDirections.length > 0) {
+
+    const dir =
+      validDirections[
+        Math.floor(
+          Math.random() * validDirections.length
+        )
+      ];
+
+    tombolX += dir.x * radius;
+    tombolY += dir.y * radius;
+
+    ratingNoBtn.style.transition =
+      "transform 0.25s ease";
+
+    ratingNoBtn.style.transform =
+      `translate(${tombolX}px, ${tombolY}px)`;
+
+
+    /* Suara tombol */
+
+    const jumpSound =
+      document.getElementById("jumpSound");
+
+    if (jumpSound) {
+      jumpSound.currentTime = 0;
+
+      jumpSound.play().catch(() => {});
+    }
+  }
+}
+
+
+/* ================================
+   RESET TOMBOL "TIDAK"
+================================ */
+
+function resetTombolTidak() {
+
+  tombolX = 0;
+  tombolY = 0;
 
   ratingNoBtn.style.transition =
     "transform 0.25s ease";
 
-  const jumpSound = document.getElementById("jumpSound");
+  ratingNoBtn.style.transform =
+    "translate(0, 0)";
+}
 
-  if (jumpSound) {
-    jumpSound.currentTime = 0;
-    jumpSound.play().catch(() => {});
+
+/* ================================
+   EVENT TOMBOL "TIDAK"
+================================ */
+
+/* PC / Laptop */
+
+ratingNoBtn.addEventListener(
+  "mouseenter",
+  gerakinTombolTidak
+);
+
+
+/* HP / Touch */
+
+ratingNoBtn.addEventListener(
+  "touchstart",
+  (e) => {
+
+    e.preventDefault();
+
+    gerakinTombolTidak();
   }
-}
+);
 
-function resetTombolTidak() {
-  ratingNoBtn.style.position = "";
-  ratingNoBtn.style.left = "";
-  ratingNoBtn.style.top = "";
-}
 
-ratingNoBtn.addEventListener("mouseenter", gerakinTombolTidak);
+/* ================================
+   SAAT CRISP DITUTUP
+================================ */
 
-ratingNoBtn.addEventListener("touchstart", (e) => {
-  e.preventDefault();
-  gerakinTombolTidak();
-});
+$crisp.push([
+  "on",
+  "chat:closed",
+  () => {
 
-$crisp.push(["on", "chat:closed", () => {
-  resetTombolTidak();
-  ratingQuestion.style.display = "block";
-  ratingButtons.style.display = "flex";
-  ratingThanks.classList.remove("show");
-  ratingOverlay.classList.add("show");
-}]);
+    /* Kembalikan tombol Tidak */
 
-ratingYesBtn.addEventListener("click", () => {
-  ratingQuestion.style.display = "none";
-  ratingButtons.style.display = "none";
-  ratingThanks.classList.add("show");
+    resetTombolTidak();
 
-  const bar = document.getElementById("ratingProgressBar");
-  bar.style.animation = "none";
-  bar.offsetHeight;
-  bar.style.animation = "shrinkBar 5s linear forwards";
 
-  setTimeout(() => {
-    ratingOverlay.classList.remove("show");
-  }, 5000);
-});
+    /* Tampilkan kembali pertanyaan */
+
+    ratingQuestion.style.display =
+      "block";
+
+    ratingButtons.style.display =
+      "flex";
+
+
+    /* Sembunyikan ucapan terima kasih */
+
+    ratingThanks.classList.remove(
+      "show"
+    );
+
+
+    /* Tampilkan overlay */
+
+    ratingOverlay.classList.add(
+      "show"
+    );
+  }
+]);
+
+
+/* ================================
+   TOMBOL "PUAS"
+================================ */
+
+ratingYesBtn.addEventListener(
+  "click",
+  () => {
+
+    /* Reset posisi tombol Tidak
+       supaya saat survei muncul lagi
+       posisinya tetap normal */
+
+    resetTombolTidak();
+
+
+    /* Sembunyikan pertanyaan */
+
+    ratingQuestion.style.display =
+      "none";
+
+    ratingButtons.style.display =
+      "none";
+
+
+    /* Tampilkan ucapan terima kasih */
+
+    ratingThanks.classList.add(
+      "show"
+    );
+
+
+    /* Progress bar */
+
+    const bar =
+      document.getElementById(
+        "ratingProgressBar"
+      );
+
+    if (bar) {
+
+      bar.style.animation = "none";
+
+      /*
+        Paksa browser melakukan reflow
+        supaya animasi bisa dimulai ulang
+      */
+
+      bar.offsetHeight;
+
+      bar.style.animation =
+        "shrinkBar 5s linear forwards";
+    }
+
+
+    /* Tutup survei setelah 5 detik */
+
+    setTimeout(() => {
+
+      ratingOverlay.classList.remove(
+        "show"
+      );
+
+    }, 5000);
+  }
+);
