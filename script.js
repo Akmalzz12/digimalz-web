@@ -1089,16 +1089,20 @@ const ratingYesBtn = document.getElementById("ratingYesBtn");
 function gerakinTombolTidak() {
   const container = ratingButtons.getBoundingClientRect();
   const btnWidth = ratingNoBtn.offsetWidth;
-  const maxX = container.width - btnWidth - 10;
-  const maxY = 80;
 
-  const randomX = Math.random() * maxX;
+  // batasi gerak horizontal supaya tidak menabrak area tombol "Puas"
+  // ratingButtons pakai flex + gap, jadi separuh kiri kira-kira aman untuk tombol "Tidak"
+  const safeMaxX = (container.width / 2) - btnWidth - 15;
+  const randomX = Math.random() * Math.max(safeMaxX, 0);
+
+  // gerak vertikal sedikit lebih jauh dari sebelumnya
+  const maxY = 110;
   const randomY = (Math.random() * maxY) - (maxY / 2);
 
   ratingNoBtn.style.position = "relative";
   ratingNoBtn.style.left = randomX + "px";
   ratingNoBtn.style.top = randomY + "px";
-  ratingNoBtn.style.transition = "left 0.2s ease, top 0.2s ease";
+  ratingNoBtn.style.transition = "left 0.25s ease, top 0.25s ease";
 }
 
 function resetTombolTidak() {
