@@ -1086,26 +1086,50 @@ const ratingThanks = document.getElementById("ratingThanks");
 const ratingNoBtn = document.getElementById("ratingNoBtn");
 const ratingYesBtn = document.getElementById("ratingYesBtn");
 
+function gerakinTombolTidak() {
+  const container = ratingButtons.getBoundingClientRect();
+  const btnWidth = ratingNoBtn.offsetWidth;
+  const maxX = container.width - btnWidth - 10;
+  const maxY = 80;
+
+  const randomX = Math.random() * maxX;
+  const randomY = (Math.random() * maxY) - (maxY / 2);
+
+  ratingNoBtn.style.position = "relative";
+  ratingNoBtn.style.left = randomX + "px";
+  ratingNoBtn.style.top = randomY + "px";
+  ratingNoBtn.style.transition = "left 0.2s ease, top 0.2s ease";
+}
+
+function resetTombolTidak() {
+  ratingNoBtn.style.position = "";
+  ratingNoBtn.style.left = "";
+  ratingNoBtn.style.top = "";
+}
+
+ratingNoBtn.addEventListener("mouseenter", gerakinTombolTidak);
+
+ratingNoBtn.addEventListener("touchstart", (e) => {
+  e.preventDefault();
+  gerakinTombolTidak();
+});
+
 $crisp.push(["on", "chat:closed", () => {
+  resetTombolTidak();
   ratingQuestion.style.display = "block";
   ratingButtons.style.display = "flex";
   ratingThanks.classList.remove("show");
   ratingOverlay.classList.add("show");
 }]);
 
-ratingNoBtn.addEventListener("click", () => {
-  showToast("Tombol rusak, pilih tombol sampingnya aja.", "#E5484D");
-});
-
 ratingYesBtn.addEventListener("click", () => {
   ratingQuestion.style.display = "none";
   ratingButtons.style.display = "none";
   ratingThanks.classList.add("show");
 
-  // restart animasi progress bar dari awal
   const bar = document.getElementById("ratingProgressBar");
   bar.style.animation = "none";
-  bar.offsetHeight; // trik supaya browser "lupa" animasi lama
+  bar.offsetHeight;
   bar.style.animation = "shrinkBar 5s linear forwards";
 
   setTimeout(() => {
