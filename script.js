@@ -1086,28 +1086,35 @@ const ratingThanks = document.getElementById("ratingThanks");
 const ratingNoBtn = document.getElementById("ratingNoBtn");
 const ratingYesBtn = document.getElementById("ratingYesBtn");
 
+let lastCornerIndex = -1;
+
 function gerakinTombolTidak() {
   const yesRect = ratingYesBtn.getBoundingClientRect();
   const noRect = ratingButtons.getBoundingClientRect();
   const btnWidth = ratingNoBtn.offsetWidth;
 
-  const safeMaxX = Math.max((yesRect.left - noRect.left) - btnWidth - 10, 10);
-  const maxY = 140;
-  const minJumpDistance = 90; // jarak minimal lompatan (garis lurus), biar selalu terasa jauh
+  const maxX = Math.max((yesRect.left - noRect.left) - btnWidth - 10, 10);
+  const maxY = 130;
 
-  let randomX, randomY, distance;
+  // 4 titik pojok terjauh dari posisi awal, supaya lompatannya selalu terasa jauh & konsisten
+  const corners = [
+    { x: maxX, y: -maxY },
+    { x: maxX, y: maxY },
+    { x: maxX * 0.3, y: -maxY },
+    { x: maxX * 0.3, y: maxY }
+  ];
 
-  // ulangi terus sampai dapat posisi yang jaraknya cukup jauh dari posisi awal (0,0)
+  let index;
   do {
-    randomX = Math.random() * safeMaxX;
-    const dir = Math.random() < 0.5 ? -1 : 1;
-    randomY = dir * (Math.random() * maxY);
-    distance = Math.sqrt(randomX * randomX + randomY * randomY);
-  } while (distance < minJumpDistance);
+    index = Math.floor(Math.random() * corners.length);
+  } while (index === lastCornerIndex);
+  lastCornerIndex = index;
+
+  const pos = corners[index];
 
   ratingNoBtn.style.position = "relative";
-  ratingNoBtn.style.left = randomX + "px";
-  ratingNoBtn.style.top = randomY + "px";
+  ratingNoBtn.style.left = pos.x + "px";
+  ratingNoBtn.style.top = pos.y + "px";
   ratingNoBtn.style.transition = "left 0.25s ease, top 0.25s ease";
 }
 
