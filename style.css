@@ -79,8 +79,8 @@ body {
   flex: 1;
   padding: 8px;
   border: none;
-  border-radius: 12px;
-  font-size: 14px;
+  border-radius: 10px;
+  font-size: 13px;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
