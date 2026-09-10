@@ -1089,26 +1089,18 @@ const ratingYesBtn = document.getElementById("ratingYesBtn");
 let lastCornerIndex = -1;
 
 function gerakinTombolTidak() {
-  const radius = 100; // jarak lompat, SAMA setiap kali, tidak berubah
+  const radius = 120; // SEMUA loncatan tepat 120px
 
-  // arah-arah yang aman (menghindari sisi kanan supaya tidak nabrak tombol "Puas")
-  const directions = [
-    { x: 0, y: -1 },       // atas
-    { x: 0, y: 1 },        // bawah
-    { x: -1, y: 0 },       // kiri
-    { x: -0.7, y: -0.7 },  // kiri-atas
-    { x: -0.7, y: 0.7 }    // kiri-bawah
-  ];
+  let angle;
 
-  let index;
   do {
-    index = Math.floor(Math.random() * directions.length);
-  } while (index === lastCornerIndex);
-  lastCornerIndex = index;
+    angle = Math.random() * Math.PI * 2;
+  } while (
+    Math.abs(Math.cos(angle)) < 0.2
+  );
 
-  const dir = directions[index];
-  const posX = dir.x * radius;
-  const posY = dir.y * radius;
+  const posX = Math.cos(angle) * radius;
+  const posY = Math.sin(angle) * radius;
 
   ratingNoBtn.style.position = "relative";
   ratingNoBtn.style.left = posX + "px";
