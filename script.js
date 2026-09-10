@@ -1089,26 +1089,35 @@ const ratingYesBtn = document.getElementById("ratingYesBtn");
 let lastCornerIndex = -1;
 
 function gerakinTombolTidak() {
-  const maxY = 130;
+  const radius = 100; // jarak lompat, SAMA setiap kali, tidak berubah
 
-  // 3 titik, cuma beda posisi vertikal (atas/bawah), X tetap diam
-  const corners = [
-    { y: -maxY },
-    { y: maxY },
-    { y: -maxY * 0.5 }
+  // arah-arah yang aman (menghindari sisi kanan supaya tidak nabrak tombol "Puas")
+  const directions = [
+    { x: 0, y: -1 },       // atas
+    { x: 0, y: 1 },        // bawah
+    { x: -1, y: 0 },       // kiri
+    { x: -0.7, y: -0.7 },  // kiri-atas
+    { x: -0.7, y: 0.7 }    // kiri-bawah
   ];
 
   let index;
   do {
-    index = Math.floor(Math.random() * corners.length);
+    index = Math.floor(Math.random() * directions.length);
   } while (index === lastCornerIndex);
   lastCornerIndex = index;
 
-  const pos = corners[index];
+  const dir = directions[index];
+  const posX = dir.x * radius;
+  const posY = dir.y * radius;
 
   ratingNoBtn.style.position = "relative";
-  ratingNoBtn.style.top = pos.y + "px";
-  ratingNoBtn.style.transition = "top 0.25s ease";
+  ratingNoBtn.style.left = posX + "px";
+  ratingNoBtn.style.top = posY + "px";
+  ratingNoBtn.style.transition = "left 0.25s ease, top 0.25s ease";
+
+  const jumpSound = document.getElementById("jumpSound");
+  jumpSound.currentTime = 0;
+  jumpSound.play().catch(() => {});
 }
 
 function resetTombolTidak() {
