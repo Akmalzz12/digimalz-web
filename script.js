@@ -1091,12 +1091,16 @@ function gerakinTombolTidak() {
   const noRect = ratingButtons.getBoundingClientRect();
   const btnWidth = ratingNoBtn.offsetWidth;
 
-  // batas gerak horizontal: dari 0 sampai sebelum posisi tombol "Puas" mulai
-  const safeMaxX = (yesRect.left - noRect.left) - btnWidth - 15;
-  const randomX = Math.random() * Math.max(safeMaxX, 20);
+  // horizontal: pakai hampir seluruh jarak ke tombol "Puas"
+  const safeMaxX = (yesRect.left - noRect.left) - btnWidth - 10;
+  const minX = safeMaxX * 0.5; // minimal separuh jarak, biar selalu lompat jauh
+  const randomX = minX + Math.random() * Math.max(safeMaxX - minX, 0);
 
-  const maxY = 110;
-  const randomY = (Math.random() * maxY) - (maxY / 2);
+  // vertikal: perbesar range + kasih minimum jarak juga
+  const maxY = 160;
+  const minY = 60;
+  const dir = Math.random() < 0.5 ? -1 : 1; // acak arah atas/bawah
+  const randomY = dir * (minY + Math.random() * (maxY - minY));
 
   ratingNoBtn.style.position = "relative";
   ratingNoBtn.style.left = randomX + "px";
