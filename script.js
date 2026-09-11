@@ -1089,53 +1089,27 @@ const ratingYesBtn = document.getElementById("ratingYesBtn");
 let tombolX = 0;
 let tombolY = 0;
 
-
-/* ================================
-   GERAKKAN TOMBOL "TIDAK"
-================================ */
-
 function gerakinTombolTidak() {
   const radius = 150;
-
   const directions = [
-    { x: -1, y: 0 },                 // kiri
-    { x: 1, y: 0 },                  // kanan
-    { x: 0, y: -1 },                 // atas
-    { x: 0, y: 1 },                  // bawah
-
-    { x: -0.7071, y: -0.7071 },      // kiri atas
-    { x: -0.7071, y: 0.7071 },       // kiri bawah
-    { x: 0.7071, y: -0.7071 },       // kanan atas
-    { x: 0.7071, y: 0.7071 }         // kanan bawah
+    { x: -1, y: 0 },
+    { x: 1, y: 0 },
+    { x: 0, y: -1 },
+    { x: 0, y: 1 },
+    { x: -0.7071, y: -0.7071 },
+    { x: -0.7071, y: 0.7071 },
+    { x: 0.7071, y: -0.7071 },
+    { x: 0.7071, y: 0.7071 }
   ];
 
   const rect = ratingNoBtn.getBoundingClientRect();
-
   const margin = 10;
 
-  /*
-    Posisi tombol saat ini di viewport.
-    Kita hitung posisi tombol setelah lompat.
-  */
-
-  const currentLeft = rect.left;
-  const currentRight = rect.right;
-  const currentTop = rect.top;
-  const currentBottom = rect.bottom;
-
   const validDirections = directions.filter(dir => {
-
-    const nextLeft =
-      currentLeft + (dir.x * radius);
-
-    const nextRight =
-      currentRight + (dir.x * radius);
-
-    const nextTop =
-      currentTop + (dir.y * radius);
-
-    const nextBottom =
-      currentBottom + (dir.y * radius);
+    const nextLeft = rect.left + dir.x * radius;
+    const nextRight = rect.right + dir.x * radius;
+    const nextTop = rect.top + dir.y * radius;
+    const nextBottom = rect.bottom + dir.y * radius;
 
     return (
       nextLeft >= margin &&
@@ -1145,188 +1119,63 @@ function gerakinTombolTidak() {
     );
   });
 
+  if (!validDirections.length) return;
 
-  /*
-    Kalau masih ada arah yang aman,
-    pilih salah satu secara random.
-  */
+  const dir = validDirections[
+    Math.floor(Math.random() * validDirections.length)
+  ];
 
-  if (validDirections.length > 0) {
+  tombolX += dir.x * radius;
+  tombolY += dir.y * radius;
 
-    const dir =
-      validDirections[
-        Math.floor(
-          Math.random() * validDirections.length
-        )
-      ];
+  ratingNoBtn.style.transition = "transform 0.25s ease";
+  ratingNoBtn.style.transform = `translate(${tombolX}px, ${tombolY}px)`;
 
-    tombolX += dir.x * radius;
-    tombolY += dir.y * radius;
-
-    ratingNoBtn.style.transition =
-      "transform 0.25s ease";
-
-    ratingNoBtn.style.transform =
-      `translate(${tombolX}px, ${tombolY}px)`;
-
-
-    /* Suara tombol */
-
-    const jumpSound =
-      document.getElementById("jumpSound");
-
-    if (jumpSound) {
-      jumpSound.currentTime = 0;
-
-      jumpSound.play().catch(() => {});
-    }
+  const jumpSound = document.getElementById("jumpSound");
+  if (jumpSound) {
+    jumpSound.currentTime = 0;
+    jumpSound.play().catch(() => {});
   }
 }
-
-
-/* ================================
-   RESET TOMBOL "TIDAK"
-================================ */
 
 function resetTombolTidak() {
-
   tombolX = 0;
   tombolY = 0;
-
-  ratingNoBtn.style.transition =
-    "transform 0.25s ease";
-
-  ratingNoBtn.style.transform =
-    "translate(0, 0)";
+  ratingNoBtn.style.transition = "transform 0.25s ease";
+  ratingNoBtn.style.transform = "translate(0, 0)";
 }
 
+ratingNoBtn.addEventListener("mouseenter", gerakinTombolTidak);
 
-/* ================================
-   EVENT TOMBOL "TIDAK"
-================================ */
+ratingNoBtn.addEventListener("touchstart", e => {
+  e.preventDefault();
+  gerakinTombolTidak();
+});
 
-/* PC / Laptop */
+$crisp.push(["on", "chat:closed", () => {
+  resetTombolTidak();
+  ratingQuestion.style.display = "block";
+  ratingButtons.style.display = "flex";
+  ratingThanks.classList.remove("show");
+  ratingOverlay.classList.add("show");
+}]);
 
-ratingNoBtn.addEventListener(
-  "mouseenter",
-  gerakinTombolTidak
-);
+ratingYesBtn.addEventListener("click", () => {
+  resetTombolTidak();
 
+  ratingQuestion.style.display = "none";
+  ratingButtons.style.display = "none";
+  ratingThanks.classList.add("show");
 
-/* HP / Touch */
+  const bar = document.getElementById("ratingProgressBar");
 
-ratingNoBtn.addEventListener(
-  "touchstart",
-  (e) => {
-
-    e.preventDefault();
-
-    gerakinTombolTidak();
+  if (bar) {
+    bar.style.animation = "none";
+    bar.offsetHeight;
+    bar.style.animation = "shrinkBar 5s linear forwards";
   }
-);
 
-
-/* ================================
-   SAAT CRISP DITUTUP
-================================ */
-
-$crisp.push([
-  "on",
-  "chat:closed",
-  () => {
-
-    /* Kembalikan tombol Tidak */
-
-    resetTombolTidak();
-
-
-    /* Tampilkan kembali pertanyaan */
-
-    ratingQuestion.style.display =
-      "block";
-
-    ratingButtons.style.display =
-      "flex";
-
-
-    /* Sembunyikan ucapan terima kasih */
-
-    ratingThanks.classList.remove(
-      "show"
-    );
-
-
-    /* Tampilkan overlay */
-
-    ratingOverlay.classList.add(
-      "show"
-    );
-  }
-]);
-
-
-/* ================================
-   TOMBOL "PUAS"
-================================ */
-
-ratingYesBtn.addEventListener(
-  "click",
-  () => {
-
-    /* Reset posisi tombol Tidak
-       supaya saat survei muncul lagi
-       posisinya tetap normal */
-
-    resetTombolTidak();
-
-
-    /* Sembunyikan pertanyaan */
-
-    ratingQuestion.style.display =
-      "none";
-
-    ratingButtons.style.display =
-      "none";
-
-
-    /* Tampilkan ucapan terima kasih */
-
-    ratingThanks.classList.add(
-      "show"
-    );
-
-
-    /* Progress bar */
-
-    const bar =
-      document.getElementById(
-        "ratingProgressBar"
-      );
-
-    if (bar) {
-
-      bar.style.animation = "none";
-
-      /*
-        Paksa browser melakukan reflow
-        supaya animasi bisa dimulai ulang
-      */
-
-      bar.offsetHeight;
-
-      bar.style.animation =
-        "shrinkBar 5s linear forwards";
-    }
-
-
-    /* Tutup survei setelah 5 detik */
-
-    setTimeout(() => {
-
-      ratingOverlay.classList.remove(
-        "show"
-      );
-
-    }, 5000);
-  }
-);
+  setTimeout(() => {
+    ratingOverlay.classList.remove("show");
+  }, 5000);
+});
