@@ -125,7 +125,7 @@ body {
   background: #038df2;
   border-radius: 4px;
   transform-origin: left;
-  animation: shrinkBar 5s linear forwards;
+  animation: shrinkBar 5.5s linear forwards;
 }
 
 @keyframes shrinkBar {
