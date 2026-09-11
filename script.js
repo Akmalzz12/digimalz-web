@@ -1203,11 +1203,11 @@ ratingYesBtn.addEventListener(
       bar.style.animation = "none";
       bar.offsetHeight;
       bar.style.animation =
-        "shrinkBar 5s linear forwards";
+        "shrinkBar 5.5s linear forwards";
     }
 
     setTimeout(() => {
       ratingOverlay.classList.remove("show");
-    }, 5000);
+    }, 5500);
   }
 );
