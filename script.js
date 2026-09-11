@@ -1091,6 +1091,7 @@ let tombolY = 0;
 
 function gerakinTombolTidak() {
   const radius = 150;
+
   const directions = [
     { x: -1, y: 0 },
     { x: 1, y: 0 },
@@ -1129,9 +1130,11 @@ function gerakinTombolTidak() {
   tombolY += dir.y * radius;
 
   ratingNoBtn.style.transition = "transform 0.25s ease";
-  ratingNoBtn.style.transform = `translate(${tombolX}px, ${tombolY}px)`;
+  ratingNoBtn.style.transform =
+    `translate(${tombolX}px, ${tombolY}px)`;
 
   const jumpSound = document.getElementById("jumpSound");
+
   if (jumpSound) {
     jumpSound.currentTime = 0;
     jumpSound.play().catch(() => {});
@@ -1141,41 +1144,70 @@ function gerakinTombolTidak() {
 function resetTombolTidak() {
   tombolX = 0;
   tombolY = 0;
+
   ratingNoBtn.style.transition = "transform 0.25s ease";
   ratingNoBtn.style.transform = "translate(0, 0)";
 }
 
-ratingNoBtn.addEventListener("mouseenter", gerakinTombolTidak);
+ratingNoBtn.addEventListener(
+  "mouseenter",
+  gerakinTombolTidak
+);
 
-ratingNoBtn.addEventListener("touchstart", e => {
-  e.preventDefault();
-  gerakinTombolTidak();
-});
-
-$crisp.push(["on", "chat:closed", () => {
-  resetTombolTidak();
-  ratingQuestion.style.display = "block";
-  ratingButtons.style.display = "flex";
-  ratingThanks.classList.remove("show");
-  ratingOverlay.classList.add("show");
-}]);
-
-ratingYesBtn.addEventListener("click", () => {
-  resetTombolTidak();
-
-  ratingQuestion.style.display = "none";
-  ratingButtons.style.display = "none";
-  ratingThanks.classList.add("show");
-
-  const bar = document.getElementById("ratingProgressBar");
-
-  if (bar) {
-    bar.style.animation = "none";
-    bar.offsetHeight;
-    bar.style.animation = "shrinkBar 5s linear forwards";
+ratingNoBtn.addEventListener(
+  "touchstart",
+  e => {
+    e.preventDefault();
+    gerakinTombolTidak();
   }
+);
 
-  setTimeout(() => {
-    ratingOverlay.classList.remove("show");
-  }, 5000);
-});
+$crisp.push([
+  "on",
+  "chat:closed",
+  () => {
+    resetTombolTidak();
+
+    ratingQuestion.style.display = "block";
+    ratingButtons.style.display = "flex";
+
+    ratingThanks.classList.remove("show");
+
+    ratingOverlay.classList.add("show");
+  }
+]);
+
+ratingYesBtn.addEventListener(
+  "click",
+  () => {
+
+    const puasSound =
+      document.getElementById("puasSound");
+
+    if (puasSound) {
+      puasSound.currentTime = 0;
+      puasSound.play().catch(() => {});
+    }
+
+    resetTombolTidak();
+
+    ratingQuestion.style.display = "none";
+    ratingButtons.style.display = "none";
+
+    ratingThanks.classList.add("show");
+
+    const bar =
+      document.getElementById("ratingProgressBar");
+
+    if (bar) {
+      bar.style.animation = "none";
+      bar.offsetHeight;
+      bar.style.animation =
+        "shrinkBar 5s linear forwards";
+    }
+
+    setTimeout(() => {
+      ratingOverlay.classList.remove("show");
+    }, 5000);
+  }
+);
