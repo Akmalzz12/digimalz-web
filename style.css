@@ -2525,25 +2525,3 @@ textarea {
     padding: 18px;
   }
 }
-
-
-/* Perbaikan tampilan pemberitahuan berjalan */
-.notice-bar {
-  display: flex;
-  align-items: center;
-  min-height: 44px;
-  overflow: hidden;
-}
-
-.notice-content {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-}
-
-.notice-js {
-  display: block;
-  width: max-content;
-  white-space: nowrap;
-}
-
