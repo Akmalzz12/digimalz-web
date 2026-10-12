@@ -2112,3 +2112,285 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* ========================================
+   NAVBAR RESPONSIVE DIGIMALZ
+======================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.logo-mark {
+  display: block;
+  width: auto;
+  height: 36px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* Desktop */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(16px, 2.5vw, 32px);
+  margin-left: auto;
+}
+
+.desktop-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0;
+  color: #4A5568;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.desktop-nav-link svg {
+  flex-shrink: 0;
+  color: #038df2;
+}
+
+.desktop-nav-link:hover {
+  color: #038df2;
+}
+
+/* Hamburger disembunyikan di desktop */
+.menu-btn {
+  display: none;
+}
+
+/* Menu mobile */
+.menu-overlay,
+.menu-panel {
+  display: none;
+}
+
+/* Mobile dan tablet kecil */
+@media (max-width: 768px) {
+  .navbar {
+    min-height: 64px;
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .logo-mark {
+    height: 34px;
+    max-width: 160px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .menu-btn span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    border-radius: 10px;
+    background: #038df2;
+    transition: transform 0.25s ease,
+                opacity 0.2s ease;
+  }
+
+  .menu-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: rgba(16, 21, 28, 0.35);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease,
+                visibility 0.3s ease;
+  }
+
+  .menu-overlay.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .menu-panel {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(86%, 340px);
+    min-width: 0;
+    padding: 22px 20px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: #fff;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -12px 0 35px rgba(16, 21, 28, 0.15);
+    z-index: 10001;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.25s ease,
+                visibility 0.35s ease;
+  }
+
+  .menu-panel.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px 2px 14px;
+    border-bottom: 1px solid #EEF1F5;
+  }
+
+  .menu-header > span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #10151C;
+  }
+
+  .menu-close {
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 9px;
+    background: #F1F4FF;
+    color: #5B6B7F;
+    font-size: 23px;
+    cursor: pointer;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 14px;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .menu-item:active {
+    background: #F1F4FF;
+  }
+
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background: #F1F4FF;
+    color: #038df2;
+  }
+
+  .menu-item strong {
+    display: block;
+    margin-bottom: 2px;
+    color: #10151C;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .menu-item small {
+    display: block;
+    color: #8492A6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+  }
+}
+
+/* Desktop lebar */
+@media (min-width: 769px) {
+  .menu-btn,
+  .menu-overlay,
+  .menu-panel {
+    display: none !important;
+  }
+}
+
+/* Desktop sempit: hindari menu bertabrakan */
+@media (min-width: 769px) and (max-width: 900px) {
+  .navbar {
+    padding-left: 24px;
+    padding-right: 24px;
+    gap: 18px;
+  }
+
+  .logo-mark {
+    height: 32px;
+  }
+
+  .desktop-nav {
+    gap: 14px;
+  }
+
+  .desktop-nav-link {
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .desktop-nav-link svg {
+    width: 15px;
+    height: 15px;
+  }
+}
