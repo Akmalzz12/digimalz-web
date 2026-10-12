@@ -75,62 +75,196 @@ window.CRISP_WEBSITE_ID="d7222fdb-bdab-45c7-9371-5b45bee3ed08";
   </button>
 </nav>
 
-<!-- MENU NAVBAR -->
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+
+  <!-- LOGO -->
+  <a href="/" class="navbar-logo">
+    <img
+      src="icon/logo.png"
+      alt="Digimalz"
+      class="logo-mark"
+    >
+  </a>
+
+  <!-- MENU DESKTOP -->
+  <div class="desktop-nav">
+
+    <a href="/kontak" class="desktop-nav-link">
+      <svg width="18" height="18" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+          19.79 19.79 0 0 1-8.63-3.07
+          19.5 19.5 0 0 1-6-6
+          19.79 19.79 0 0 1-3.07-8.67
+          A2 2 0 0 1 4.11 2h3
+          a2 2 0 0 1 2 1.72
+          c.127.96.362 1.903.7 2.81
+          a2 2 0 0 1-.45 2.11L8.09 9.91
+          a16 16 0 0 0 6 6l1.27-1.27
+          a2 2 0 0 1 2.11-.45
+          c.907.338 1.85.573 2.81.7
+          A2 2 0 0 1 22 16.92z">
+        </path>
+      </svg>
+      <span>Contact Kami</span>
+    </a>
+
+    <a href="/sk" class="desktop-nav-link">
+      <svg width="18" height="18" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16
+          a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+        </path>
+        <polyline points="14 2 14 8 20 8"></polyline>
+        <line x1="8" y1="13" x2="16" y2="13"></line>
+        <line x1="8" y1="17" x2="16" y2="17"></line>
+      </svg>
+      <span>Syarat Ketentuan</span>
+    </a>
+
+    <a href="/saran" class="desktop-nav-link">
+      <svg width="18" height="18" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5
+          9.55 9.55 0 0 1-4-.8L3 21l1.8-4.5
+          A8.38 8.38 0 0 1 3 11.5
+          8.5 8.5 0 0 1 12 3
+          a8.5 8.5 0 0 1 9 8.5z">
+        </path>
+        <line x1="8" y1="11" x2="16" y2="11"></line>
+        <line x1="8" y1="15" x2="13" y2="15"></line>
+      </svg>
+      <span>Kritik &amp; Saran</span>
+    </a>
+
+  </div>
+
+  <!-- HAMBURGER MOBILE -->
+  <button
+    type="button"
+    class="menu-btn"
+    id="menuBtn"
+    aria-label="Buka menu"
+    aria-controls="menuPanel"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+</nav>
+<!-- ===== END NAVBAR ===== -->
+
+
+<!-- ===== MENU OVERLAY MOBILE ===== -->
 <div class="menu-overlay" id="menuOverlay"></div>
 
-<div class="menu-panel" id="menuPanel">
+
+<!-- ===== MENU PANEL MOBILE ===== -->
+<div
+  class="menu-panel"
+  id="menuPanel"
+  aria-label="Menu navigasi"
+  aria-hidden="true"
+>
+
   <div class="menu-header">
     <span>Menu</span>
 
-    <button class="menu-close" id="menuClose">
+    <button
+      type="button"
+      class="menu-close"
+      id="menuClose"
+      aria-label="Tutup menu"
+    >
       &times;
     </button>
   </div>
 
   <div class="menu-items">
+
+    <!-- CONTACT -->
     <a href="/kontak" class="menu-item">
       <span class="menu-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        <svg width="18" height="18" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+            19.79 19.79 0 0 1-8.63-3.07
+            19.5 19.5 0 0 1-6-6
+            19.79 19.79 0 0 1-3.07-8.67
+            A2 2 0 0 1 4.11 2h3
+            a2 2 0 0 1 2 1.72
+            c.127.96.362 1.903.7 2.81
+            a2 2 0 0 1-.45 2.11L8.09 9.91
+            a16 16 0 0 0 6 6l1.27-1.27
+            a2 2 0 0 1 2.11-.45
+            c.907.338 1.85.573 2.81.7
+            A2 2 0 0 1 22 16.92z">
+          </path>
         </svg>
       </span>
+
       <span>
         <strong>Contact Kami</strong>
         <small>Hubungi kami untuk bantuan</small>
       </span>
     </a>
 
+    <!-- SYARAT KETENTUAN -->
     <a href="/sk" class="menu-item">
       <span class="menu-icon">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+        <svg width="18" height="18" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16
+            a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+          </path>
           <polyline points="14 2 14 8 20 8"></polyline>
           <line x1="8" y1="13" x2="16" y2="13"></line>
           <line x1="8" y1="17" x2="16" y2="17"></line>
         </svg>
       </span>
+
       <span>
         <strong>Syarat Ketentuan</strong>
         <small>Ketentuan layanan kami</small>
       </span>
     </a>
-    
-    <a href="/saran" class="menu-item">
-  <span class="menu-icon">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5 9.55 9.55 0 0 1-4-.8L3 21l1.8-4.5A8.38 8.38 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"></path>
-      <line x1="8" y1="11" x2="16" y2="11"></line>
-      <line x1="8" y1="15" x2="13" y2="15"></line>
-    </svg>
-  </span>
 
-  <span>
-    <strong>Kritik &amp; Saran</strong>
-    <small>Masukan untuk kami</small>
-  </span>
-</a>
+    <!-- KRITIK DAN SARAN -->
+    <a href="/saran" class="menu-item">
+      <span class="menu-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5
+            9.55 9.55 0 0 1-4-.8L3 21l1.8-4.5
+            A8.38 8.38 0 0 1 3 11.5
+            8.5 8.5 0 0 1 12 3
+            a8.5 8.5 0 0 1 9 8.5z">
+          </path>
+          <line x1="8" y1="11" x2="16" y2="11"></line>
+          <line x1="8" y1="15" x2="13" y2="15"></line>
+        </svg>
+      </span>
+
+      <span>
+        <strong>Kritik &amp; Saran</strong>
+        <small>Masukan untuk kami</small>
+      </span>
+    </a>
+
   </div>
 </div>
+<!-- ===== END MENU PANEL ===== -->
+
 
     <!-- ===== BANNER ===== -->
   <div class="banner-box">
