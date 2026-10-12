@@ -2394,3 +2394,92 @@ textarea {
     height: 15px;
   }
 }
+
+
+/* =================================
+   SAMAKAN LEBAR SECTION WEBSITE
+================================= */
+
+:root {
+  --content-width: 1100px;
+  --content-padding: 20px;
+}
+
+/* Banner */
+.banner-box {
+  width: calc(100% - 40px);
+  max-width: var(--content-width);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Teks berjalan */
+.notice-bar {
+  width: calc(100% - 40px);
+  max-width: var(--content-width);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Form order */
+.order-box {
+  width: calc(100% - 40px);
+  max-width: 480px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Kenapa harus Digimalz */
+.why-box {
+  width: calc(100% - 40px);
+  max-width: var(--content-width);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Testimoni */
+.testi-box {
+  width: calc(100% - 40px);
+  max-width: var(--content-width);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Metode pembayaran */
+.payment-box {
+  width: calc(100% - 40px);
+  max-width: var(--content-width);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* Pastikan padding tidak menambah lebar */
+.banner-box,
+.notice-bar,
+.order-box,
+.why-box,
+.testi-box,
+.payment-box,
+.banner-box *,
+.notice-bar *,
+.order-box *,
+.why-box *,
+.testi-box *,
+.payment-box * {
+  box-sizing: border-box;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+  .banner-box,
+  .notice-bar,
+  .why-box,
+  .testi-box,
+  .payment-box {
+    width: calc(100% - 28px);
+  }
+
+  .order-box {
+    width: calc(100% - 28px);
+  }
+}
