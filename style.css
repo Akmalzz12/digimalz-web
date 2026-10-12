@@ -1496,3 +1496,619 @@ body {
 #crisp-chatbox a[data-visible="true"] {
   display: none !important;
 }
+
+
+/* ========================================
+   RESPONSIVE OVERHAUL
+   Mobile, Tablet, Desktop
+   Footer tidak diubah
+======================================== */
+
+/* Mencegah halaman melebar ke samping */
+html {
+  width: 100%;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+.order-box,
+.banner-box,
+.notice-bar,
+.why-box,
+.testi-box,
+.payment-box {
+  min-width: 0;
+}
+
+/* ========================================
+   DESKTOP NAVIGATION
+======================================== */
+
+/* Tampilkan link desktop jika tersedia di HTML */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.desktop-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 0;
+  color: #4A5568;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+  color: #038df2;
+}
+
+@media (min-width: 769px) {
+  .navbar {
+    padding: 14px 5%;
+    gap: 30px;
+  }
+
+  .logo-mark {
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .menu-btn,
+  .menu-overlay,
+  .menu-panel {
+    display: none;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    padding: 14px 24px;
+  }
+
+  .order-box,
+  .banner-box,
+  .notice-bar,
+  .why-box,
+  .testi-box,
+  .payment-box {
+    width: 88%;
+    max-width: 620px;
+  }
+
+  .order-box {
+    padding: 30px 26px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .why-card {
+    padding: 20px 18px;
+  }
+
+  .why-card h3 {
+    font-size: 14px;
+  }
+
+  .why-card p {
+    font-size: 12px;
+  }
+
+  .testi-card {
+    padding: 24px;
+  }
+
+  .payment-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .menu-panel {
+    width: 320px;
+    max-width: 80%;
+  }
+}
+
+/* ========================================
+   DESKTOP
+======================================== */
+
+@media (min-width: 769px) {
+  /* Navbar */
+  .navbar {
+    min-height: 72px;
+  }
+
+  /* Form pemesanan */
+  .order-box {
+    width: 90%;
+    max-width: 760px;
+    margin: 48px auto;
+    padding: 34px;
+  }
+
+  .order-box h2 {
+    font-size: 23px;
+  }
+
+  .field label {
+    font-size: 14px;
+  }
+
+  .dropdown-btn {
+    padding: 15px 18px;
+  }
+
+  .dropdown-list li {
+    padding: 10px 12px;
+  }
+
+  .stepper {
+    gap: 20px;
+  }
+
+  .price-box {
+    padding: 17px 20px;
+  }
+
+  .wa-btn {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  /* Banner */
+  .banner-box {
+    width: 90%;
+    max-width: 900px;
+    margin: 36px auto 12px;
+    border-radius: 16px;
+  }
+
+  /* Pengumuman berjalan */
+  .notice-bar {
+    width: 90%;
+    max-width: 900px;
+    height: 50px;
+    margin: 28px auto 0;
+  }
+
+  .notice-icon {
+    width: 60px;
+    min-width: 60px;
+  }
+
+  .notice-js {
+    font-size: 15px;
+  }
+
+  /* Alasan memilih layanan */
+  .why-box {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 64px;
+  }
+
+  .why-title {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .why-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+  }
+
+  .why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  }
+
+  .why-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .why-card h3 {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .why-card p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* Testimoni */
+  .testi-box {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 64px;
+  }
+
+  .testi-title,
+  .payment-title {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+
+  .testi-card {
+    padding: 30px;
+    min-height: 180px;
+    border-radius: 18px;
+  }
+
+  .testi-avatar {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .testi-info strong {
+    font-size: 16px;
+  }
+
+  .testi-info span {
+    font-size: 12px;
+  }
+
+  .testi-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .testi-nav {
+    margin-top: 22px;
+  }
+
+  /* Metode pembayaran */
+  .payment-box {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 64px;
+  }
+
+  .payment-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .payment-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  /* Tombol chat */
+  #customChatBtn {
+    width: 60px;
+    height: 60px;
+    right: 28px;
+    bottom: 24px;
+  }
+
+  /* Popup */
+  .rating-box {
+    max-width: 380px;
+    padding: 32px 28px;
+  }
+
+  .ad-popup-container,
+  .ad-popup {
+    max-width: 420px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .navbar {
+    min-height: 64px;
+    padding: 11px 16px;
+    gap: 12px;
+  }
+
+  .logo-mark {
+    height: 34px;
+    max-width: 70%;
+  }
+
+  /* Hamburger */
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .menu-btn span {
+    width: 24px;
+    height: 3px;
+  }
+
+  /* Menu geser dari kanan */
+  .menu-panel {
+    width: min(86%, 340px);
+    min-width: 0;
+    padding: 22px 18px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .menu-item {
+    padding: 11px 10px;
+    gap: 10px;
+  }
+
+  .menu-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Form */
+  .order-box {
+    width: 92%;
+    margin: 30px auto;
+    padding: 24px 17px;
+    border-radius: 16px;
+  }
+
+  .order-box h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .field {
+    margin-bottom: 16px;
+  }
+
+  .dropdown-btn {
+    padding: 12px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .dropdown-list {
+    max-height: 200px;
+  }
+
+  .stepper {
+    gap: 12px;
+  }
+
+  .stepper button {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+  }
+
+  .stepper span {
+    min-width: 50px;
+    font-size: 16px;
+  }
+
+  .price-box {
+    gap: 10px;
+    padding: 13px;
+  }
+
+  .price-box span:last-child {
+    font-size: 16px;
+  }
+
+  .desc-card {
+    padding: 12px;
+  }
+
+  /* Banner dan pengumuman */
+  .banner-box {
+    width: 92%;
+    margin: 24px auto 8px;
+    border-radius: 10px;
+  }
+
+  .notice-bar {
+    width: 92%;
+    height: 44px;
+    margin: 24px auto 0;
+  }
+
+  .notice-icon {
+    width: 44px;
+    min-width: 44px;
+  }
+
+  .notice-js {
+    font-size: 12px;
+  }
+
+  /* Kartu alasan memilih */
+  .why-box,
+  .testi-box,
+  .payment-box {
+    width: 92%;
+    margin-bottom: 42px;
+  }
+
+  .why-title,
+  .testi-title,
+  .payment-title {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  .why-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .why-card {
+    min-width: 0;
+    padding: 14px 11px;
+  }
+
+  .why-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .why-card h3 {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .why-card p {
+    font-size: 11px;
+    overflow-wrap: anywhere;
+  }
+
+  /* Testimoni */
+  .testi-card {
+    padding: 17px 15px;
+    min-height: 0;
+  }
+
+  .testi-head {
+    gap: 10px;
+  }
+
+  .testi-info strong {
+    font-size: 14px;
+  }
+
+  .testi-text {
+    font-size: 12px;
+  }
+
+  /* Pembayaran */
+  .payment-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .payment-card {
+    min-width: 0;
+    padding: 8px 5px;
+    border-radius: 10px;
+  }
+
+  /* Tombol chat */
+  #customChatBtn {
+    width: 52px;
+    height: 52px;
+    right: 14px;
+    bottom: 16px;
+  }
+
+  /* Label chat */
+  .crisp-label {
+    right: 14px;
+    bottom: 80px;
+    font-size: 11px;
+  }
+
+  /* Popup rating dan iklan */
+  .rating-overlay,
+  .ad-popup-overlay {
+    padding: 16px;
+  }
+
+  .rating-box {
+    padding: 24px 18px;
+  }
+
+  .ad-popup-container,
+  .ad-popup {
+    max-width: 100%;
+  }
+
+  .toast {
+    max-width: calc(100% - 30px);
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* ========================================
+   HP SANGAT KECIL
+======================================== */
+
+@media (max-width: 360px) {
+  .order-box {
+    padding: 20px 13px;
+  }
+
+  .why-grid {
+    gap: 8px;
+  }
+
+  .why-card {
+    padding: 12px 9px;
+  }
+
+  .why-card h3 {
+    font-size: 11.5px;
+  }
+
+  .why-card p {
+    font-size: 10.5px;
+  }
+
+  .payment-grid {
+    gap: 6px;
+  }
+
+  .payment-card {
+    padding: 6px 4px;
+  }
+
+  .menu-panel {
+    width: 90%;
+  }
+}
+
+/* Menghormati pengaturan aksesibilitas */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
