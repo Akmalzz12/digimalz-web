@@ -719,7 +719,8 @@ const noticeContent = document.querySelector(".notice-content");
 
 const noticeMessages = [
   "Wellcome to Digimalz.id! 🎉 Pesan layanan produk digital dengan mudah dan cepat.",
-  "Khusus pembelian pada kategori aplikasi premium, tanyakan stok terlebih dahulu sebelum transfer.",
+  "Digimalz saat ini tidak lagi menjual produk katagori "suntik sosmed" seperti penambahan followers, likes, views.",
+  "Untuk pemesanan aplikasi premium, tanyakan stok terlebih dahulu sebelum order.",
   "Harga yang tertera pada website dapat berubah sewaktu-waktu tanpa pemberitahuan."
 ];
 
