@@ -12,6 +12,8 @@ const DATA = {
       "Netflix Log Via Link": { icon: "icon/netflix.png", prices: { 1: 18000 } },
       "Disney+": { icon: "icon/disney.png", prices: { 1: 00000 } },
       "Bstation": { icon: "icon/bstation.png", prices: { 1: 30000 } },
+      "HBO Max Standar": { icon: "icon/hbo.png", prices: { 1: 13000 } },
+      "HBO Max Ultimate": { icon: "icon/hbo.png", prices: { 1: 18000 } },
       
   }
  },
@@ -197,13 +199,64 @@ const DESCRIPTIONS = {
       },
       {
         type: "note",
-        text: "Catatan: Bisa pakai akun pribadi"
+        text: "Catatan: Akun dari admin."
       },
       {
         type: "paragraph",
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
-    ] 
+    ],
+   
+    "HBO Max Standard": [
+  {
+    type: "paragraph",
+    text: "HBO Max Standard adalah layanan streaming untuk menikmati berbagai film blockbuster, serial populer, anime, dan tayangan eksklusif dari HBO, Warner Bros., DC, dan lainnya dengan kualitas Full HD."
+  },
+  {
+    type: "benefits",
+    items: [
+      "Streaming 2 Perangkat Sekaligus",
+      "Kualitas Video Full HD 1080p",
+      "Akses Film & Serial Eksklusif",
+      "Download Hingga 30 Konten",
+      "Hingga 5 Profil dalam 1 Akun"
+    ]
+  },
+  {
+    type: "note",
+    text: "Catatan: Kualitas dan fitur mengikuti ketentuan paket HBO Max."
+  },
+  {
+    type: "paragraph",
+    text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+  }
+],
+
+"HBO Max Ultimate": [
+  {
+    type: "paragraph",
+    text: "HBO Max Ultimate adalah layanan streaming premium untuk menikmati berbagai film blockbuster, serial populer, anime, dan tayangan eksklusif dengan kualitas gambar dan audio terbaik hingga 4K UHD."
+  },
+  {
+    type: "benefits",
+    items: [
+      "Streaming 4 Perangkat Sekaligus",
+      "Kualitas Video Hingga 4K UHD",
+      "Dukungan Dolby Atmos & Dolby Vision",
+      "Akses Film & Serial Eksklusif",
+      "Download Hingga 100 Konten",
+      "Hingga 5 Profil dalam 1 Akun"
+    ]
+  },
+  {
+    type: "note",
+    text: "Catatan: Kualitas dan fitur mengikuti ketentuan paket HBO Max."
+  },
+  {
+    type: "paragraph",
+    text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+  }
+]
 },
 
   "Editing Apps": {
