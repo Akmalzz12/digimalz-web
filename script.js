@@ -8,8 +8,8 @@ const DATA = {
     services: {
       "YouTube Famhead": { icon: "icon/yt.png", prices: { 1: 15000 } },
       "YouTube Indplane": { icon: "icon/yt.png", prices: { 1: 13000 } },
-      "Netflix Log Via Email": { icon: "icon/netflix.png", prices: { 1: 28000 } },
-      "Netflix Log Via Link": { icon: "icon/netflix.png", prices: { 1: 18000 } },
+      "Netflix Via Email": { icon: "icon/netflix.png", prices: { 1: 28000 } },
+      "Netflix Via Link": { icon: "icon/netflix.png", prices: { 1: 18000 } },
       "Disney+": { icon: "icon/disney.png", prices: { 1: 00000 } },
       "Bstation": { icon: "icon/bstation.png", prices: { 1: 30000 } },
       "HBO Max Standar": { icon: "icon/hbo.png", prices: { 1: 13000 } },
@@ -40,6 +40,8 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
+      "Spotify": { icon: "icon/spotify.png", prices: { 1: 18000 } },
+      "Apple Music": { icon: "icon/apple.png", prices: { 1: 8000 } },
   }
  },
 
@@ -106,7 +108,7 @@ const DESCRIPTIONS = {
       }
     ],
 
-    "Netflix Log Via Email": [
+    "Netflix Via Email": [
       {
         type: "paragraph",
         text: "Netflix Premium adalah layanan streaming untuk menikmati berbagai film, serial, dan tayangan eksklusif dengan kualitas tinggi."
@@ -132,7 +134,7 @@ const DESCRIPTIONS = {
       }
     ],
 
-    "Netflix Log Via Link": [
+    "Netflix Via Link": [
       {
         type: "paragraph",
         text: "Netflix Premium adalah layanan streaming untuk menikmati berbagai film, serial, dan tayangan eksklusif dengan kualitas tinggi."
