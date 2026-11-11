@@ -14,6 +14,7 @@ const DATA = {
       "Bstation": { icon: "icon/bstation.png", prices: { 1: 30000 } },
       "HBO Max Standar": { icon: "icon/hbo.png", prices: { 1: 13000 } },
       "HBO Max Ultimate": { icon: "icon/hbo.png", prices: { 1: 18000 } },
+      "iQIYI": { icon: "icon/hbo.png", prices: { 1: 24000 } },
       
   }
  },
@@ -257,7 +258,32 @@ const DESCRIPTIONS = {
         type: "paragraph",
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
-    ]
+    ],
+
+    "iQIYI": [
+      {
+        type: "paragraph",
+        text: "iQIYI Premium Private adalah layanan berlangganan streaming untuk menikmati berbagai drama Asia, anime, variety show, dan film favorit dengan pengalaman menonton yang lebih nyaman, menggunakan akun private region US."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Bebas Iklan",
+          "Akses Konten Premium & Eksklusif",
+          "Kualitas Video Hingga 1080p",
+          "Akun Private (Tidak Sharing)",
+          "Region US"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private region US dari admin."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
   },
 
   "Editing Apps": {
