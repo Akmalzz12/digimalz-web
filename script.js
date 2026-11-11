@@ -13,7 +13,17 @@ const DATA = {
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
       "Disney+": { icon: "icon/disney.png", prices: { 1: 28000, 2: 56000, 3: 84000 } },
   }
- }
+ },
+
+  "Editing Apps": {
+    icon: "icon/app.png",
+    unit: "bulan",
+    services: {
+      "Canva": { icon: "icon/canva.png", prices: { 1: 2000 } },
+      "Capcut": { icon: "icon/capcut.png", prices: { 1: 20000 } },
+      "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000 } },
+}
+}
 };
 // ============================================================
 
