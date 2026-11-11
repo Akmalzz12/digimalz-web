@@ -10,8 +10,9 @@ const DATA = {
       "YouTube Indplane": { icon: "icon/yt.png", prices: { 1: 13000 } },
       "Netflix Log Via Email": { icon: "icon/netflix.png", prices: { 1: 28000 } },
       "Netflix Log Via Link": { icon: "icon/netflix.png", prices: { 1: 18000 } },
-      "Vidio": { icon: "icon/vidio.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
-      "Disney+": { icon: "icon/disney.png", prices: { 1: 28000, 2: 56000, 3: 84000 } },
+      "Disney+": { icon: "icon/disney.png", prices: { 1: 00000 } },
+      "Bstation": { icon: "icon/bstation.png", prices: { 1: 30000 } },
+      
   }
  },
 
@@ -178,7 +179,31 @@ const DESCRIPTIONS = {
         type: "paragraph",
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
-   ] 
+    ],
+    
+    "Bstation": [
+      {
+        type: "paragraph",
+        text: "Bstation Premium adalah layanan berlangganan streaming untuk menikmati berbagai anime, donghua, drama, dan film favorit dengan pengalaman menonton yang lebih nyaman."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Bebas Iklan",
+          "Akses Konten Premium & Eksklusif",
+          "Kualitas Video Hingga 1080p",
+          "Akses Episode Premium Lebih Lengkap"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Bisa pakai akun pribadi"
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ] 
 },
 
   "Editing Apps": {
