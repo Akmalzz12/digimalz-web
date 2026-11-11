@@ -30,82 +30,8 @@ const DATA = {
 // Deskripsi tiap layanan — terpisah dari data harga, nggak nyampur
 
 const DESCRIPTIONS = {
-  "Aplikasi Premium": {
-    "Canva": [
-      {
-        type: "paragraph",
-        text: "Canva Pro adalah versi premium Canva dengan akses fitur, template, elemen, dan aset eksklusif untuk membuat desain lebih mudah dan profesional."
-      },
-      {
-        type: "benefits",
-        items: [
-          "Akses Jutaan Template & Elemen",
-          "Akses Ribuan Font Menarik",
-          "Hapus Background Otomatis",
-          "Simpan Design Jernih"
-        ]
-      },
-      {
-        type: "note",
-        text: "Catatan: proses menggunakan sistem invite email canva kamu."
-      },
-      {
-        type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-      }
-    ],
-
-    "Capcut": [
-      {
-        type: "paragraph",
-        text: "CapCut Pro adalah versi premium CapCut dengan fitur editing lebih lengkap, efek dan template eksklusif, serta akses berbagai tools premium untuk membuat video lebih keren dan profesional."
-      },
-      {
-        type: "benefits",
-        items: [
-          "Tidak Ada Iklan",
-          "Akses Efek, Font & Template Pro",
-          "Akses Tools AI",
-          "Hapus Watermark",
-          "Ekspor Video Kualitas Tinggi"
-        ]
-      },
-      {
-        type: "note",
-        text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
-      },
-      {
-        type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-      }
-    ],
-
-    "Alight Motion": [
-      {
-        type: "paragraph",
-        text: "Alight Motion Pro adalah versi premium Alight Motion dengan fitur editing lebih lengkap untuk membuat animasi, motion graphics, dan video profesional."
-      },
-      {
-        type: "benefits",
-        items: [
-          "Tidak Ada Iklan",
-          "Akses Efek, Font & Template Pro",
-          "Akses Tools AI",
-          "Hapus Watermark",
-          "Ekspor Video Kualitas Tinggi"
-        ]
-      },
-      {
-        type: "note",
-        text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
-      },
-      {
-        type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-      }
-    ],
-
-    "YouTube Famhead": [
+  "Streaming Apps": {
+     "YouTube Famhead": [
       {
         type: "paragraph",
         text: "YouTube Premium Family Head adalah layanan berlangganan YouTube Premium bagi pemilik grup keluarga untuk menikmati video tanpa iklan, akses YouTube Music Premium, pemutaran di latar belakang, serta download video untuk ditonton secara offline."
@@ -252,21 +178,47 @@ const DESCRIPTIONS = {
         type: "paragraph",
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
-    ],
+   ] 
+},
 
-    "Spotify": [
+  "Editing Apps": {
+     "Canva": [
       {
         type: "paragraph",
-        text: "Spotify Premium adalah layanan berlangganan Spotify untuk menikmati musik dan podcast tanpa iklan, download offline, serta fitur premium lainnya."
+        text: "Canva Pro adalah versi premium Canva dengan akses fitur, template, elemen, dan aset eksklusif untuk membuat desain lebih mudah dan profesional."
       },
       {
         type: "benefits",
         items: [
-          "Paket Indplan",
+          "Akses Jutaan Template & Elemen",
+          "Akses Ribuan Font Menarik",
+          "Hapus Background Otomatis",
+          "Simpan Design Jernih"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: proses menggunakan sistem invite email canva kamu."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Capcut": [
+      {
+        type: "paragraph",
+        text: "CapCut Pro adalah versi premium CapCut dengan fitur editing lebih lengkap, efek dan template eksklusif, serta akses berbagai tools premium untuk membuat video lebih keren dan profesional."
+      },
+      {
+        type: "benefits",
+        items: [
           "Tidak Ada Iklan",
-          "Pilih & Putar Lagu Bebas",
-          "Download Lagu Untuk Offline",
-          "Unlimited Skip"
+          "Akses Efek, Font & Template Pro",
+          "Akses Tools AI",
+          "Hapus Watermark",
+          "Ekspor Video Kualitas Tinggi"
         ]
       },
       {
@@ -279,73 +231,24 @@ const DESCRIPTIONS = {
       }
     ],
 
-    "Getcontact": [
+    "Alight Motion": [
       {
         type: "paragraph",
-        text: "Getcontact Premium adalah layanan berlangganan dengan fitur tambahan untuk membantu mengelola dan mengenali nomor telepon dengan lebih lengkap."
+        text: "Alight Motion Pro adalah versi premium Alight Motion dengan fitur editing lebih lengkap untuk membuat animasi, motion graphics, dan video profesional."
       },
       {
         type: "benefits",
         items: [
           "Tidak Ada Iklan",
-          "Identifikasi Nomor Lebih Lengkap",
-          "Lihat Tag Nomor",
-          "Lihat Siapa Yang Mencari Nomor Kamu",
-          "Fitur Pencarian Premium"
+          "Akses Efek, Font & Template Pro",
+          "Akses Tools AI",
+          "Hapus Watermark",
+          "Ekspor Video Kualitas Tinggi"
         ]
       },
       {
         type: "note",
-        text: "Catatan: Sistem proses pakai nomor WhatsApp kamu."
-      },
-      {
-        type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-      }
-    ],
-
-    "ChatGPT": [
-      {
-        type: "paragraph",
-        text: "ChatGPT Plus adalah paket premium ChatGPT dengan akses fitur dan model yang lebih lengkap untuk membantu berbagai kebutuhan, seperti belajar, bekerja, membuat konten, dan lainnya."
-      },
-      {
-        type: "benefits",
-        items: [
-          "Akses Model AI Lebih Canggih",
-          "Batas Penggunaan Lebih Tinggi",
-          "Analisis File & Dokumen",
-          "Prioritas Saat Trafik Tinggi",
-          "Fitur AI Lebih Lengkap"
-        ]
-      },
-      {
-        type: "note",
-        text: "Catatan: Sistem proses pakai email kamu."
-      },
-      {
-        type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-      }
-    ],
-
-    "Gemini": [
-      {
-        type: "paragraph",
-        text: "Gemini Advanced adalah layanan AI premium dari Google dengan akses fitur AI yang lebih canggih untuk membantu menulis, belajar, membuat ide, menganalisis informasi, dan berbagai kebutuhan lainnya."
-      },
-      {
-        type: "benefits",
-        items: [
-          "Akses Model AI Premium",
-          "Kemampuan Reasoning Lebih Canggih",
-          "Analisis File & Dokumen",
-          "Prioritas Saat Trafik Tinggi"
-        ]
-      },
-      {
-        type: "note",
-        text: "Catatan: Sistem proses pakai email kamu."
+        text: "Catatan: Akun dari admin, tidak bisa pakai akun pribadi."
       },
       {
         type: "paragraph",
