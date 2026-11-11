@@ -519,8 +519,10 @@ function getQtySteps() {
 
 function formatQtyDisplay() {
   if (qty === null) { qtyValue.textContent = "-"; return; }
-  const unit = DATA[selectedSM].unit;
-  qtyValue.textContent = unit === "bulan" ? `${qty} Bulan` : qty;
+  const unit = getUnit();
+  qtyValue.textContent =
+    unit === "bulan" ? `${qty} Bulan` :
+    unit === "hari" ? `${qty} Hari` : qty;
 }
 
 // bangun HTML deskripsi sesuai urutan yang ditentukan
@@ -590,6 +592,7 @@ Object.keys(DATA).forEach(sm => {
 
         const steps = getQtySteps();
         qty = steps[0];
+        qtyLabel.textContent = ["bulan", "hari"].includes(getUnit()) ? "Pilih Durasi" : "Tentukan Jumlah";
         formatQtyDisplay();
 
         updatePrice();
@@ -667,8 +670,10 @@ waBtn.addEventListener("click", () => {
   const total = priceTable[qty] ?? 0;
   if (total <= 0) return;
   const totalFormatted = "Rp" + total.toLocaleString("id-ID");
-  const unit = DATA[selectedSM].unit;
-  const jumlahLine = unit === "bulan" ? `Durasi: ${qty} Bulan` : `Jumlah: ${qty}`;
+  const unit = getUnit();
+const jumlahLine =
+  unit === "bulan" ? `Durasi: ${qty} Bulan` :
+  unit === "hari" ? `Durasi: ${qty} Hari` : `Jumlah: ${qty}`;
 
   const message =
 `Halo Digimalz, saya mau order:
