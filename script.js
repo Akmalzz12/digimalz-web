@@ -15,6 +15,10 @@ const DATA = {
       "HBO Max Standar": { icon: "icon/hbo.png", prices: { 1: 13000 } },
       "HBO Max Ultimate": { icon: "icon/hbo.png", prices: { 1: 18000 } },
       "iQIYI": { icon: "icon/iqiyi.png", prices: { 1: 24000 } },
+      "Prime Video": { icon: "icon/prime.png", prices: { 1: 13000 } },
+      "Vision+": { icon: "icon/vision.png", prices: { 1: 28000 } },
+      "Viu": { icon: "icon/viu.png", prices: { 12: 5000 } },
+      "WeTV": { icon: "icon/wetv.png", prices: { 1: 18000 } },
       
   }
  },
@@ -284,6 +288,104 @@ const DESCRIPTIONS = {
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
+  
+    "Prime Video": [
+      {
+        type: "paragraph",
+        text: "Prime Video Private adalah layanan streaming untuk menikmati berbagai film, serial, dan konten original favorit dengan pengalaman menonton yang lebih nyaman, menggunakan akun private."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akun Private (Tidak Sharing)",
+          "Akses Film & Serial Original",
+          "Kualitas Video Hingga Full HD",
+          "Bisa Ditonton di Berbagai Perangkat"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Vision+": [
+      {
+        type: "paragraph",
+        text: "Vision+ Paket Sport adalah layanan berlangganan streaming untuk menikmati berbagai tayangan olahraga favorit, pertandingan, dan konten sport lainnya dengan pengalaman menonton yang lebih nyaman."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akses Channel & Konten Olahraga",
+          "Tayangan Pertandingan Pilihan",
+          "Bisa Ditonton di Berbagai Perangkat",
+          "Kualitas Video Jernih"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Viu": [
+      {
+        type: "paragraph",
+        text: "Viu Private adalah layanan berlangganan streaming untuk menikmati berbagai drama Korea, drama Asia, variety show, dan anime favorit dengan pengalaman menonton yang lebih nyaman, menggunakan akun private."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Bebas Iklan",
+          "Akses Konten Premium",
+          "Akun Private (Tidak Sharing)",
+          "Kualitas Video Hingga 1080p"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+ 
+    "WeTV": [
+      {
+        type: "paragraph",
+        text: "WeTV Premium adalah layanan berlangganan streaming untuk menikmati berbagai drama Asia, anime, dan variety show favorit dengan pengalaman menonton yang lebih nyaman."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akses seluruh konten Premium/VIP",
+          "Bebas iklan pada konten VIP",
+          "Kualitas streaming hingga Full HD (sesuai perangkat)",
+          "Download video untuk ditonton secara offline",
+          "Akses episode terbaru lebih awal (sesuai ketersediaan konten)",
+          "Full Garansi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Silakan konfirmasi ketersediaan stok terlebih dahulu sebelum melakukan pemesanan."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ]
   },
 
   "Editing Apps": {
