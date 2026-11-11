@@ -518,9 +518,14 @@ function getQtySteps() {
   return Object.keys(priceTable).map(Number).sort((a, b) => a - b);
 }
 
+function getUnit() {
+  return DATA[selectedSM].services[selectedService]?.unit || DATA[selectedSM].unit;
+}
+
 function formatQtyDisplay() {
   if (qty === null) { qtyValue.textContent = "-"; return; }
   const unit = getUnit();
+  qtyLabel.textContent = ["bulan", "hari"].includes(unit) ? "Pilih Durasi" : "Tentukan Jumlah";
   qtyValue.textContent =
     unit === "bulan" ? `${qty} Bulan` :
     unit === "hari" ? `${qty} Hari` : qty;
