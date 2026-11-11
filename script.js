@@ -26,6 +26,7 @@ const DATA = {
 // ============================================================
 
 // Deskripsi tiap layanan — terpisah dari data harga, nggak nyampur
+
 const DESCRIPTIONS = {
   "Aplikasi Premium": {
     "Canva": [
@@ -48,7 +49,7 @@ const DESCRIPTIONS = {
       },
       {
         type: "paragraph",
-        text: 'Dengan melakukan orderan Anda        dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
 
@@ -349,179 +350,9 @@ const DESCRIPTIONS = {
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ]
-
-    // tambahin layanan lain dengan format yang sama
-  },
-
- "Nokos WhatsApp": {
-  "Nomor Indonesia": [
-    {
-      type: "paragraph",
-      text: "Mohon dibaca sebelum order!"
-    },
-    {
-      type: "paragraph",
-      text: "Layanan ini menyediakan nomor virtual yang khusus digunakan untuk WhatsApp. Nomor bersifat virtual dan tidak berupa kartu SIM fisik."
-    },
-    {
-      type: "benefits",
-      items: [
-        "Operator Random",
-        "Nomor Baru/Fresh",
-        "Proses Cepat",
-        "Langsung bisa digunakan"
-      ]
-    },
-    {
-      type: "note",
-      text: "Catatan: Kode OTP hanya bisa di request 1x, jika nomor ter-logout dari WhatsApp maka tidak bisa req OTP lagi! - jadi harap bijak dalam menggunakan nomor virtual tersebut, jangan langsung spam chat saat nomor baru aktif."
-    },
-    {
-      type: "paragraph",
-      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-    }
-  ]
-},
-
-  "Suntik Instagram": {
-    "Followers": [
-      {
-        type: "paragraph",
-        text: "Mohon dibaca sebelum order!"
-      },
-      {
-        type: "paragraph",
-        text: 'Pastikan akun tidak di privat, dilarang keras untuk mengganti username saat proses sedang berlangsung, dan sudah menonaktifkan fitur "Laporkan untuk ditinjau".'
-      },
-      {
-        type: "benefits",
-        items: [
-          "Mix Account With Post",
-          "Drop/Turun 1-3%",
-          "Refill 30 Days",
-          "Proses Instant"
-        ]
-      },
-      {
-        type: "note",
-        text: "Proses hanya menggunakan username sosmed | Tingkat drop/penurunan setiap akun berbeda-beda, dan tergantung dari Instagram nya juga sedang ketat atau tidak."
-      },
-      {
-        type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-      }
-    ],
-
-  "Likes": [
-    {
-      type: "paragraph",
-      text: "Mohon dibaca sebelum order!"
-    },
-    {
-      type: "paragraph",
-      text: 'Pastikan akun tidak di privat dan postingan dapat diakses secara publik. Jangan menghapus postingan selama proses sedang berlangsung.'
-    },
-    {
-      type: "benefits",
-      items: [
-        "Akun Indonesia Bot",
-        "Proses Instant",
-        "Drop/Turun 1-5%",
-        "Hight Quality"
-      ]
-    },
-    {
-      type: "note",
-      text: "Proses hanya menggunakan link postingan Instagram."
-    },
-    {
-      type: "paragraph",
-      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-    }
-  ],
-
- "Komentar": [
-    {
-      type: "paragraph",
-      text: "Mohon dibaca sebelum order!"
-    },
-    {
-      type: "paragraph",
-      text: 'Pastikan akun tidak di privat dan postingan dapat diakses secara publik. Jangan menghapus postingan selama proses sedang berlangsung.'
-    },
-    {
-      type: "benefits",
-      items: [
-        "Komentar 100% sesuai script kamu",
-        "Dikerjakan manual oleh akun real, bukan bot",
-        "Non Drop/Tidak Turun",
-        "Cocok untuk campaign, testimoni, soft-selling, atau membangun percakapan terarah."
-      ]
-    },
-    {
-      type: "note",
-      text: "Proses hanya menggunakan link postingan Instagram."
-    },
-    {
-      type: "paragraph",
-      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-    }
-  ]
-},
-
-  "Google Maps Riview": {
-  "Custom Review Bintang 5": [
-    {
-      type: "paragraph",
-      text: "Mohon dibaca sebelum order!"
-    },
-    {
-      type: "paragraph",
-      text: "Layanan penambahan rating ⭐5 + Custom riview yang dikerjakan manual oleh tim buzzer kami. Akun riview bersifat real bukan bot - Setiap review mengikuti teks/script yang kamu berikan agar terlihat natural dan sesuai kebutuhan bisnis."
-    },
-    {
-      type: "benefits",
-      items: [
-        "Akun Real Indonesia",
-        "Riview Sesuai Script",
-        "Pengerjaan Manual, Bukan Bot",
-        "Permanen/No Drop",
-        "Cocok untuk bisnis, restoran, jasa, klinik, toko, kantor, dan usaha lokal lainnya."
-      ]
-    },
-    {
-      type: "paragraph",
-      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-    }
-   ],
-
-    "Random Review Bintang 5": [
-    {
-      type: "paragraph",
-      text: "Mohon dibaca sebelum order!"
-    },
-    {
-      type: "paragraph",
-      text: "Layanan penambahan rating ⭐5 + Riview positif acak yang dikerjakan manual oleh tim buzzer kami. Akun riview bersifat real bukan bot - Komentar menggunakan variasi natural yang tetap relevan agar tidak terlihat dibuat-buat."
-    },
-    {
-      type: "benefits",
-      items: [
-        "Akun Real Indonesia",
-        "Komentar Positif Random",
-        "Pengerjaan Manual, Bukan Bot",
-        "Permanen/No Drop",
-        "Cocok untuk bisnis, restoran, jasa, klinik, toko, kantor, dan usaha lokal lainnya."
-      ]
-    },
-    {
-      type: "paragraph",
-      text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-    }
-  ]
-},
-  // tambahin kategori/layanan lain kalau perlu
+  }
 };
+
 
 let selectedSM = null;
 let selectedService = null;
