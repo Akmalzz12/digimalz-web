@@ -33,6 +33,13 @@ const DATA = {
       "Meitu": { icon: "icon/meitu.png", unit: "hari", prices: { 7: 7000 } },
       "Picsart": { icon: "icon/picsart.png", unit: "hari", prices: { 7: 9000 } },
       "Wink": { icon: "icon/wink.png", unit: "hari", prices: { 7: 7000 } },
+  }
+ },
+
+  "Editing Apps": {
+    icon: "icon/app.png",
+    unit: "bulan",
+    services: {
 }
 }
 };
