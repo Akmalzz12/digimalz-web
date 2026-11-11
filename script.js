@@ -36,7 +36,7 @@ const DATA = {
   }
  },
 
-  "Editing Apps": {
+  "AI Apps": {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
