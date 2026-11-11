@@ -19,8 +19,8 @@ const DATA = {
       "Getcontact": { icon: "icon/gtc.png", prices: { 1: 10000, 2: 20000, 3: 30000 } },
       "ChatGPT": { icon: "icon/gpt.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
       "Gemini": { icon: "icon/gemini.png", prices: { 18: 15000 } }
-    }
   }
+ }
 }
 };
 // ============================================================
