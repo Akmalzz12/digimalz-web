@@ -36,12 +36,19 @@ const DATA = {
   }
  },
 
+  "Music Apps": {
+    icon: "icon/app.png",
+    unit: "bulan",
+    services: {
+  }
+ },
+
   "AI Apps": {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-}
-}
+  }
+  }
 };
 // ============================================================
 
