@@ -32,9 +32,10 @@ const DATA = {
 
 // Deskripsi tiap layanan — terpisah dari data harga, nggak nyampur
 
+
 const DESCRIPTIONS = {
   "Streaming Apps": {
-     "YouTube Famhead": [
+    "YouTube Famhead": [
       {
         type: "paragraph",
         text: "YouTube Premium Family Head adalah layanan berlangganan YouTube Premium bagi pemilik grup keluarga untuk menikmati video tanpa iklan, akses YouTube Music Premium, pemutaran di latar belakang, serta download video untuk ditonton secara offline."
@@ -182,7 +183,7 @@ const DESCRIPTIONS = {
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
-    
+
     "Bstation": [
       {
         type: "paragraph",
@@ -206,61 +207,61 @@ const DESCRIPTIONS = {
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ],
-   
-    "HBO Max Standard": [
-  {
-    type: "paragraph",
-    text: "HBO Max Standard adalah layanan streaming untuk menikmati berbagai film blockbuster, serial populer, anime, dan tayangan eksklusif dari HBO, Warner Bros., DC, dan lainnya dengan kualitas Full HD."
-  },
-  {
-    type: "benefits",
-    items: [
-      "Streaming 2 Perangkat Sekaligus",
-      "Kualitas Video Full HD 1080p",
-      "Akses Film & Serial Eksklusif",
-      "Download Hingga 30 Konten",
-      "Hingga 5 Profil dalam 1 Akun"
-    ]
-  },
-  {
-    type: "note",
-    text: "Catatan: Kualitas dan fitur mengikuti ketentuan paket HBO Max."
-  },
-  {
-    type: "paragraph",
-    text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-  }
-],
 
-"HBO Max Ultimate": [
-  {
-    type: "paragraph",
-    text: "HBO Max Ultimate adalah layanan streaming premium untuk menikmati berbagai film blockbuster, serial populer, anime, dan tayangan eksklusif dengan kualitas gambar dan audio terbaik hingga 4K UHD."
-  },
-  {
-    type: "benefits",
-    items: [
-      "Streaming 4 Perangkat Sekaligus",
-      "Kualitas Video Hingga 4K UHD",
-      "Dukungan Dolby Atmos & Dolby Vision",
-      "Akses Film & Serial Eksklusif",
-      "Download Hingga 100 Konten",
-      "Hingga 5 Profil dalam 1 Akun"
+    "HBO Max Standar": [
+      {
+        type: "paragraph",
+        text: "HBO Max Standard adalah layanan streaming untuk menikmati berbagai film blockbuster, serial populer, anime, dan tayangan eksklusif dari HBO, Warner Bros., DC, dan lainnya dengan kualitas Full HD."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Streaming 2 Perangkat Sekaligus",
+          "Kualitas Video Full HD 1080p",
+          "Akses Film & Serial Eksklusif",
+          "Download Hingga 30 Konten",
+          "Hingga 5 Profil dalam 1 Akun"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Kualitas dan fitur mengikuti ketentuan paket HBO Max."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "HBO Max Ultimate": [
+      {
+        type: "paragraph",
+        text: "HBO Max Ultimate adalah layanan streaming premium untuk menikmati berbagai film blockbuster, serial populer, anime, dan tayangan eksklusif dengan kualitas gambar dan audio terbaik hingga 4K UHD."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Streaming 4 Perangkat Sekaligus",
+          "Kualitas Video Hingga 4K UHD",
+          "Dukungan Dolby Atmos & Dolby Vision",
+          "Akses Film & Serial Eksklusif",
+          "Download Hingga 100 Konten",
+          "Hingga 5 Profil dalam 1 Akun"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Kualitas dan fitur mengikuti ketentuan paket HBO Max."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
     ]
   },
-  {
-    type: "note",
-    text: "Catatan: Kualitas dan fitur mengikuti ketentuan paket HBO Max."
-  },
-  {
-    type: "paragraph",
-    text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-  }
-]
-},
 
   "Editing Apps": {
-     "Canva": [
+    "Canva": [
       {
         type: "paragraph",
         text: "Canva Pro adalah versi premium Canva dengan akses fitur, template, elemen, dan aset eksklusif untuk membuat desain lebih mudah dan profesional."
@@ -335,6 +336,7 @@ const DESCRIPTIONS = {
     ]
   }
 };
+
 
 
 let selectedSM = null;
