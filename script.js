@@ -2,7 +2,7 @@
 const WA_NUMBER = "628553333529";
 
 const DATA = {
-  "Aplikasi Premium": {
+  "Streaming Apps": {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
