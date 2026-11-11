@@ -14,7 +14,7 @@ const DATA = {
       "Bstation": { icon: "icon/bstation.png", prices: { 1: 30000 } },
       "HBO Max Standar": { icon: "icon/hbo.png", prices: { 1: 13000 } },
       "HBO Max Ultimate": { icon: "icon/hbo.png", prices: { 1: 18000 } },
-      "iQIYI": { icon: "icon/hbo.png", prices: { 1: 24000 } },
+      "iQIYI": { icon: "icon/iqiyi.png", prices: { 1: 24000 } },
       
   }
  },
