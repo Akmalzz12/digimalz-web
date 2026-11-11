@@ -11,81 +11,14 @@ const DATA = {
       "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000 } },
       "YouTube Famhead": { icon: "icon/yt.png", prices: { 1: 15000 } },
       "YouTube Indplane": { icon: "icon/yt.png", prices: { 1: 13000 } },
-      "Netflix": { icon: "icon/netflix.png", prices: { 1: 33000 } },
+      "Netflix Log Via Email": { icon: "icon/netflix.png", prices: { 1: 28000 } },
+      "Netflix Log Via Link": { icon: "icon/netflix.png", prices: { 1: 18000 } },
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
       "Disney+": { icon: "icon/disney.png", prices: { 1: 28000, 2: 56000, 3: 84000 } },
       "Spotify": { icon: "icon/spotify.png", prices: { 1: 30000 } },
       "Getcontact": { icon: "icon/gtc.png", prices: { 1: 10000, 2: 20000, 3: 30000 } },
       "ChatGPT": { icon: "icon/gpt.png", prices: { 1: 20000, 2: 40000, 3: 60000 } },
       "Gemini": { icon: "icon/gemini.png", prices: { 18: 15000 } }
-    }
-  },
-  "Nomor Virtual WhatsApp": {
-  icon: "icon/wa.png",
-  unit: "nomor",
-  services: {
-    "Nomor Indonesia": {
-      1: 10000
-    }
-  }
-},
-  "Suntik Instagram": {
-    icon: "icon/ig.png",
-    services: {
-      "Followers": { 1000: 15000, 2000: 25000, 3000: 40000, 4000: 50000, 5000: 65000, 6000: 75000, 7000: 95000, 8000: 105000, 9000: 120000, 10000: 135000 },
-      "Likes": { 100: 2000, 200: 4000, 300: 6000, 400: 8000, 500: 10000, 1000: 15000, 2000: 25000, 3000: 35000, 4000: 45000, 5000: 50000 },
-      "Komentar": { 10: 5000, 20: 10000, 30: 15000, 40: 20000, 50: 25000, 60: 30000, 70: 35000, 80: 40000, 90: 45000, 100: 50000 }
-    }
-  },
-  "Suntik TikTok": {
-    icon: "icon/tt.png",
-    services: {
-      "Followers": { 100: 5000, 200: 8000, 300: 12000, 400: 16000, 500: 20000, 1000: 40000, 2000: 80000, 3000: 120000, 4000: 160000, 5000: 200000 },
-      "Likes": { 100: 2000, 200: 4000, 300: 6000, 400: 8000, 500: 9000, 1000: 10000, 2000: 15000, 3000: 20000, 4000: 25000, 5000: 30000 },
-      "Views": { 1000: 3000, 2000: 6000, 3000: 9000, 4000: 12000, 5000: 15000, 6000: 18000, 7000: 21000, 8000: 24000, 9000: 27000, 10000: 30000 }
-    }
-  },
-  "Suntik Shopee": {
-    icon: "icon/sp.png",
-    services: {
-      "Followers": { 100: 2000, 200: 4000, 300: 6000, 400: 8000, 500: 10000, 1000: 20000, 2000: 40000, 3000: 60000, 4000: 80000, 5000: 100000 },
-      "Likes": { 100: 1000, 200: 2000, 300: 3000, 400: 4000, 500: 5000, 1000: 10000, 2000: 20000, 3000: 30000, 4000: 40000, 5000: 50000 },
-      "Komentar": { 10: 5000, 20: 10000, 30: 15000, 40: 20000, 50: 25000, 60: 30000, 70: 35000, 80: 40000, 90: 45000, 100: 50000 }
-    }
-  },
-  "Suntik X/Twitter": {
-    icon: "icon/x.png",
-    services: {
-      "Followers": { 100: 3000, 200: 6000, 300: 9000, 400: 12000, 500: 15000, 1000: 20000, 2000: 40000, 3000: 60000, 4000: 80000, 5000: 100000 },
-      "Likes": { 100: 1000, 200: 2000, 300: 3000, 400: 4000, 500: 5000, 1000: 10000, 2000: 15000, 3000: 20000, 4000: 25000, 5000: 30000 },
-      "Views": { 1000: 2000, 2000: 4000, 3000: 6000, 4000: 8000, 5000: 10000, 6000: 12000, 7000: 14000, 8000: 16000, 9000: 18000, 10000: 20000 }
-    }
-  },
-    "Suntik Facebook": {
-    icon: "icon/fb.png",
-    services: {
-      "Followers": { 100: 2000, 200: 4000, 300: 6000, 400: 8000, 500: 10000, 1000: 15000, 2000: 30000, 3000: 45000, 4000: 60000, 5000: 75000 },
-      "Likes": { 100: 2000, 200: 4000, 300: 6000, 400: 8000, 500: 10000, 1000: 15000, 2000: 30000, 3000: 45000, 4000: 60000, 5000: 75000 },
-      "Views": { 1000: 2000, 2000: 4000, 3000: 6000, 4000: 8000, 5000: 10000, 6000: 12000, 7000: 14000, 8000: 16000, 9000: 18000, 10000: 20000 }
-    }
-  },
-  "Google Maps Riview": {
-  icon: "icon/gmaps.png",
-  services: {
-    "Custom Review Bintang 5": {
-      10: 30000,
-      20: 60000,
-      30: 90000,
-      40: 120000,
-      50: 150000
-    },
-
-    "Random Review Bintang 5": {
-      10: 25000,
-      20: 50000,
-      30: 75000,
-      40: 100000,
-      50: 125000
     }
   }
 }
@@ -169,7 +102,7 @@ const DESCRIPTIONS = {
       }
     ],
 
-    "YouTube Famphead": [
+    "YouTube Famhead": [
       {
         type: "paragraph",
         text: "YouTube Premium Family Head adalah layanan berlangganan YouTube Premium bagi pemilik grup keluarga untuk menikmati video tanpa iklan, akses YouTube Music Premium, pemutaran di latar belakang, serta download video untuk ditonton secara offline."
@@ -218,7 +151,7 @@ const DESCRIPTIONS = {
       }
     ],
 
-    "Netflix": [
+    "Netflix Log Via Email": [
       {
         type: "paragraph",
         text: "Netflix Premium adalah layanan streaming untuk menikmati berbagai film, serial, dan tayangan eksklusif dengan kualitas tinggi."
@@ -227,6 +160,7 @@ const DESCRIPTIONS = {
         type: "benefits",
         items: [
           "Akun Sharing 1P1U",
+          "Login Via Email & Pass",
           "Akses Film & Serial Lengkap",
           "Tidak Ada Iklan",
           "Kualitas Video Jernih",
@@ -235,7 +169,33 @@ const DESCRIPTIONS = {
       },
       {
         type: "note",
-        text: "Catatan: Akun dari admin, tidak bisa pakai akun/email sendiri"
+        text: "Catatan: Akun dari admin"
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Netflix Log Via Link": [
+      {
+        type: "paragraph",
+        text: "Netflix Premium adalah layanan streaming untuk menikmati berbagai film, serial, dan tayangan eksklusif dengan kualitas tinggi."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akun Sharing 1P1U",
+          "Login Via Link/Tautan",
+          "Akses Film & Serial Lengkap",
+          "Tidak Ada Iklan",
+          "Kualitas Video Jernih",
+          "Support Semua Device"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin"
       },
       {
         type: "paragraph",
