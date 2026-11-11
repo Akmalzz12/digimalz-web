@@ -30,7 +30,7 @@ const DATA = {
       "Canva": { icon: "icon/canva.png", prices: { 1: 2000 } },
       "Capcut": { icon: "icon/capcut.png", prices: { 1: 20000 } },
       "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000 } },
-      "Meitu": { icon: "icon/meitu.png", prices: { 7: 7000 } },
+      "Meitu": { icon: "icon/meitu.png", unit: "hari", prices: { 7: 7000 } },
 }
 }
 };
