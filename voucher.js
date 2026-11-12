@@ -22,7 +22,7 @@
   const VOUCHERS = [
     {
       aktif: true,
-      code: "DIGI5",
+      code: "DGM5",
       potongan: 1000,
       min: 0,
       sekaliPakai: false,
