@@ -921,9 +921,10 @@ waBtn.addEventListener("click", () => {
     : { final: total, discount: 0, code: null };
   const totalFormatted = "Rp" + v.final.toLocaleString("id-ID");
   const unit = getUnit();
-const jumlahLine =
-  unit === "bulan" ? `Durasi: ${qty} Bulan` :
-  unit === "hari" ? `Durasi: ${qty} Hari` : `Jumlah: ${qty}`;
+  const unitName = unit ? unit.charAt(0).toUpperCase() + unit.slice(1) : "";
+  const jumlahLine = ["bulan", "hari"].includes(unit)
+    ? `Durasi: ${qty} ${unitName}`
+    : `Jumlah: ${qty} ${unitName}`.trim();
 
   const voucherLine = v.code
     ? `\nHarga Normal: Rp${total.toLocaleString("id-ID")}\nVoucher: ${v.code} (potongan Rp${v.discount.toLocaleString("id-ID")})`
