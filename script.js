@@ -33,8 +33,8 @@ const DATA = {
       "Capcut": { icon: "icon/capcut.png", prices: { 1: 25000 } },
       "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000 } },
       "Picsart": { icon: "icon/picsart.png", unit: "hari", prices: { 7: 8000 } },
-      "Meitu": { icon: "icon/meitu.png", unit: "hari", prices: { 7: 7000 } },
-      "Wink": { icon: "icon/wink.png", unit: "hari", prices: { 7: 7000 } },
+      "Meitu": { icon: "icon/meitu.png", unit: "hari", prices: { 7: 7500 } },
+      "Wink": { icon: "icon/wink.png", unit: "hari", prices: { 7: 7500 } },
   }
  },
 
@@ -51,7 +51,7 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "ChatGPT Go": { icon: "icon/chatgpt.png", prices: { 3: 90000 } },
+      "ChatGPT Go": { icon: "icon/chatgpt.png", prices: { 3: 88000 } },
       "Gemini Pro": { icon: "icon/gemini.png", prices: { 3: 18000 } },
   }
   }
