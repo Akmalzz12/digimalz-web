@@ -6,8 +6,7 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "YouTube Famhead": { icon: "icon/yt.png", prices: { 1: 13000 } },
-      "YouTube Indplane": { icon: "icon/yt.png", prices: { 1: 12000 } },
+      "YouTube": { icon: "icon/yt.png", prices: { 1: 13000 } },
       "Netflix Via Email": { icon: "icon/netflix.png", prices: { 1: 28000 } },
       "Netflix Via Link": { icon: "icon/netflix.png", prices: { 1: 18000 } },
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 48000 } },
@@ -63,7 +62,7 @@ const DATA = {
 
 const DESCRIPTIONS = {
   "Streaming Apps": {
-    "YouTube Famhead": [
+    "YouTube": [
       {
         type: "paragraph",
         text: "YouTube Premium Family Head adalah layanan berlangganan YouTube Premium bagi pemilik grup keluarga untuk menikmati video tanpa iklan, akses YouTube Music Premium, pemutaran di latar belakang, serta download video untuk ditonton secara offline."
@@ -72,30 +71,6 @@ const DESCRIPTIONS = {
         type: "benefits",
         items: [
           "Invite 5 Email Keluarga",
-          "Tidak Ada Iklan",
-          "Putar Video Di latar Belakang",
-          "Kualitas Video Jernih",
-          "Download Video Untuk Offline"
-        ]
-      },
-      {
-        type: "note",
-        text: "Catatan: Akun dari admin, tidak bisa menggunakan akun pribadi."
-      },
-      {
-        type: "paragraph",
-        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
-      }
-    ],
-
-    "YouTube Indplane": [
-      {
-        type: "paragraph",
-        text: "YouTube Premium Individual adalah layanan berlangganan YouTube untuk menikmati video tanpa iklan, akses YouTube Music Premium, pemutaran di latar belakang, serta download video untuk ditonton secara offline."
-      },
-      {
-        type: "benefits",
-        items: [
           "Tidak Ada Iklan",
           "Putar Video Di latar Belakang",
           "Kualitas Video Jernih",
