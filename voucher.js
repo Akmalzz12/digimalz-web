@@ -5,7 +5,13 @@
 (function () {
   "use strict";
 
+  // ====== SAKLAR UTAMA ======
+  // true  = voucher menyala
+  // false = semua voucher mati (template di bawah tetap aman)
+  const VOUCHER_AKTIF = true;
+
   // ====== ATUR VOUCHER DI SINI ======
+  // aktif       : true = tampil, false = sembunyikan voucher ini saja
   // code        : kode unik (huruf besar, tanpa spasi)
   // percent     : besar diskon dalam persen
   // min         : minimal belanja (Rp). 0 = tanpa minimal
@@ -14,6 +20,7 @@
   // logo        : gambar di sisi kiri kartu
   const VOUCHERS = [
     {
+      aktif: true,
       code: "DIGI5",
       percent: 5,
       min: 0,
@@ -144,7 +151,7 @@
   function render() {
     if (!listEl) return;
 
-    const visible = VOUCHERS.filter(v => !isExpired(v));
+    const visible = VOUCHERS.filter(v => v.aktif !== false && !isExpired(v));
     // voucher baru muncul setelah kategori & layanan dipilih (harga sudah ada)
     boxEl.style.display = (visible.length && lastTotal > 0) ? "" : "none";
     listEl.innerHTML = visible.map(cardHTML).join("");
@@ -188,7 +195,7 @@
 
   // ---------- Pasang ke halaman ----------
   const priceBox = document.querySelector(".price-box");
-  if (!priceBox || !VOUCHERS.length) return;
+  if (!VOUCHER_AKTIF || !priceBox || !VOUCHERS.length) return;
 
   boxEl = document.createElement("div");
   boxEl.className = "field voucher-field";
