@@ -10,6 +10,7 @@ const DATA = {
       "YouTube Indplane": { icon: "icon/yt.png", prices: { 1: 13000 } },
       "Netflix Via Email": { icon: "icon/netflix.png", prices: { 1: 28000 } },
       "Netflix Via Link": { icon: "icon/netflix.png", prices: { 1: 18000 } },
+      "Vidio": { icon: "icon/vidio.png", prices: { 1: 48000 } },
       "Disney+": { icon: "icon/disney.png", prices: { 1: 00000 } },
       "Bstation": { icon: "icon/bstation.png", prices: { 1: 30000 } },
       "HBO Max Standar": { icon: "icon/hbo.png", prices: { 1: 13000 } },
@@ -20,7 +21,6 @@ const DATA = {
       "Viu": { icon: "icon/viu.png", prices: { 12: 5000 } },
       "WeTV": { icon: "icon/wetv.png", prices: { 1: 18000 } },
       "Loklok": { icon: "icon/loklok.png", unit: "hari", prices: { 40: 41000 } },
-      "Vidio": { icon: "icon/vidio.png", prices: { 1: 48000 } },
       
   }
  },
