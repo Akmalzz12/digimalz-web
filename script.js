@@ -49,6 +49,8 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
+      "ChatGPT Go": { icon: "icon/chatgpt.png", prices: { 3: 90000 } },
+      "Gemini Pro": { icon: "icon/gemini.png", prices: { 3: 18000 } },
   }
   }
 };
@@ -608,6 +610,58 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Akun dari admin, tidak bisa menggunakan akun pribadi."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ]
+  },
+
+  "AI Apps": {
+    "ChatGPT Go": [
+      {
+        type: "paragraph",
+        text: "ChatGPT Go adalah paket berlangganan ChatGPT dengan batas penggunaan lebih besar dibanding akun gratis, untuk membantu menulis, belajar, mencari ide, membuat gambar, dan menyelesaikan berbagai tugas dengan lebih lancar, menggunakan akun private."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akun Private (Tidak Sharing)",
+          "Include Email Akses",
+          "Batas Penggunaan Lebih Besar",
+          "Support All Device",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin, sudah termasuk akses email."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+   
+    "Gemini Pro": [
+      {
+        type: "paragraph",
+        text: "Gemini Pro adalah paket berlangganan Google Gemini dengan akses fitur AI yang lebih lengkap untuk membantu menulis, belajar, coding, dan menyelesaikan berbagai tugas dengan lebih lancar. Akun Gemini Pro aktif selama 3 bulan."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akun Gemini Pro Selama 3 Bulan",
+          "Support Argon & Claude Model 5.5",
+          "Support Antigravity",
+          "Storage Hingga 5TB",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin."
       },
       {
         type: "paragraph",
