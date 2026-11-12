@@ -912,7 +912,7 @@ waBtn.addEventListener("click", () => {
   if (total <= 0) return;
   const v = typeof Voucher !== "undefined"
     ? Voucher.calc(total)
-    : { final: total, discount: 0, code: null, percent: 0 };
+    : { final: total, discount: 0, code: null };
   const totalFormatted = "Rp" + v.final.toLocaleString("id-ID");
   const unit = getUnit();
 const jumlahLine =
@@ -920,7 +920,7 @@ const jumlahLine =
   unit === "hari" ? `Durasi: ${qty} Hari` : `Jumlah: ${qty}`;
 
   const voucherLine = v.code
-    ? `\nHarga Normal: Rp${total.toLocaleString("id-ID")}\nVoucher: ${v.code} (Diskon ${v.percent}%, hemat Rp${v.discount.toLocaleString("id-ID")})`
+    ? `\nHarga Normal: Rp${total.toLocaleString("id-ID")}\nVoucher: ${v.code} (potongan Rp${v.discount.toLocaleString("id-ID")})`
     : "";
 
   const message =
