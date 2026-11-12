@@ -6,8 +6,8 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "YouTube Famhead": { icon: "icon/yt.png", prices: { 1: 15000 } },
-      "YouTube Indplane": { icon: "icon/yt.png", prices: { 1: 13000 } },
+      "YouTube Famhead": { icon: "icon/yt.png", prices: { 1: 13000 } },
+      "YouTube Indplane": { icon: "icon/yt.png", prices: { 1: 12000 } },
       "Netflix Via Email": { icon: "icon/netflix.png", prices: { 1: 28000 } },
       "Netflix Via Link": { icon: "icon/netflix.png", prices: { 1: 18000 } },
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 48000 } },
@@ -30,9 +30,9 @@ const DATA = {
     unit: "bulan",
     services: {
       "Canva": { icon: "icon/canva.png", prices: { 1: 2000 } },
-      "Capcut": { icon: "icon/capcut.png", prices: { 1: 20000 } },
+      "Capcut": { icon: "icon/capcut.png", prices: { 1: 25000 } },
       "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000 } },
-      "Picsart": { icon: "icon/picsart.png", unit: "hari", prices: { 7: 9000 } },
+      "Picsart": { icon: "icon/picsart.png", unit: "hari", prices: { 7: 8000 } },
       "Meitu": { icon: "icon/meitu.png", unit: "hari", prices: { 7: 7000 } },
       "Wink": { icon: "icon/wink.png", unit: "hari", prices: { 7: 7000 } },
   }
