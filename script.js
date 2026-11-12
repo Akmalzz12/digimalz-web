@@ -562,7 +562,7 @@ const DESCRIPTIONS = {
   },
 
   "Music Apps": {
-    "Spotify Family": [
+    "Spotify": [
       {
         type: "paragraph",
         text: "Spotify Premium Family Plan adalah layanan berlangganan musik dan podcast untuk menikmati jutaan lagu tanpa iklan, dengan akses fitur premium seperti putar lagu sesuka hati dan download untuk didengarkan secara offline."
@@ -582,6 +582,32 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Akun private dari admin."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Apple Music": [
+      {
+        type: "paragraph",
+        text: "Apple Music Premium Family Head adalah layanan berlangganan Apple Music bagi pengelola grup Family Sharing untuk menikmati jutaan lagu tanpa iklan, kualitas audio lossless, serta download lagu untuk didengarkan secara offline."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Invite 5 Email Keluarga",
+          "Tidak Ada Iklan",
+          "Kualitas Audio Lossless & Spatial Audio",
+          "Download Lagu Untuk Offline",
+          "Support Perangkat Apple & Android",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun dari admin, tidak bisa menggunakan akun pribadi."
       },
       {
         type: "paragraph",
