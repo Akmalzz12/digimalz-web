@@ -13,18 +13,16 @@
   // ====== ATUR VOUCHER DI SINI ======
   // aktif       : true = tampil, false = sembunyikan voucher ini saja
   // code        : kode unik (huruf besar, tanpa spasi)
-  // percent     : besar diskon dalam persen
+  // potongan    : potongan harga tetap (Rp), contoh 1000
   // min         : minimal belanja (Rp). 0 = tanpa minimal
-  // maxDiscount : batas maksimal potongan (Rp). 0 = tanpa batas
   // expires     : batas waktu (format ISO, +07:00 = WIB)
   // logo        : gambar di sisi kiri kartu
   const VOUCHERS = [
     {
-      aktif: false,
+      aktif: true,
       code: "DIGI5",
-      percent: 5,
+      potongan: 1000,
       min: 0,
-      maxDiscount: 0,
       expires: "2026-11-13T23:59:59+07:00",
       logo: "icon/logo.png"
     }
@@ -72,19 +70,17 @@
   const isExpired = v => Date.now() >= new Date(v.expires).getTime();
   const usable = (v, total) => !isUsed(v.code) && !isExpired(v) && total >= v.min;
 
-  function discountOf(v, total) {
-    let d = Math.floor(total * v.percent / 100);
-    if (v.maxDiscount > 0) d = Math.min(d, v.maxDiscount);
-    return d;
+  function discountOf(v) {
+    return v.potongan > 0 ? v.potongan : 0;
   }
 
   function calc(total) {
     const v = applied ? find(applied) : null;
     if (!v || total <= 0 || !usable(v, total)) {
-      return { final: total, discount: 0, code: null, percent: 0 };
+      return { final: total, discount: 0, code: null };
     }
-    const d = Math.min(discountOf(v, total), total);
-    return { final: total - d, discount: d, code: v.code, percent: v.percent };
+    const d = Math.min(discountOf(v), total);
+    return { final: total - d, discount: d, code: v.code };
   }
 
   // ---------- Teks waktu ----------
@@ -117,8 +113,7 @@
     const belumMin = lastTotal > 0 && lastTotal < v.min;
     const disabled = used || lastTotal < v.min;
 
-    let minText = "Min. blj " + rp(v.min);
-    if (v.maxDiscount > 0) minText += " · Maks. " + rp(v.maxDiscount);
+    const minText = "Min. blj " + rp(v.min);
 
     let infoLine;
     if (used) {
@@ -138,7 +133,7 @@
         '<div class="voucher-logo"><img src="' + v.logo + '" alt=""></div>' +
         '<div class="voucher-body">' +
           '<div class="voucher-info">' +
-            "<strong>Diskon " + v.percent + "%</strong>" +
+            "<strong>Diskon " + rp(v.potongan) + "</strong>" +
             "<span>" + minText + "</span>" +
             infoLine +
           "</div>" +
