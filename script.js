@@ -765,9 +765,7 @@ function formatQtyDisplay() {
   if (qty === null) { qtyValue.textContent = "-"; return; }
   const unit = getUnit();
   qtyLabel.textContent = ["bulan", "hari"].includes(unit) ? "Pilih Durasi" : "Tentukan Jumlah";
-  qtyValue.textContent =
-    unit === "bulan" ? `${qty} Bulan` :
-    unit === "hari" ? `${qty} Hari` : qty;
+  qtyValue.textContent = unit ? `${qty} ${unit.charAt(0).toUpperCase() + unit.slice(1)}` : qty;
 }
 
 // bangun HTML deskripsi sesuai urutan yang ditentukan
