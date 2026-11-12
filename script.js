@@ -60,8 +60,9 @@ const DATA = {
     unit: "nomor",
     services: {
       "Region Indonesia": { icon: "icon/indonesia.png", prices: { 1: 10000 } },
-      "Region Malaysia": { icon: "icon/indonesia.png", prices: { 1: 15000 } },
-      "Region Singapore": { icon: "icon/indonesia.png", prices: { 1: 2100000 } },
+      "Region Malaysia": { icon: "icon/malaysia.png", prices: { 1: 15000 } },
+      "Region India": { icon: "icon/india.png", prices: { 1: 30000 } },
+      "Region Singapore": { icon: "icon/singapore.png", prices: { 1: 2100000 } },
 
   }
  }
