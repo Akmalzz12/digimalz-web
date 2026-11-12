@@ -209,7 +209,8 @@
       applied = null;
     } else {
       applied = code;
-      if (typeof showToast === "function") showToast("Voucher " + code + " dipakai");
+      if (typeof showToast === "function")
+showToast("Voucher Berhasil Dipakai");
     }
     render();
     syncPrice();
