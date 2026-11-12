@@ -15,6 +15,8 @@
   // code        : kode unik (huruf besar, tanpa spasi)
   // potongan    : potongan harga tetap (Rp), contoh 1000
   // min         : minimal belanja (Rp). 0 = tanpa minimal
+  // sekaliPakai : false = bisa dipakai berulang selama voucher masih tampil
+  //               true  = hanya 1 kali per perangkat
   // expires     : batas waktu (format ISO, +07:00 = WIB)
   // logo        : gambar di sisi kiri kartu
   const VOUCHERS = [
@@ -23,6 +25,7 @@
       code: "DIGI5",
       potongan: 1000,
       min: 0,
+      sekaliPakai: false,
       expires: "2026-11-13T23:59:59+07:00",
       logo: "icon/logo.png"
     }
@@ -66,7 +69,10 @@
 
   // ---------- Aturan voucher ----------
   const find = code => VOUCHERS.find(v => v.code === code);
-  const isUsed = code => readUsed().indexOf(code) !== -1;
+  const isUsed = code => {
+    const v = find(code);
+    return !!(v && v.sekaliPakai) && readUsed().indexOf(code) !== -1;
+  };
   const isExpired = v => Date.now() >= new Date(v.expires).getTime();
   const usable = (v, total) => !isUsed(v.code) && !isExpired(v) && total >= v.min;
 
@@ -180,6 +186,8 @@
     // dipanggil setelah order dikirim ke WhatsApp
     consume: function () {
       if (!applied) return;
+      const v = find(applied);
+      if (!v || !v.sekaliPakai) return; // voucher berulang: tidak dihanguskan
       const list = readUsed();
       if (list.indexOf(applied) === -1) list.push(applied);
       saveUsed(list);
