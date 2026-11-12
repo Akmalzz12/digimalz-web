@@ -559,6 +559,35 @@ const DESCRIPTIONS = {
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
     ]
+  },
+
+  "Music Apps": {
+    "Spotify Family": [
+      {
+        type: "paragraph",
+        text: "Spotify Premium Family Plan adalah layanan berlangganan musik dan podcast untuk menikmati jutaan lagu tanpa iklan, dengan akses fitur premium seperti putar lagu sesuka hati dan download untuk didengarkan secara offline."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akun Private (Tidak Sharing)",
+          "Bebas Ganti Password",
+          "Support All Device",
+          "Bisa Perpanjang Akun yang Sama",
+          "Tidak Ada Iklan",
+          "Download Lagu Untuk Offline",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ]
   }
 };
 
