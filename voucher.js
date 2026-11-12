@@ -145,7 +145,8 @@
     if (!listEl) return;
 
     const visible = VOUCHERS.filter(v => !isExpired(v));
-    boxEl.style.display = visible.length ? "" : "none";
+    // voucher baru muncul setelah kategori & layanan dipilih (harga sudah ada)
+    boxEl.style.display = (visible.length && lastTotal > 0) ? "" : "none";
     listEl.innerHTML = visible.map(cardHTML).join("");
 
     const c = calc(lastTotal);
@@ -170,7 +171,7 @@
     refresh: function (total) {
       lastTotal = total > 0 ? total : 0;
       const v = applied ? find(applied) : null;
-      if (applied && (!v || !usable(v, lastTotal))) applied = null;
+      if (applied && (lastTotal <= 0 || !v || !usable(v, lastTotal))) applied = null;
       render();
     },
 
@@ -209,8 +210,7 @@
       applied = null;
     } else {
       applied = code;
-      if (typeof showToast === "function")
-showToast("Voucher Berhasil Dipakai");
+      if (typeof showToast === "function") showToast("Voucher Berhasil Dipakai");
     }
     render();
     syncPrice();
@@ -225,4 +225,3 @@ showToast("Voucher Berhasil Dipakai");
 
   render();
 })();
-                                             
