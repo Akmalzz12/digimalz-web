@@ -20,7 +20,7 @@
   // logo        : gambar di sisi kiri kartu
   const VOUCHERS = [
     {
-      aktif: true,
+      aktif: false,
       code: "DIGI5",
       percent: 5,
       min: 0,
