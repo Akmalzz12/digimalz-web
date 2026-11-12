@@ -1,0 +1,163 @@
+/* ==============================
+   VOUCHER DISKON
+============================== */
+
+.voucher-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Kartu tiket: lubang setengah lingkaran di garis sobekan */
+.voucher {
+  --notch: 8px;
+  --left: 84px;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 84px;
+  background: #F1F8FF;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  -webkit-mask:
+    radial-gradient(circle var(--notch) at var(--left) 0, transparent 98%, #000) top / 100% 51% no-repeat,
+    radial-gradient(circle var(--notch) at var(--left) 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
+  mask:
+    radial-gradient(circle var(--notch) at var(--left) 0, transparent 98%, #000) top / 100% 51% no-repeat,
+    radial-gradient(circle var(--notch) at var(--left) 100%, transparent 98%, #000) bottom / 100% 51% no-repeat;
+}
+
+/* Sisi kiri: logo */
+.voucher-logo {
+  width: var(--left);
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #DCEEFF;
+  border-radius: 10px 0 0 10px;
+}
+
+.voucher-logo img {
+  max-width: 100%;
+  max-height: 44px;
+  object-fit: contain;
+}
+
+/* Sisi kanan: keterangan + tombol */
+.voucher-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-left: 2px dashed #A9CFF5;
+}
+
+.voucher-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.voucher-info strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #038df2;
+  line-height: 1.3;
+}
+
+.voucher-info span {
+  font-size: 11.5px;
+  color: #4A5568;
+  line-height: 1.4;
+}
+
+.voucher-info small {
+  font-size: 11px;
+  color: #8492A6;
+  line-height: 1.4;
+}
+
+.voucher-info small.urgent {
+  color: #E5484D;
+  font-weight: 600;
+}
+
+.voucher-info small.warn {
+  color: #E5484D;
+}
+
+.voucher-btn {
+  flex: none;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #038df2;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.voucher-btn:active {
+  opacity: 0.8;
+}
+
+/* Sedang dipakai */
+.voucher.applied {
+  background: #E8F4FF;
+  box-shadow: inset 0 0 0 2px #038df2;
+}
+
+.voucher.applied .voucher-btn {
+  background: #FFFFFF;
+  color: #038df2;
+  box-shadow: inset 0 0 0 1.5px #038df2;
+}
+
+/* Tidak bisa dipakai (sudah terpakai / belum memenuhi minimal belanja) */
+.voucher.disabled {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.voucher.disabled .voucher-btn {
+  background: #B8C2CF;
+  color: #FFFFFF;
+  cursor: not-allowed;
+}
+
+/* Info hemat di bawah kartu */
+.voucher-saving {
+  display: none;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #20A464;
+}
+
+.voucher-saving.show {
+  display: block;
+}
+
+@media (max-width: 380px) {
+  .voucher {
+    --left: 70px;
+  }
+
+  .voucher-body {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .voucher-btn {
+    padding: 8px 11px;
+  }
+}
