@@ -890,12 +890,16 @@ minusBtn.addEventListener("click", () => {
 });
 
 function updatePrice() {
+  const hasVoucher = typeof Voucher !== "undefined";
   if (selectedSM && selectedService && qty !== null) {
     const priceTable = getPriceTable(selectedSM, selectedService);
     const total = priceTable[qty] ?? 0;
-    priceValue.textContent = "Rp" + total.toLocaleString("id-ID");
+    if (hasVoucher) Voucher.refresh(total);
+    const v = hasVoucher ? Voucher.calc(total) : { final: total };
+    priceValue.textContent = "Rp" + v.final.toLocaleString("id-ID");
     waBtn.disabled = total <= 0;
   } else {
+    if (hasVoucher) Voucher.refresh(0);
     priceValue.textContent = "Rp0";
     waBtn.disabled = true;
   }
@@ -906,24 +910,36 @@ waBtn.addEventListener("click", () => {
   const priceTable = getPriceTable(selectedSM, selectedService);
   const total = priceTable[qty] ?? 0;
   if (total <= 0) return;
-  const totalFormatted = "Rp" + total.toLocaleString("id-ID");
+  const v = typeof Voucher !== "undefined"
+    ? Voucher.calc(total)
+    : { final: total, discount: 0, code: null, percent: 0 };
+  const totalFormatted = "Rp" + v.final.toLocaleString("id-ID");
   const unit = getUnit();
 const jumlahLine =
   unit === "bulan" ? `Durasi: ${qty} Bulan` :
   unit === "hari" ? `Durasi: ${qty} Hari` : `Jumlah: ${qty}`;
+
+  const voucherLine = v.code
+    ? `\nHarga Normal: Rp${total.toLocaleString("id-ID")}\nVoucher: ${v.code} (Diskon ${v.percent}%, hemat Rp${v.discount.toLocaleString("id-ID")})`
+    : "";
 
   const message =
 `Halo Digimalz, saya mau order:
 
 Sosial Media/Kategori: ${selectedSM}
 Layanan: ${selectedService}
-${jumlahLine}
+${jumlahLine}${voucherLine}
 Total Harga: ${totalFormatted}
 
 Mohon info lebih lanjut. Terima kasih!`;
 
   const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
+
+  if (v.code) {
+    Voucher.consume();
+    updatePrice();
+  }
 });
 
 // ============================================================
