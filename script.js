@@ -19,6 +19,8 @@ const DATA = {
       "Vision+": { icon: "icon/vision.png", prices: { 1: 28000 } },
       "Viu": { icon: "icon/viu.png", prices: { 12: 5000 } },
       "WeTV": { icon: "icon/wetv.png", prices: { 1: 18000 } },
+      "Loklok": { icon: "icon/loklok.png", unit: "hari", prices: { 40: 41000 } },
+      "Vidio": { icon: "icon/vidio.png", prices: { 1: 48000 } },
       
   }
  },
@@ -401,6 +403,55 @@ const DESCRIPTIONS = {
       {
         type: "note",
         text: "Catatan: Silakan konfirmasi ketersediaan stok terlebih dahulu sebelum melakukan pemesanan."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Loklok": [
+      {
+        type: "paragraph",
+        text: "Loklok VIP Dasar/Basic adalah layanan berlangganan streaming untuk menikmati berbagai film, drama Asia, dan anime favorit dengan pengalaman menonton yang lebih nyaman, menggunakan akun private."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Paket VIP Dasar/Basic",
+          "Akun Private (Tidak Sharing)",
+          "Domain Email Outlook",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin dengan domain email Outlook."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Vidio": [
+      {
+        type: "paragraph",
+        text: "Vidio Platinum adalah paket berlangganan Vidio untuk menikmati berbagai konten premium, film, serial, dan tayangan eksklusif dengan pengalaman menonton yang lebih nyaman, menggunakan akun private."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Paket Platinum",
+          "Akun Private (Tidak Sharing)",
+          "Support All Device",
+          "Akses Konten Premium & Eksklusif",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin."
       },
       {
         type: "paragraph",
