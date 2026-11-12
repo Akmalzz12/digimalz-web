@@ -480,6 +480,84 @@ const DESCRIPTIONS = {
         type: "paragraph",
         text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
       }
+    ],
+
+    "Meitu": [
+      {
+        type: "paragraph",
+        text: "Meitu VIP+ Private adalah versi premium Meitu dengan fitur edit foto dan video lebih lengkap, efek dan filter eksklusif, serta akses berbagai tools premium untuk hasil edit lebih keren dan profesional, menggunakan akun private."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akun Private (Tidak Sharing)",
+          "Akses Fitur & Efek VIP+",
+          "Tidak Ada Iklan",
+          "Hapus Watermark",
+          "Support All Device",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Picsart": [
+      {
+        type: "paragraph",
+        text: "Picsart Pro Private adalah versi premium Picsart dengan fitur edit foto dan video lebih lengkap, template, efek, dan tools AI eksklusif untuk membuat desain dan konten lebih keren dan profesional, menggunakan akun private."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Akun Private (Tidak Sharing)",
+          "Akses Template, Efek & Font Pro",
+          "Akses Tools AI",
+          "Tidak Ada Iklan",
+          "Hapus Watermark",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
+    ],
+
+    "Wink": [
+      {
+        type: "paragraph",
+        text: "Wink VIP+ adalah versi premium Wink dengan fitur edit dan perbaikan kualitas video serta foto yang lebih lengkap, efek dan tools AI eksklusif untuk hasil yang lebih jernih dan profesional, menggunakan akun private."
+      },
+      {
+        type: "benefits",
+        items: [
+          "Khusus Android",
+          "Akun Private (Tidak Sharing)",
+          "Akses Fitur & Tools VIP+",
+          "Tidak Ada Iklan",
+          "Hapus Watermark",
+          "Full Bergaransi"
+        ]
+      },
+      {
+        type: "note",
+        text: "Catatan: Akun private dari admin, khusus perangkat Android dan tidak bisa digunakan di iOS."
+      },
+      {
+        type: "paragraph",
+        text: 'Dengan melakukan orderan Anda dianggap sudah memahami <a href="/sk" target="_blank" style="color: #038df2;">Syarat dan Ketentuan</a> Digimalz.id.'
+      }
     ]
   }
 };
