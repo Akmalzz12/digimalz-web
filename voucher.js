@@ -27,7 +27,7 @@
       min: 0,
       sekaliPakai: false,
       expires: "2026-11-13T23:59:59+07:00",
-      logo: "icon/logo.png"
+      logo: "icon/voucher.png"
     }
   ];
   // ==================================
