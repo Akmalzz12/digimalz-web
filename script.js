@@ -55,7 +55,7 @@ const DATA = {
   }
  },
 
-  "Nomor Kosong WhatsApp": {
+  "Nokos WhatsApp": {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
