@@ -53,7 +53,15 @@ const DATA = {
       "ChatGPT Go": { icon: "icon/chatgpt.png", prices: { 3: 89000 } },
       "Gemini Pro": { icon: "icon/gemini.png", prices: { 3: 19000 } },
   }
+ },
+
+  "Nomor Kosong WhatsApp": {
+    icon: "icon/app.png",
+    unit: "bulan",
+    services: {
+
   }
+ }
 };
 // ============================================================
 
