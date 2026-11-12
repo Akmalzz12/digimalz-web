@@ -57,9 +57,9 @@ const DATA = {
 
   "Nokos WhatsApp": {
     icon: "icon/app.png",
-    unit: "bulan",
+    unit: "nomor",
     services: {
-
+      "Region Indonesia": { icon: "icon/indonesia.png", prices: { 1: 10000 } },
   }
  }
 };
