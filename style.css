@@ -2525,3 +2525,56 @@ textarea {
     padding: 18px;
   }
 }
+
+/* ==============================
+   LABEL KECEPATAN PROSES
+============================== */
+
+.proses-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+  margin-left: auto;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.proses-badge svg {
+  flex: none;
+}
+
+/* Proses Instant: hijau */
+.proses-badge.instant {
+  background: #E6F8EE;
+  color: #17995A;
+}
+
+/* Proses 3-5 Jam: oranye */
+.proses-badge.jam {
+  background: #FFF3DF;
+  color: #C97A12;
+}
+
+/* Nama layanan boleh menyusut supaya label tidak terdorong keluar */
+.dropdown-list li > span:not(.proses-badge) {
+  min-width: 0;
+}
+
+/* Di kartu deskripsi: baris sendiri di paling atas, sedikit lebih besar */
+.desc-card .proses-row {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.desc-card .proses-row .proses-badge {
+  margin-left: 0;
+  padding: 4px 11px;
+  font-size: 11px;
+}
+
