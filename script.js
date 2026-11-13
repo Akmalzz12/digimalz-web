@@ -797,7 +797,7 @@ function renderDescription(desc) {
 // Di tiap layanan tulis:  proses: "instant"  -> Proses Instant
 //                         proses: "3-5"      -> Proses 3-5 Jam
 // Kalau tidak ditulis, memakai PROSES_DEFAULT ("" = tanpa label)
-const PROSES_DEFAULT = "instant";
+const PROSES_DEFAULT = "";
 
 function prosesBadge(sm, sv) {
   const type = DATA[sm].services[sv].proses ?? PROSES_DEFAULT;
