@@ -24,7 +24,7 @@
       aktif: true,
       code: "DGM11",
       potongan: 1000,
-      min: 5,
+      min: 5000,
       sekaliPakai: false,
       expires: "2026-11-13T23:59:59+07:00",
       logo: "icon/voucher.png"
