@@ -28,7 +28,7 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "Canva": { icon: "icon/canva.png", proses: "instant", prices: { 1: 3000 } },
+      "Canva": { icon: "icon/canva.png", proses: "3-5", prices: { 1: 3000 } },
       "Capcut": { icon: "icon/capcut.png", prices: { 1: 27000 } },
       "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000 } },
       "Picsart": { icon: "icon/picsart.png", unit: "hari", prices: { 7: 9000 } },
