@@ -5,20 +5,8 @@
 (function () {
   "use strict";
 
-  // ====== SAKLAR UTAMA ======
-  // true  = voucher menyala
-  // false = semua voucher mati (template di bawah tetap aman)
   const VOUCHER_AKTIF = true;
 
-  // ====== ATUR VOUCHER DI SINI ======
-  // aktif       : true = tampil, false = sembunyikan voucher ini saja
-  // code        : kode unik (huruf besar, tanpa spasi)
-  // potongan    : potongan harga tetap (Rp), contoh 1000
-  // min         : minimal belanja (Rp). 0 = tanpa minimal
-  // sekaliPakai : false = bisa dipakai berulang selama voucher masih tampil
-  //               true  = hanya 1 kali per perangkat
-  // expires     : batas waktu (format ISO, +07:00 = WIB)
-  // logo        : gambar di sisi kiri kartu
   const VOUCHERS = [
     {
       aktif: true,
@@ -27,13 +15,21 @@
       min: 5000,
       sekaliPakai: false,
       expires: "2026-11-13T23:59:59+07:00",
-      logo: "icon/voucher.png"
+      logo: "icon/logo.png"
     }
   ];
   // ==================================
 
   const KEY = "dgm_vc_used";
   const rp = n => "Rp" + n.toLocaleString("id-ID");
+
+  // Singkat: 5000 -> Rp5RB, 1500 -> Rp1,5RB, 2000000 -> Rp2JT
+  const rpShort = n => {
+    const fmt = x => String(parseFloat(x.toFixed(1))).replace(".", ",");
+    if (n >= 1000000) return "Rp" + fmt(n / 1000000) + "JT";
+    if (n >= 1000) return "Rp" + fmt(n / 1000) + "RB";
+    return "Rp" + n;
+  };
 
   let applied = null; // kode voucher yang sedang dipilih
   let lastTotal = 0;  // harga normal produk yang sedang dipilih
@@ -119,7 +115,7 @@
     const belumMin = lastTotal > 0 && lastTotal < v.min;
     const disabled = used || lastTotal < v.min;
 
-    const minText = "Min. blj " + rp(v.min);
+    const minText = "Min. Blj " + rpShort(v.min);
 
     let infoLine;
     if (used) {
