@@ -121,7 +121,7 @@
     if (used) {
       infoLine = '<small>Sudah dipakai di perangkat ini</small>';
     } else if (belumMin) {
-      infoLine = '<small class="warn">Belanja ' + rp(v.min - lastTotal) + ' lagi untuk pakai</small>';
+      infoLine = '<small class="warn">Tambah ' + rp(v.min - lastTotal) + ' lagi untuk pakai</small>';
     } else {
       const t = timeInfo(v);
       infoLine = '<small class="' + (t.urgent ? "urgent" : "") + '">' + t.text + "</small>";
