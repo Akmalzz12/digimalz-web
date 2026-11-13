@@ -28,7 +28,7 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "Canva": { icon: "icon/canva.png", prices: { 1: 3000 } },
+      "Canva": { icon: "icon/canva.png", proses: "instant", prices: { 1: 3000 } },
       "Capcut": { icon: "icon/capcut.png", prices: { 1: 27000 } },
       "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000 } },
       "Picsart": { icon: "icon/picsart.png", unit: "hari", prices: { 7: 9000 } },
@@ -793,6 +793,23 @@ function renderDescription(desc) {
   }).join("");
 }
 
+// ====== LABEL KECEPATAN PROSES ======
+// Di tiap layanan tulis:  proses: "instant"  -> Proses Instant
+//                         proses: "3-5"      -> Proses 3-5 Jam
+// Kalau tidak ditulis, memakai PROSES_DEFAULT ("" = tanpa label)
+const PROSES_DEFAULT = "instant";
+
+function prosesBadge(sm, sv) {
+  const type = DATA[sm].services[sv].proses ?? PROSES_DEFAULT;
+  if (type === "instant") {
+    return `<span class="proses-badge instant"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Proses Instant</span>`;
+  }
+  if (type === "3-5") {
+    return `<span class="proses-badge jam"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Proses 3-5 Jam</span>`;
+  }
+  return "";
+}
+
 Object.keys(DATA).forEach(sm => {
   const li = document.createElement("li");
   li.innerHTML = `<img src="${DATA[sm].icon}" alt="${sm}" class="sm-icon"><span>${sm}</span>`;
@@ -817,9 +834,10 @@ Object.keys(DATA).forEach(sm => {
     Object.keys(DATA[sm].services).forEach(sv => {
       const liSv = document.createElement("li");
       const serviceIcon = DATA[sm].services[sv].icon;
+      const badge = prosesBadge(sm, sv);
       liSv.innerHTML = serviceIcon
-        ? `<img src="${serviceIcon}" alt="${sv}" class="sm-icon"><span>${sv}</span>`
-        : `<span>${sv}</span>`;
+        ? `<img src="${serviceIcon}" alt="${sv}" class="sm-icon"><span>${sv}</span>${badge}`
+        : `<span>${sv}</span>${badge}`;
       liSv.addEventListener("click", () => {
         selectedService = sv;
         svSelected.innerHTML = serviceIcon
@@ -831,7 +849,7 @@ Object.keys(DATA).forEach(sm => {
 
         const desc = DESCRIPTIONS[selectedSM]?.[sv];
         if (desc) {
-          descText.innerHTML = renderDescription(desc);
+          descText.innerHTML = `<span class="proses-row">${badge}</span>` + renderDescription(desc);
           descBox.style.display = "block";
         } else {
           descBox.style.display = "none";
