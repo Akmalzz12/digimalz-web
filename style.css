@@ -2527,74 +2527,121 @@ textarea {
 }
 
 /* ==============================
-   LABEL KECEPATAN PROSES (glass)
+   LABEL KECEPATAN PROSES
 ============================== */
 
 .proses-badge {
   position: relative;
-  z-index: 1;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 4px 11px;
+  gap: 6px;
+  padding: 3px 12px 3px 4px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   font-family: 'Poppins', sans-serif;
   font-size: 11px;
   font-weight: 600;
   line-height: 1.5;
+  color: #FFFFFF;
   white-space: nowrap;
-  -webkit-backdrop-filter: blur(10px) saturate(170%);
-  backdrop-filter: blur(10px) saturate(170%);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
+/* Ikon di dalam lingkaran kecil */
 .proses-badge svg {
   flex: none;
+  width: 18px;
+  height: 18px;
+  padding: 3.5px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
 }
 
 /* Proses Instant: merah */
 .proses-badge.instant {
-  color: #D93036;
-  background: linear-gradient(135deg, rgba(255, 107, 112, 0.32), rgba(255, 107, 112, 0.12));
+  background: linear-gradient(135deg, #FF6B70, #E0343A);
   box-shadow:
-    0 4px 14px rgba(229, 72, 77, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    0 3px 8px rgba(224, 52, 58, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 /* Proses jam: oranye */
 .proses-badge.jam {
-  color: #B86A0C;
-  background: linear-gradient(135deg, rgba(255, 168, 58, 0.36), rgba(255, 168, 58, 0.14));
+  background: linear-gradient(135deg, #FFB347, #F08A0A);
   box-shadow:
-    0 4px 14px rgba(240, 150, 30, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    0 3px 8px rgba(240, 138, 10, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 /* Baris label di paling atas kartu deskripsi */
 .desc-card .proses-row {
-  position: relative;
   display: block;
   margin-bottom: 12px;
 }
 
-/* Cahaya warna di belakang kapsul, supaya efek blur kaca terlihat */
+/* Matikan cahaya blur versi lama */
 .desc-card .proses-row::before {
-  content: "";
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  width: 80px;
-  height: 18px;
-  transform: translateY(-50%);
+  display: none;
+}
+
+/* ==============================
+   LABEL KECEPATAN PROSES
+============================== */
+
+.proses-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 12px 3px 4px;
   border-radius: 999px;
-  filter: blur(9px);
-  opacity: 0.6;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #FFFFFF;
+  white-space: nowrap;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
-.desc-card .proses-row:has(.instant)::before {
-  background: #FF6B70;
+/* Ikon di dalam lingkaran kecil */
+.proses-badge svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  padding: 3.5px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
 }
 
-.desc-card .proses-row:has(.jam)::before {
-  background: #FFA83A;
+/* Proses Instant: merah */
+.proses-badge.instant {
+  background: linear-gradient(135deg, #FF6B70, #E0343A);
+  box-shadow:
+    0 3px 8px rgba(224, 52, 58, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+/* Proses jam: oranye */
+.proses-badge.jam {
+  background: linear-gradient(135deg, #FFB347, #F08A0A);
+  box-shadow:
+    0 3px 8px rgba(240, 138, 10, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+/* Baris label di paling atas kartu deskripsi */
+.desc-card .proses-row {
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Matikan cahaya blur versi lama */
+.desc-card .proses-row::before {
+  display: none;
 }
