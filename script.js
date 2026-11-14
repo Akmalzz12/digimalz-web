@@ -8,18 +8,18 @@ const DATA = {
     services: {
       "YouTube": { icon: "icon/yt.png", proses: "instant", prices: { 1: 14000 } },
       "Netflix Via Email": { icon: "icon/netflix.png", proses: "3-5", prices: { 1: 29000 } },
-      "Netflix Via Link": { icon: "icon/netflix.png", prices: { 1: 19000 } },
-      "Vidio": { icon: "icon/vidio.png", prices: { 1: 49000 } },
-      "Vision+": { icon: "icon/vision.png", prices: { 1: 29000 } },
-      "Disney+": { icon: "icon/disney.png", prices: { 1: 00000 } },
-      "Prime Video": { icon: "icon/prime.png", prices: { 1: 14000 } },
-      "Bstation": { icon: "icon/bstation.png", prices: { 1: 32000 } },
-      "HBO Max Standar": { icon: "icon/hbo.png", prices: { 1: 14000 } },
-      "HBO Max Ultimate": { icon: "icon/hbo.png", prices: { 1: 19000 } },
-      "iQIYI": { icon: "icon/iqiyi.png", prices: { 1: 25000 } },
-      "Viu": { icon: "icon/viu.png", prices: { 12: 6000 } },
-      "WeTV": { icon: "icon/wetv.png", prices: { 1: 32000 } },
-      "Loklok": { icon: "icon/loklok.png", unit: "hari", prices: { 40: 42000 } },
+      "Netflix Via Link": { icon: "icon/netflix.png", proses: "3-5", prices: { 1: 19000 } },
+      "Vidio": { icon: "icon/vidio.png", proses: "3-5", prices: { 1: 49000 } },
+      "Vision+": { icon: "icon/vision.png", proses: "3-5", prices: { 1: 29000 } },
+      "Disney+": { icon: "icon/disney.png", proses: "3-5", prices: { 1: 00000 } },
+      "Prime Video": { icon: "icon/prime.png", proses: "3-5", prices: { 1: 14000 } },
+      "Bstation": { icon: "icon/bstation.png", proses: "3-5", prices: { 1: 32000 } },
+      "HBO Max Standar": { icon: "icon/hbo.png", proses: "3-5", prices: { 1: 14000 } },
+      "HBO Max Ultimate": { icon: "icon/hbo.png", proses: "3-5", prices: { 1: 19000 } },
+      "iQIYI": { icon: "icon/iqiyi.png", proses: "3-5", prices: { 1: 25000 } },
+      "Viu": { icon: "icon/viu.png", proses: "3-5", prices: { 12: 6000 } },
+      "WeTV": { icon: "icon/wetv.png", proses: "3-5", prices: { 1: 32000 } },
+      "Loklok": { icon: "icon/loklok.png", proses: "3-5", unit: "hari", prices: { 40: 42000 } },
       
   }
  },
@@ -28,12 +28,12 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "Canva": { icon: "icon/canva.png", prices: { 1: 3000 } },
-      "Capcut": { icon: "icon/capcut.png", prices: { 1: 27000 } },
-      "Alight Motion": { icon: "icon/am.png", prices: { 1: 5000 } },
-      "Picsart": { icon: "icon/picsart.png", unit: "hari", prices: { 7: 9000 } },
-      "Meitu": { icon: "icon/meitu.png", unit: "hari", prices: { 7: 8500 } },
-      "Wink": { icon: "icon/wink.png", unit: "hari", prices: { 7: 8500 } },
+      "Canva": { icon: "icon/canva.png", proses: "instant", prices: { 1: 3000 } },
+      "Capcut": { icon: "icon/capcut.png", proses: "instant", prices: { 1: 27000 } },
+      "Alight Motion": { icon: "icon/am.png", proses: "instant", prices: { 1: 5000 } },
+      "Picsart": { icon: "icon/picsart.png", proses: "3-5", unit: "hari", prices: { 7: 9000 } },
+      "Meitu": { icon: "icon/meitu.png", proses: "3-5", unit: "hari", prices: { 7: 8500 } },
+      "Wink": { icon: "icon/wink.png", proses: "3-5", unit: "hari", prices: { 7: 8500 } },
   }
  },
 
@@ -41,8 +41,8 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "Spotify": { icon: "icon/spotify.png", prices: { 1: 19000 } },
-      "Apple Music": { icon: "icon/apple.png", prices: { 1: 9000 } },
+      "Spotify": { icon: "icon/spotify.png", proses: "instant", prices: { 1: 19000 } },
+      "Apple Music": { icon: "icon/apple.png", proses: "instant", prices: { 1: 9000 } },
   }
  },
 
@@ -50,8 +50,8 @@ const DATA = {
     icon: "icon/app.png",
     unit: "bulan",
     services: {
-      "ChatGPT Go": { icon: "icon/chatgpt.png", prices: { 3: 89000 } },
-      "Gemini Pro": { icon: "icon/gemini.png", prices: { 3: 19000 } },
+      "ChatGPT Go": { icon: "icon/chatgpt.png", proses: "3-5", prices: { 3: 89000 } },
+      "Gemini Pro": { icon: "icon/gemini.png", proses: "3-5", prices: { 3: 19000 } },
   }
  },
 
