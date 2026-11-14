@@ -2549,10 +2549,10 @@ textarea {
   flex: none;
 }
 
-/* Proses Instant: hijau */
+/* Proses Instant: merah */
 .proses-badge.instant {
-  background: #E6F8EE;
-  color: #17995A;
+  background: #FDECEC;
+  color: #D93036;
 }
 
 /* Proses 3-5 Jam: oranye */
