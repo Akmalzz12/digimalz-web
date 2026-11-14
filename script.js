@@ -7,7 +7,7 @@ const DATA = {
     unit: "bulan",
     services: {
       "YouTube": { icon: "icon/yt.png", proses: "instant", prices: { 1: 14000 } },
-      "Netflix Via Email": { icon: "icon/netflix.png", prices: { 1: 29000 } },
+      "Netflix Via Email": { icon: "icon/netflix.png", proses: "3-5", prices: { 1: 29000 } },
       "Netflix Via Link": { icon: "icon/netflix.png", prices: { 1: 19000 } },
       "Vidio": { icon: "icon/vidio.png", prices: { 1: 49000 } },
       "Vision+": { icon: "icon/vision.png", prices: { 1: 29000 } },
