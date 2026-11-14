@@ -793,21 +793,27 @@ function renderDescription(desc) {
   }).join("");
 }
 
-// ====== LABEL KECEPATAN PROSES ======
-// Di tiap layanan tulis:  proses: "instant"  -> Proses Instant
-//                         proses: "3-5"      -> Proses 3-5 Jam
+// ====== LABEL KECEPATAN PROSES (tampil di kartu deskripsi) ======
+// Di tiap layanan tulis, contoh:
+//   proses: "instant"   -> Proses Instant (hijau)
+//   proses: "3-5"       -> Proses 3-5 Jam (oranye)
+//   proses: "6-7"       -> Proses 6-7 Jam
+//   proses: "1 Hari"    -> Proses 1 Hari  (teks bebas, kalau ada kata sendiri tidak ditambah "Jam")
 // Kalau tidak ditulis, memakai PROSES_DEFAULT ("" = tanpa label)
-const PROSES_DEFAULT = "";
+const PROSES_DEFAULT = "instant";
 
 function prosesBadge(sm, sv) {
-  const type = DATA[sm].services[sv].proses ?? PROSES_DEFAULT;
-  if (type === "instant") {
+  let type = DATA[sm].services[sv].proses ?? PROSES_DEFAULT;
+  if (!type) return "";
+  type = String(type).trim();
+
+  if (type.toLowerCase() === "instant") {
     return `<span class="proses-badge instant"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Proses Instant</span>`;
   }
-  if (type === "3-5") {
-    return `<span class="proses-badge jam"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Proses 3-5 Jam</span>`;
-  }
-  return "";
+
+  // hanya angka/strip (misal "6-7") -> otomatis ditambah " Jam"
+  const teks = /^[\d\s\-–]+$/.test(type) ? type + " Jam" : type;
+  return `<span class="proses-badge jam"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Proses ${teks}</span>`;
 }
 
 Object.keys(DATA).forEach(sm => {
@@ -836,8 +842,8 @@ Object.keys(DATA).forEach(sm => {
       const serviceIcon = DATA[sm].services[sv].icon;
       const badge = prosesBadge(sm, sv);
       liSv.innerHTML = serviceIcon
-        ? `<img src="${serviceIcon}" alt="${sv}" class="sm-icon"><span>${sv}</span>${badge}`
-        : `<span>${sv}</span>${badge}`;
+        ? `<img src="${serviceIcon}" alt="${sv}" class="sm-icon"><span>${sv}</span>`
+        : `<span>${sv}</span>`;
       liSv.addEventListener("click", () => {
         selectedService = sv;
         svSelected.innerHTML = serviceIcon
