@@ -800,7 +800,7 @@ function renderDescription(desc) {
 //   proses: "6-7"       -> Proses 6-7 Jam
 //   proses: "1 Hari"    -> Proses 1 Hari  (teks bebas, kalau ada kata sendiri tidak ditambah "Jam")
 // Kalau tidak ditulis, memakai PROSES_DEFAULT ("" = tanpa label)
-const PROSES_DEFAULT = "instant";
+const PROSES_DEFAULT = "";
 
 function prosesBadge(sm, sv) {
   let type = DATA[sm].services[sv].proses ?? PROSES_DEFAULT;
