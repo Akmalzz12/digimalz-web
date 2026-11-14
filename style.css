@@ -2527,22 +2527,25 @@ textarea {
 }
 
 /* ==============================
-   LABEL KECEPATAN PROSES
+   LABEL KECEPATAN PROSES (glass)
 ============================== */
 
 .proses-badge {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  flex: none;
-  margin-left: auto;
-  padding: 3px 9px;
+  gap: 5px;
+  padding: 4px 11px;
   border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
   font-family: 'Poppins', sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.5;
   white-space: nowrap;
+  -webkit-backdrop-filter: blur(10px) saturate(170%);
+  backdrop-filter: blur(10px) saturate(170%);
 }
 
 .proses-badge svg {
@@ -2551,30 +2554,47 @@ textarea {
 
 /* Proses Instant: merah */
 .proses-badge.instant {
-  background: #FDECEC;
   color: #D93036;
+  background: linear-gradient(135deg, rgba(255, 107, 112, 0.32), rgba(255, 107, 112, 0.12));
+  box-shadow:
+    0 4px 14px rgba(229, 72, 77, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
-/* Proses 3-5 Jam: oranye */
+/* Proses jam: oranye */
 .proses-badge.jam {
-  background: #FFF3DF;
-  color: #C97A12;
+  color: #B86A0C;
+  background: linear-gradient(135deg, rgba(255, 168, 58, 0.36), rgba(255, 168, 58, 0.14));
+  box-shadow:
+    0 4px 14px rgba(240, 150, 30, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
-/* Nama layanan boleh menyusut supaya label tidak terdorong keluar */
-.dropdown-list li > span:not(.proses-badge) {
-  min-width: 0;
-}
-
-/* Di kartu deskripsi: baris sendiri di paling atas, sedikit lebih besar */
+/* Baris label di paling atas kartu deskripsi */
 .desc-card .proses-row {
+  position: relative;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.desc-card .proses-row .proses-badge {
-  margin-left: 0;
-  padding: 4px 11px;
-  font-size: 11px;
+/* Cahaya warna di belakang kapsul, supaya efek blur kaca terlihat */
+.desc-card .proses-row::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  width: 80px;
+  height: 18px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  filter: blur(9px);
+  opacity: 0.6;
 }
 
+.desc-card .proses-row:has(.instant)::before {
+  background: #FF6B70;
+}
+
+.desc-card .proses-row:has(.jam)::before {
+  background: #FFA83A;
+}
