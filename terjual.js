@@ -9,7 +9,7 @@
 // ============================================================
 const TERJUAL = {
   // ----- Streaming Apps -----
-  "YouTube": 0,
+  "YouTube": 10,
   "Netflix Via Email": 0,
   "Netflix Via Link": 0,
   "Vidio": 0,
