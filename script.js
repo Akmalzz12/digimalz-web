@@ -855,7 +855,9 @@ Object.keys(DATA).forEach(sm => {
 
         const desc = DESCRIPTIONS[selectedSM]?.[sv];
         if (desc) {
-          descText.innerHTML = `<span class="proses-row">${badge}</span>` + renderDescription(desc);
+          const terjual = typeof terjualBadge === "function" ? terjualBadge(sv) : "";
+          const labels = badge + terjual;
+          descText.innerHTML = (labels ? `<span class="proses-row">${labels}</span>` : "") + renderDescription(desc);
           descBox.style.display = "block";
         } else {
           descBox.style.display = "none";
