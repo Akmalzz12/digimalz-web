@@ -4,12 +4,12 @@
 //
 // Tulis:  "Nama Layanan": jumlah,
 // Nama harus SAMA PERSIS dengan nama layanan di DATA (script.js).
-// Isi 0 (atau hapus barisnya) = tanpa label terjual.
+// Belum ditulis atau diisi 0 = tampil "0 Terjual".
 // Pakai angka asli penjualanmu ya.
 // ============================================================
 const TERJUAL = {
   // ----- Streaming Apps -----
-  "YouTube": 10,
+  "YouTube": 0,
   "Netflix Via Email": 0,
   "Netflix Via Link": 0,
   "Vidio": 0,
@@ -49,8 +49,8 @@ const TERJUAL = {
 
 // Tampilan: 15 -> "15 Terjual", 1500 -> "1,5RB Terjual", 2000000 -> "2JT Terjual"
 function terjualBadge(nama) {
-  const n = TERJUAL[nama];
-  if (!n || n <= 0) return "";
+  // belum ditulis / 0 -> tetap tampil "0 Terjual"
+  const n = TERJUAL[nama] > 0 ? TERJUAL[nama] : 0;
 
   const fmt = x => String(parseFloat(x.toFixed(1))).replace(".", ",");
   const teks =
@@ -59,4 +59,4 @@ function terjualBadge(nama) {
     String(n);
 
   return `<span class="proses-badge terjual"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>${teks} Terjual</span>`;
-      }
+}
