@@ -9,36 +9,36 @@
 // ============================================================
 const TERJUAL = {
   // ----- Streaming Apps -----
-  "YouTube": 0,
-  "Netflix Via Email": 0,
-  "Netflix Via Link": 0,
-  "Vidio": 0,
-  "Vision+": 0,
+  "YouTube": 42,
+  "Netflix Via Email": 66,
+  "Netflix Via Link": 35,
+  "Vidio": 8,
+  "Vision+": 3,
   "Disney+": 0,
-  "Prime Video": 0,
-  "Bstation": 0,
-  "HBO Max Standar": 0,
-  "HBO Max Ultimate": 0,
-  "iQIYI": 0,
-  "Viu": 0,
-  "WeTV": 0,
-  "Loklok": 0,
+  "Prime Video": 2,
+  "Bstation": 4,
+  "HBO Max Standar": 8,
+  "HBO Max Ultimate": 2,
+  "iQIYI": 11,
+  "Viu": 17,
+  "WeTV": 14,
+  "Loklok": 5,
 
   // ----- Editing Apps -----
-  "Canva": 0,
-  "Capcut": 0,
-  "Alight Motion": 0,
-  "Picsart": 0,
-  "Meitu": 0,
-  "Wink": 0,
+  "Canva": 87,
+  "Capcut": 63,
+  "Alight Motion": 44,
+  "Picsart": 16,
+  "Meitu": 12,
+  "Wink": 6,
 
   // ----- Music Apps -----
-  "Spotify": 0,
-  "Apple Music": 0,
+  "Spotify": 45,
+  "Apple Music": 3,
 
   // ----- AI Apps -----
-  "ChatGPT Go": 0,
-  "Gemini Pro": 0,
+  "ChatGPT Go": 4,
+  "Gemini Pro": 2,
 
   // ----- Nokos WhatsApp -----
   "Region Indonesia": 0,
