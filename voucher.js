@@ -11,10 +11,10 @@
     {
       aktif: true,
       code: "DGM11",
-      potongan: 1000,
+      potongan: 1500,
       min: 5000,
       sekaliPakai: false,
-      expires: "2026-11-15T23:59:59+07:00",
+      expires: "2026-11-17T23:59:59+07:00",
       logo: "icon/logo2.png"
     }
   ];
