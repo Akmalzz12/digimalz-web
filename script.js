@@ -11,7 +11,7 @@ const DATA = {
       "Netflix Via Link": { icon: "icon/netflix.png", proses: "3-5", prices: { 1: 19000 } },
       "Vidio": { icon: "icon/vidio.png", proses: "3-5", prices: { 1: 49000 } },
       "Vision+": { icon: "icon/vision.png", proses: "3-5", prices: { 1: 29000 } },
-      "Disney+": { icon: "icon/disney.png", proses: "3-5", prices: { 1: 00000 } },
+      "Disney+": { icon: "icon/disney.png", proses: "3-5", prices: { 1: 19000 } },
       "Prime Video": { icon: "icon/prime.png", proses: "3-5", prices: { 1: 14000 } },
       "Bstation": { icon: "icon/bstation.png", proses: "3-5", prices: { 1: 32000 } },
       "HBO Max Standar": { icon: "icon/hbo.png", proses: "3-5", prices: { 1: 14000 } },
