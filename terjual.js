@@ -14,7 +14,7 @@ const TERJUAL = {
   "Netflix Via Link": 35,
   "Vidio": 8,
   "Vision+": 3,
-  "Disney+": 0,
+  "Disney+": 6,
   "Prime Video": 2,
   "Bstation": 4,
   "HBO Max Standar": 8,
