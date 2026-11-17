@@ -167,8 +167,87 @@
     if (typeof updatePrice === "function") updatePrice();
   }
 
+  // ---------- Popup ajakan pakai promo ----------
+  let popEl = null;
+  let pending = null;   // { v, onSkip }
+  let skipOnce = false; // true = pembeli memilih lanjut tanpa promo
+
+  // voucher terbaik yang bisa dipakai untuk total ini
+  function bestOffer(total) {
+    let best = null;
+    VOUCHERS.forEach(v => {
+      if (v.aktif === false || !usable(v, total)) return;
+      if (!best || discountOf(v) > discountOf(best)) best = v;
+    });
+    return best;
+  }
+
+  function closePopup() {
+    if (popEl) popEl.classList.remove("show");
+  }
+
+  function buildPopup() {
+    popEl = document.createElement("div");
+    popEl.className = "promo-pop-overlay";
+    popEl.innerHTML =
+      '<div class="promo-pop" role="dialog" aria-modal="true">' +
+        '<div class="promo-pop-icon">' +
+          '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+            '<polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/>' +
+            '<line x1="12" y1="22" x2="12" y2="7"/>' +
+            '<path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>' +
+            '<path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>' +
+          "</svg>" +
+        "</div>" +
+        "<h3>Yakin nih ga mau pakai promo?</h3>" +
+        "<p>Yuk pakai promonya!</p>" +
+        '<div class="promo-pop-info"></div>' +
+        '<button type="button" class="promo-pop-yes">Pakai Promo</button>' +
+        '<button type="button" class="promo-pop-skip">Lanjut tanpa promo</button>' +
+      "</div>";
+    document.body.appendChild(popEl);
+
+    popEl.addEventListener("click", function (e) {
+      if (e.target === popEl) {            // klik di luar kotak = batal
+        closePopup();
+        return;
+      }
+      if (e.target.closest(".promo-pop-yes")) {
+        applied = pending.v.code;
+        closePopup();
+        render();
+        syncPrice();
+        if (typeof showToast === "function") showToast("Voucher Berhasil Dipakai");
+      } else if (e.target.closest(".promo-pop-skip")) {
+        closePopup();
+        skipOnce = true;
+        if (pending && pending.onSkip) pending.onSkip();
+      }
+    });
+  }
+
+  function openPopup(v, total, onSkip) {
+    if (!popEl) buildPopup();
+    pending = { v: v, onSkip: onSkip };
+    const d = Math.min(discountOf(v), total);
+    popEl.querySelector(".promo-pop-info").innerHTML =
+      "<strong>Diskon " + rp(d) + "</strong>" +
+      "<span>Harga jadi " + rp(total - d) + " (dari " + rp(total) + ")</span>";
+    popEl.classList.add("show");
+  }
+
   // ---------- API untuk script.js ----------
   window.Voucher = {
+    // dipanggil saat tombol Order diklik. true = popup tampil (order ditahan)
+    offer: function (total, onSkip) {
+      if (!VOUCHER_AKTIF || applied || total <= 0) return false;
+      if (skipOnce) { skipOnce = false; return false; }
+      const v = bestOffer(total);
+      if (!v) return false;
+      openPopup(v, total, onSkip);
+      return true;
+    },
+
     calc: calc,
 
     // dipanggil dari updatePrice() setiap harga berubah
