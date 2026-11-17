@@ -949,6 +949,9 @@ waBtn.addEventListener("click", () => {
   const v = typeof Voucher !== "undefined"
     ? Voucher.calc(total)
     : { final: total, discount: 0, code: null };
+  // belum pakai voucher -> ajak pakai promo dulu
+  if (!v.code && typeof Voucher !== "undefined" && Voucher.offer(total, () => waBtn.click())) return;
+
   const totalFormatted = "Rp" + v.final.toLocaleString("id-ID");
   const unit = getUnit();
   const unitName = unit ? unit.charAt(0).toUpperCase() + unit.slice(1) : "";
