@@ -200,7 +200,7 @@
           "</svg>" +
         "</div>" +
         "<h3>Yakin nih ga mau pakai promo?</h3>" +
-        "<p>Pakai aja! Gapapa kok:></p>" +
+        "<p>Pakai aja! Gapapa kok 😉</p>" +
         '<div class="promo-pop-info"></div>' +
         '<button type="button" class="promo-pop-yes">Pakai Promo</button>' +
         '<button type="button" class="promo-pop-skip">Lanjut tanpa promo</button>' +
