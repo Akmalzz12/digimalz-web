@@ -33,7 +33,7 @@ const TERJUAL = {
   "Wink": 6,
 
   // ----- Music Apps -----
-  "Spotify": 46,
+  "Spotify": 47,
   "Apple Music": 3,
 
   // ----- AI Apps -----
