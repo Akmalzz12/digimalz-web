@@ -19,10 +19,11 @@
   // - produk: harus SAMA PERSIS dengan nama layanan di DATA (script.js),
   //           supaya logo aplikasinya ikut tampil.
   const PEMBELIAN = [
-    { nomor: "0812*****419", produk: "Spotify" },
-    { nomor: "0821*****963", produk: "Spotify" },
-    { nomor: "0821*****286", produk: "Spotify" },
-    { nomor: "0815*****134", produk: "Spotify" },
+    { nomor: "0812****8419", produk: "Spotify" },
+    { nomor: "0896****3630", produk: "Netflix" },
+    { nomor: "0821****3963", produk: "Spotify" },
+    { nomor: "0821****7286", produk: "Spotify" },
+    { nomor: "0815****1134", produk: "Spotify" },
   ];
   // ==============================
 
