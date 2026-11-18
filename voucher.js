@@ -14,7 +14,7 @@
       potongan: 1000,
       min: 5000,
       sekaliPakai: false,
-      expires: "2026-11-17T23:59:59+07:00",
+      expires: "2026-11-19T23:59:59+07:00",
       logo: "icon/logo2.png"
     }
   ];
