@@ -1,0 +1,80 @@
+/* ==============================
+   NOTIFIKASI PEMBELIAN
+============================== */
+
+.buy-notif {
+  position: fixed;
+  left: 12px;
+  z-index: 9997;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100vw - 118px);
+  padding: 9px 14px 9px 9px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow:
+    0 8px 24px rgba(16, 21, 28, 0.16),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  font-family: 'Poppins', sans-serif;
+  pointer-events: none;
+  opacity: 0;
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
+}
+
+/* Muncul dari bawah, hilang ke bawah */
+.buy-notif.bawah {
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  transform: translateY(calc(100% + 40px));
+}
+
+/* Muncul dari atas, hilang ke atas (menyelip di bawah navbar) */
+.buy-notif.atas {
+  top: 78px;
+  transform: translateY(calc(-100% - 100px));
+}
+
+.buy-notif.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.buy-notif-img {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  padding: 3px;
+  box-sizing: border-box;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #F1F4FF;
+}
+
+.buy-notif-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #4A5568;
+}
+
+.buy-notif-num {
+  font-weight: 600;
+  color: #10151C;
+}
+
+.buy-notif-prod {
+  font-weight: 700;
+  color: #038df2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buy-notif {
+    transition: opacity 0.3s ease;
+  }
+
+  .buy-notif.bawah,
+  .buy-notif.atas {
+    transform: none;
+  }
+                             }
