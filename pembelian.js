@@ -9,7 +9,7 @@
   const POSISI = "bawah"; // "bawah" = naik dari bawah | "atas" = turun dari atas
   const MULAI = 6000;     // notif pertama muncul setelah (ms)
   const LAMA = 3000;      // lama notif tampil (ms) = 3 detik
-  const JEDA = 9000;      // jeda sebelum notif berikutnya (ms)
+  const JEDA = 5000;      // jeda sebelum notif berikutnya (ms)
   // ========================
 
   // ====== DAFTAR PEMBELIAN ======
@@ -19,7 +19,7 @@
   // - produk: harus SAMA PERSIS dengan nama layanan di DATA (script.js),
   //           supaya logo aplikasinya ikut tampil.
   const PEMBELIAN = [
-    // { nomor: "0812****3456", produk: "Spotify" },
+    { nomor: "0812****8419", produk: "Spotify" },
     // { nomor: "0857****9021", produk: "Canva" },
   ];
   // ==============================
